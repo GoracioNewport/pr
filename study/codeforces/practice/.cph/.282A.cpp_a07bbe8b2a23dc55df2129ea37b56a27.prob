@@ -1,0 +1,1 @@
+{"name":"Local: 282A","url":"/mnt/hdd/pr/study/codeforces/practice/282A.cpp","tests":[{"id":1611743031168,"input":"2\nX++\n--X\n","output":"0"}],"interactive":false,"memoryLimit":1024,"timeLimit":3000,"srcPath":"/mnt/hdd/pr/study/codeforces/practice/282A.cpp","group":"local","local":true}
