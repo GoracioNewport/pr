@@ -1,0 +1,1 @@
+{"name":"Local: Practice3B","url":"/mnt/hdd/pr/study/sqrt/Practice3B.cpp","tests":[{"id":1612099990451,"input":"5\n0 1 1 0 3","output":"4 1 3 5 2"}],"interactive":false,"memoryLimit":1024,"timeLimit":3000,"srcPath":"/mnt/hdd/pr/study/sqrt/Practice3B.cpp","group":"local","local":true}

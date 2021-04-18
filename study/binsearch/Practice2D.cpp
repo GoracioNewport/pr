@@ -1,8 +1,16 @@
+<<<<<<< HEAD
 // #pragma GCC optimize("Ofast")
 // #pragma GCC target("sse,sse2,sse3,ssse3,sse4,popcnt,abm,mmx,avx,avx2,fma")
 // #pragma GCC optimize("unroll-loops")
 #include <bits/stdc++.h>
 
+=======
+#pragma GCC optimize("Ofast")
+#pragma GCC target("sse,sse2,sse3,ssse3,sse4,popcnt,abm,mmx,avx,avx2,fma")
+#pragma GCC optimize("unroll-loops")
+#include <bits/stdc++.h>
+  
+>>>>>>> 3ea0f8c3a53376f9682af1b30d62f919759f2cdf
 using namespace std;
   
 typedef long long ll;
@@ -33,6 +41,7 @@ double eps = 1e-12;
 #define fast_cin() ios_base::sync_with_stdio(false); cin.tie(NULL); cout.tie(NULL)
 #define all(x) (x).begin(), (x).end()
 #define sz(x) ((ll)(x).size())
+<<<<<<< HEAD
 
 struct Human {
 	ll t; // Время надувания одного шара
@@ -74,3 +83,54 @@ int main() {
 		z -= min(x, z);
 	} 
 }
+=======
+  
+struct Human {
+  ll t;
+  ll z;
+  ll y;
+};
+  
+ll z, n;
+vector <Human> a;
+  
+  
+ll findB(Human h, ll x) {
+  ll c = h.t * h.z + h.y;
+  ll ans = 0;
+  ans += (x / c) * h.z;
+  ll last = min((x % c), (h.t * h.z));
+  ans += (last / h.t);
+  return ans;
+}
+  
+bool ok(ll x) {
+  ll cnt = 0;
+  for (auto &i : a) cnt += findB(i, x);
+  // cout << cnt << endl;
+  return (x <= z);
+}
+  
+  
+  
+int main() {
+  fast_cin();
+
+  cin >> z >> n;
+  a.resize(n);
+  for (auto &i : a) cin >> i.t >> i.z >> i.y;
+  ll l = 0;
+  ll r = 2e9;
+  while (l + 1 < r) {
+    ll m = (l + r) / 2;
+    // cout << "===" << endl;
+    // cout << m << endl;
+    if (ok(m)) l = m;
+    else r = m;
+  } ll ans = 0;
+  for (auto &i : a) ans += findB(i, l);
+  cout << ans << endl;
+  for (auto &i : a) cout << findB(i, l) << ' ';
+
+}
+>>>>>>> 3ea0f8c3a53376f9682af1b30d62f919759f2cdf

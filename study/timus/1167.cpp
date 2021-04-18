@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 //#pragma GCC optimize("Ofast")
 //#pragma GCC target("sse,sse2,sse3,ssse3,sse4,popcnt,abm,mmx,avx,avx2,fma")
 //#pragma GCC optimize("unroll-loops")
@@ -7,6 +8,17 @@ using namespace std;
 
 // Author: @GoracioNewport
   
+=======
+// #pragma GCC optimize("Ofast")
+// #pragma GCC target("sse,sse2,sse3,ssse3,sse4,popcnt,abm,mmx,avx,avx2,fma")
+// #pragma GCC optimize("unroll-loops")
+#include <bits/stdc++.h>
+
+// Author: @GoracioNewport
+
+using namespace std;
+
+>>>>>>> 3ea0f8c3a53376f9682af1b30d62f919759f2cdf
 typedef long long ll;
 typedef long double ld;
 typedef pair<int,int> p32;
@@ -43,6 +55,7 @@ int main() {
   cin >> n >> k;
   v64 a(n);
   for (auto &i : a) cin >> i;
+<<<<<<< HEAD
   vv64 dp(n, v64 (k, INF));
 	forn(i,min(n,k)) dp[i][i] = 0;
 	{
@@ -76,3 +89,16 @@ int main() {
 
 
 }
+=======
+  vv64 dp(n + 1, v64 (k + 1, 0));
+  forn(i,k) dp[0][i] = INF;
+  forsn(i,1,n) {
+    forsn(j,1,k) {
+      ll m = INF;
+      forn(z,i) m = min(m, dp[z][j] + )
+    }
+  }
+
+
+}
+>>>>>>> 3ea0f8c3a53376f9682af1b30d62f919759f2cdf

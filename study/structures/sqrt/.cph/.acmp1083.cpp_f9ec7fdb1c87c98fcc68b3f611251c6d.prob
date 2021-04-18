@@ -1,0 +1,1 @@
+{"name":"Local: acmp1083","url":"/mnt/hdd/pr/study/sqrt/acmp1083.cpp","tests":[{"id":1612697338564,"input":"10\n1 2 3 4 5 6 7 8 9 10\n5\nrsq 1 10\nupdate 5 6 2\nrmq 3 9\nadd 2 8 3\nget 7","output":"55\n2\n10"}],"interactive":false,"memoryLimit":1024,"timeLimit":3000,"srcPath":"/mnt/hdd/pr/study/sqrt/acmp1083.cpp","group":"local","local":true}

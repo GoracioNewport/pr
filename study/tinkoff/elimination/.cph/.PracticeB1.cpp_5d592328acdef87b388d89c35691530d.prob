@@ -1,0 +1,1 @@
+{"name":"Local: PracticeB1","url":"/media/goracionewport/53D27AD04C3F1E51/pr/study/tinkoff/elimination/PracticeB1.cpp","tests":[{"id":1610550414879,"input":"5 3\n1 3\n4 5\n3 4","output":"2\n1\n0"}],"interactive":false,"memoryLimit":1024,"timeLimit":3000,"srcPath":"/media/goracionewport/53D27AD04C3F1E51/pr/study/tinkoff/elimination/PracticeB1.cpp","group":"local","local":true}
