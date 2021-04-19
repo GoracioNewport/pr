@@ -4,7 +4,7 @@ set(CMAKE_DEPENDS_LANGUAGES
   )
 # The set of files for implicit dependencies of each language:
 set(CMAKE_DEPENDS_CHECK_CXX
-  "/mnt/hdd/pr/study/timus/1152.cpp" "/mnt/hdd/pr/study/cmake-build-debug/CMakeFiles/study.dir/timus/1152.cpp.o"
+  "/mnt/hdd/pr/study/dp/itmo/C.cpp" "/mnt/hdd/pr/study/cmake-build-debug/CMakeFiles/study.dir/dp/itmo/C.cpp.o"
   )
 set(CMAKE_CXX_COMPILER_ID "GNU")
 

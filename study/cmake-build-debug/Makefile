@@ -142,32 +142,32 @@ study/fast:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/study.dir/build.make CMakeFiles/study.dir/build
 .PHONY : study/fast
 
-timus/1152.o: timus/1152.cpp.o
+dp/itmo/C.o: dp/itmo/C.cpp.o
 
-.PHONY : timus/1152.o
+.PHONY : dp/itmo/C.o
 
 # target to build an object file
-timus/1152.cpp.o:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/study.dir/build.make CMakeFiles/study.dir/timus/1152.cpp.o
-.PHONY : timus/1152.cpp.o
+dp/itmo/C.cpp.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/study.dir/build.make CMakeFiles/study.dir/dp/itmo/C.cpp.o
+.PHONY : dp/itmo/C.cpp.o
 
-timus/1152.i: timus/1152.cpp.i
+dp/itmo/C.i: dp/itmo/C.cpp.i
 
-.PHONY : timus/1152.i
+.PHONY : dp/itmo/C.i
 
 # target to preprocess a source file
-timus/1152.cpp.i:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/study.dir/build.make CMakeFiles/study.dir/timus/1152.cpp.i
-.PHONY : timus/1152.cpp.i
+dp/itmo/C.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/study.dir/build.make CMakeFiles/study.dir/dp/itmo/C.cpp.i
+.PHONY : dp/itmo/C.cpp.i
 
-timus/1152.s: timus/1152.cpp.s
+dp/itmo/C.s: dp/itmo/C.cpp.s
 
-.PHONY : timus/1152.s
+.PHONY : dp/itmo/C.s
 
 # target to generate assembly for a file
-timus/1152.cpp.s:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/study.dir/build.make CMakeFiles/study.dir/timus/1152.cpp.s
-.PHONY : timus/1152.cpp.s
+dp/itmo/C.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/study.dir/build.make CMakeFiles/study.dir/dp/itmo/C.cpp.s
+.PHONY : dp/itmo/C.cpp.s
 
 # Help Target
 help:
@@ -178,9 +178,9 @@ help:
 	@echo "... edit_cache"
 	@echo "... rebuild_cache"
 	@echo "... study"
-	@echo "... timus/1152.o"
-	@echo "... timus/1152.i"
-	@echo "... timus/1152.s"
+	@echo "... dp/itmo/C.o"
+	@echo "... dp/itmo/C.i"
+	@echo "... dp/itmo/C.s"
 .PHONY : help
 
 

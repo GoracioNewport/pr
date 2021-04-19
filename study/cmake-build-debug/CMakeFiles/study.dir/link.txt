@@ -1,1 +1,1 @@
-/usr/bin/c++ -g CMakeFiles/study.dir/timus/1152.cpp.o -o study 
+/usr/bin/c++ -g CMakeFiles/study.dir/dp/itmo/C.cpp.o -o study 
