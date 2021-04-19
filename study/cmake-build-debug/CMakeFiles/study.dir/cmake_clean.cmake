@@ -1,8 +1,6 @@
 file(REMOVE_RECURSE
-  "CMakeFiles/study.dir/timus/1152.cpp.obj"
-  "libstudy.dll.a"
-  "study.exe"
-  "study.exe.manifest"
+  "CMakeFiles/study.dir/timus/1152.cpp.o"
+  "study"
   "study.pdb"
 )
 
