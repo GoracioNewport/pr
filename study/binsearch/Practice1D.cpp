@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 // #pragma GCC optimize("Ofast")
 // #pragma GCC target("sse,sse2,sse3,ssse3,sse4,popcnt,abm,mmx,avx,avx2,fma")
 // #pragma GCC optimize("unroll-loops")
@@ -5,6 +6,15 @@
 
 using namespace std;
 
+=======
+#pragma GCC optimize("Ofast")
+#pragma GCC target("sse,sse2,sse3,ssse3,sse4,popcnt,abm,mmx,avx,avx2,fma")
+#pragma GCC optimize("unroll-loops")
+#include <bits/stdc++.h>
+
+using namespace std;
+  
+>>>>>>> 687ac2dc6a6be5ff52518558462a7a29bf8e3088
 typedef long long ll;
 typedef long double ld;
 typedef pair<int,int> p32;
@@ -35,6 +45,7 @@ double eps = 1e-12;
 #define sz(x) ((ll)(x).size())
 
 int main() {
+<<<<<<< HEAD
   fast_cin();
 
   ll n, k;
@@ -55,5 +66,36 @@ int main() {
     ll r = upper_bound(m.begin(), m.end(), b) - m.begin();
     cout << abs(l - r) << ' ';
   } 
+=======
+    fast_cin();
+
+    ll n;
+    cin >> n;
+    v64 p(n);
+    for (auto &i : p) cin >> i;
+    ll k;
+	cin >> k;
+	sort(all(p));
+	forn(z, k) {
+		ll a, b;
+		cin >> a >> b;
+		ll l = 0;
+		ll r = n;
+		while (l + 1 < r) {
+			ll m = (l + r) / 2;
+			if (p[m] <= a) l = m;
+			else r = m;
+		} ll ans1 = l;
+		l = 0;
+		r = n;
+		while (l + 1 < r) {
+			ll m = (l + r) / 2;
+			if (p[m] < b) l = m;
+			else r = m;
+		} ll ans2 = l;
+		cout << ans1 << ' ' << ans2 << ' ';
+		cout << abs(ans1 - ans2) + 1 << endl;;
+	} cout << endl;
+>>>>>>> 687ac2dc6a6be5ff52518558462a7a29bf8e3088
 
 }

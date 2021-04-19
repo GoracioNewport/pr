@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 // #pragma GCC optimize("Ofast")
 // #pragma GCC target("sse,sse2,sse3,ssse3,sse4,popcnt,abm,mmx,avx,avx2,fma")
 // #pragma GCC optimize("unroll-loops")
@@ -7,6 +8,17 @@
 
 using namespace std;
 
+=======
+//#pragma GCC optimize("Ofast")
+//#pragma GCC target("sse,sse2,sse3,ssse3,sse4,popcnt,abm,mmx,avx,avx2,fma")
+//#pragma GCC optimize("unroll-loops")
+#include <bits/stdc++.h>
+
+using namespace std;
+
+// Author: @GoracioNewport
+  
+>>>>>>> 687ac2dc6a6be5ff52518558462a7a29bf8e3088
 typedef long long ll;
 typedef long double ld;
 typedef pair<int,int> p32;
@@ -43,6 +55,7 @@ int main() {
   cin >> n >> k;
   v64 a(n);
   for (auto &i : a) cin >> i;
+<<<<<<< HEAD
   vv64 dp(n + 1, v64 (k + 1, 0));
   forn(i,k) dp[0][i] = INF;
   forsn(i,1,n) {
@@ -54,3 +67,38 @@ int main() {
 
 
 }
+=======
+  vv64 dp(n, v64 (k, INF));
+	forn(i,min(n,k)) dp[i][i] = 0;
+	{
+		ll zCnt = 0, oCnt = 0;
+		forn(i,n) {
+			if (a[i]) oCnt++;
+			else zCnt++; 
+			dp[i][0] = zCnt * oCnt;
+		}
+	}
+
+	forsn(i,2,n) {
+		forsn(j,1,min(i,k)) {
+			ll zCnt = 0, oCnt = 0;
+			// cout << "Update " << i << ' ' << j << endl; 
+			for(ll z = i; z > 0; z--) {
+				if (a[z]) oCnt++;
+				else zCnt++;
+				// cout << zCnt << ' ' << oCnt << endl;
+				dp[i][j] = min(dp[i][j], dp[z - 1][j - 1] + (oCnt * zCnt));
+			} 
+		}
+	} cout << dp[n - 1][k - 1] << ln;
+
+	// for (auto &i : dp) {
+	// 	for (auto &j : i) cout << j << ' ';
+	// 	cout << ln;
+	// }
+	
+
+
+
+}
+>>>>>>> 687ac2dc6a6be5ff52518558462a7a29bf8e3088

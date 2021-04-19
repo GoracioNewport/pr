@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 // #pragma GCC optimize("Ofast")
 // #pragma GCC target("sse,sse2,sse3,ssse3,sse4,popcnt,abm,mmx,avx,avx2,fma")
 // #pragma GCC optimize("unroll-loops")
@@ -7,6 +8,17 @@
 
 using namespace std;
 
+=======
+//#pragma GCC optimize("Ofast")
+//#pragma GCC target("sse,sse2,sse3,ssse3,sse4,popcnt,abm,mmx,avx,avx2,fma")
+//#pragma GCC optimize("unroll-loops")
+#include <bits/stdc++.h>
+
+using namespace std;
+
+// Author: @GoracioNewport
+  
+>>>>>>> 687ac2dc6a6be5ff52518558462a7a29bf8e3088
 typedef long long ll;
 typedef long double ld;
 typedef pair<int,int> p32;
@@ -43,6 +55,7 @@ int main() {
 
   ll n, a, b;
   cin >> n >> a >> b;
+<<<<<<< HEAD
 
   vv64 dp(n + 1, v64 (2, 0));
   dp[0][0] = dp[0][1] = 0;
@@ -68,4 +81,20 @@ int main() {
 //  for (auto &i : dp) {
 //    cout << i[0] << ' ' << i[1] << ln;
 //  }
+=======
+  if (b < a) swap(a,b);
+  vv64 dpA(n + 1, v64 (2, 0));
+  vv64 dpB(n + 1, v64 (2, 0));
+  dpA[0][0] = dpA[0][1] = 0;
+  dpA[1][0] = dpA[1][1] = 1;
+  dpB[0][0] = dpB[0][1] = 0;
+  dpB[1][0] = dpB[1][1] = 1;
+  // for(ll i = 2; i <= a; i++) {
+  // 	dp[i][0] = (dp[i - 1][0] + dp[i - 1][1]) % mod;
+  // 	dp[i][1] = (dp[i - 1][0] + dp[i - 1][1]) % mod;
+  // }
+
+
+  
+>>>>>>> 687ac2dc6a6be5ff52518558462a7a29bf8e3088
 }
