@@ -41,19 +41,12 @@ int main() {
 
   ll n;
   cin >> n;
-  n += 10;
-  v64 dp(n + 10, 1);
-  dp[2] = 2;
-  forsn(i,3,n + 5) {
-    if (i % 2) {
-      ll j = i + 1;
-//      cout << j << ln;
-      dp[j] = dp[j / 2] + 1;
-    } else {
-      ll j = i - 1;
-//      cout << j << ln;
-      dp[j] = dp[j + 1] + dp[j / 2];
-    }
-  } cout << dp[n - 10] << ln;
+  v64 dp(5e6, INF);
+  dp[0] = dp[1] = 0;
+  forsn(i,1,n + 1) {
+    dp[i + 1] = min(dp[i + 1], dp[i] + 1);
+    dp[2 * i] = min(dp[2 * i], dp[i] + 1);
+    dp[3 * i] = min(dp[3 * i], dp[i] + 1);
+  } cout << dp[n] << ln;
 
 }

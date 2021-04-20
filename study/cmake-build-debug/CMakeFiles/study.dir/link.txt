@@ -1,1 +1,1 @@
-/usr/bin/c++ -g CMakeFiles/study.dir/dp/informatics/1E.cpp.o -o study 
+/usr/bin/c++ -g CMakeFiles/study.dir/dp/informatics/2F.cpp.o -o study 
