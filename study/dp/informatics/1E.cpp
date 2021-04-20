@@ -1,12 +1,12 @@
-//#pragma GCC optimize("Ofast")
-//#pragma GCC target("sse,sse2,sse3,ssse3,sse4,popcnt,abm,mmx,avx,avx2,fma")
-//#pragma GCC optimize("unroll-loops")
+// #pragma GCC optimize("Ofast")
+// #pragma GCC target("sse,sse2,sse3,ssse3,sse4,popcnt,abm,mmx,avx,avx2,fma")
+// #pragma GCC optimize("unroll-loops")
 #include <bits/stdc++.h>
+
+// Author: @GoracioNewport
 
 using namespace std;
 
-// Author: @GoracioNewport
-  
 typedef long long ll;
 typedef long double ld;
 typedef pair<int,int> p32;
@@ -39,24 +39,15 @@ double eps = 1e-12;
 int main() {
   fast_cin();
 
-  string s1, s2;
-  cin >> s1 >> s2;
-  ll n = sz(s1), m = sz(s2);
-  vv64 dp(n + 1, v64 (m + 1, INF));
-  dp[0][0] = 0;
-  forn(i,n) dp[i + 1][0] = i + 1;
-  forn(i,m) dp[0][i + 1] = i + 1;
-
-	forsn(i,1,n + 1) {
-		forsn(j,1,m + 1) {
-			if (s1[i - 1] == s2[j - 1]) dp[i][j] = dp[i - 1][j - 1];
-			else dp[i][j] = min(min(dp[i - 1][j], dp[i][j - 1]), dp[i - 1][j - 1]) + 1;
-		}
-	} cout << dp[n][m] << ln;
-
-//	for (auto &i : dp) {
-//		for (auto &j : i) cout << j << ' ';
-//		cout << ln;
-//	}
+  ll n;
+  cin >> n;
+  n += 10;
+  v64 dp(n, 1);
+  dp[2] = 2;
+  dp[3] = 4;
+  forsn(i,2,n / 2) {
+    dp[2 * i] = dp[i] + 1;
+    dp[2 * i + 1] = dp[i + 2] + 1 - dp[i];
+  } cout << dp[n - 10] << ln;
 
 }

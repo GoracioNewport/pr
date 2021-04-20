@@ -142,32 +142,32 @@ study/fast:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/study.dir/build.make CMakeFiles/study.dir/build
 .PHONY : study/fast
 
-dp/itmo/C.o: dp/itmo/C.cpp.o
+dp/informatics/1E.o: dp/informatics/1E.cpp.o
 
-.PHONY : dp/itmo/C.o
+.PHONY : dp/informatics/1E.o
 
 # target to build an object file
-dp/itmo/C.cpp.o:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/study.dir/build.make CMakeFiles/study.dir/dp/itmo/C.cpp.o
-.PHONY : dp/itmo/C.cpp.o
+dp/informatics/1E.cpp.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/study.dir/build.make CMakeFiles/study.dir/dp/informatics/1E.cpp.o
+.PHONY : dp/informatics/1E.cpp.o
 
-dp/itmo/C.i: dp/itmo/C.cpp.i
+dp/informatics/1E.i: dp/informatics/1E.cpp.i
 
-.PHONY : dp/itmo/C.i
+.PHONY : dp/informatics/1E.i
 
 # target to preprocess a source file
-dp/itmo/C.cpp.i:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/study.dir/build.make CMakeFiles/study.dir/dp/itmo/C.cpp.i
-.PHONY : dp/itmo/C.cpp.i
+dp/informatics/1E.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/study.dir/build.make CMakeFiles/study.dir/dp/informatics/1E.cpp.i
+.PHONY : dp/informatics/1E.cpp.i
 
-dp/itmo/C.s: dp/itmo/C.cpp.s
+dp/informatics/1E.s: dp/informatics/1E.cpp.s
 
-.PHONY : dp/itmo/C.s
+.PHONY : dp/informatics/1E.s
 
 # target to generate assembly for a file
-dp/itmo/C.cpp.s:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/study.dir/build.make CMakeFiles/study.dir/dp/itmo/C.cpp.s
-.PHONY : dp/itmo/C.cpp.s
+dp/informatics/1E.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/study.dir/build.make CMakeFiles/study.dir/dp/informatics/1E.cpp.s
+.PHONY : dp/informatics/1E.cpp.s
 
 # Help Target
 help:
@@ -178,9 +178,9 @@ help:
 	@echo "... edit_cache"
 	@echo "... rebuild_cache"
 	@echo "... study"
-	@echo "... dp/itmo/C.o"
-	@echo "... dp/itmo/C.i"
-	@echo "... dp/itmo/C.s"
+	@echo "... dp/informatics/1E.o"
+	@echo "... dp/informatics/1E.i"
+	@echo "... dp/informatics/1E.s"
 .PHONY : help
 
 
