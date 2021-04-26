@@ -1,11 +1,11 @@
-//#pragma GCC optimize("Ofast")
-//#pragma GCC target("sse,sse2,sse3,ssse3,sse4,popcnt,abm,mmx,avx,avx2,fma")
-//#pragma GCC optimize("unroll-loops")
+// #pragma GCC optimize("Ofast")
+// #pragma GCC target("sse,sse2,sse3,ssse3,sse4,popcnt,abm,mmx,avx,avx2,fma")
+// #pragma GCC optimize("unroll-loops")
 #include <bits/stdc++.h>
 
-using namespace std;
-
 // Author: @GoracioNewport
+
+using namespace std;
 
 typedef long long ll;
 typedef long double ld;
@@ -36,29 +36,19 @@ double eps = 1e-12;
 #define all(x) (x).begin(), (x).end()
 #define sz(x) ((ll)(x).size())
 
-ll mod = 1e9 + 7;
-
 int main() {
   fast_cin();
 
-  ll n, a, b;
-  cin >> n >> a >> b;
-  if (b < a) swap(a,b);
-  vv64 dp(n + 1, v64 (3, 0));
-  dp[0][0] = dp[0][1] = 1;
-  dp[1][0] = dp[1][1] = 1;
-  for(ll i = 2; i <= a; i++) {
-    dp[i][0] = (dp[i - 1][0] + dp[i - 1][1]) % mod;
-    dp[i][1] = (dp[i - 1][0] + dp[i - 1][1]) % mod;
+  ll n, m;
+  cin >> n >> m;
+  v64 votes(n, 0);
+  forn(i,m) {
+    ll x;
+    cin >> x;
+    votes[x - 1]++;
+  } cout << setprecision(2) << fixed;
+  for (auto &i : votes) {
+    cout << ((ld)i / (ld)m) * 100.0 << '%' << ln;
   }
-
-
-  for(ll i = a + 1; i <= n; i++) {
-    dp[i][0] = ((dp[i - 1][0] + dp[i - 1][1] - dp[i - a - 1][1]) + mod) % mod;
-    if (i > b) dp[i][1] = ((dp[i - 1][0] + dp[i - 1][1] - dp[i - b - 1][0]) + mod) % mod;
-    else dp[i][1] = (dp[i - 1][0] + dp[i - 1][1]) % mod;
-  } cout << (dp[n][0] + dp[n][1]) % mod << ln;
-
-//  for (auto &i : dp) cout << i[0] << ' ' << i[1] << ln;
 
 }
