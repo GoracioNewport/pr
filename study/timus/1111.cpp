@@ -43,6 +43,7 @@ struct Point {
 	// 	x = X;
 	// 	y = Y;
 	// }
+	// Hello
 };
 
 struct Rect {
