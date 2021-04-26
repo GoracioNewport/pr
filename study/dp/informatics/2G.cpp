@@ -1,11 +1,11 @@
-//#pragma GCC optimize("Ofast")
-//#pragma GCC target("sse,sse2,sse3,ssse3,sse4,popcnt,abm,mmx,avx,avx2,fma")
-//#pragma GCC optimize("unroll-loops")
+// #pragma GCC optimize("Ofast")
+// #pragma GCC target("sse,sse2,sse3,ssse3,sse4,popcnt,abm,mmx,avx,avx2,fma")
+// #pragma GCC optimize("unroll-loops")
 #include <bits/stdc++.h>
 
-using namespace std;
-
 // Author: @GoracioNewport
+
+using namespace std;
 
 typedef long long ll;
 typedef long double ld;
@@ -36,29 +36,23 @@ double eps = 1e-12;
 #define all(x) (x).begin(), (x).end()
 #define sz(x) ((ll)(x).size())
 
-ll mod = 1e9 + 7;
-
 int main() {
   fast_cin();
 
-  ll n, a, b;
-  cin >> n >> a >> b;
-  if (b < a) swap(a,b);
-  vv64 dp(n + 1, v64 (3, 0));
-  dp[0][0] = dp[0][1] = 1;
-  dp[1][0] = dp[1][1] = 1;
-  for(ll i = 2; i <= a; i++) {
-    dp[i][0] = (dp[i - 1][0] + dp[i - 1][1]) % mod;
-    dp[i][1] = (dp[i - 1][0] + dp[i - 1][1]) % mod;
-  }
-
-
-  for(ll i = a + 1; i <= n; i++) {
-    dp[i][0] = ((dp[i - 1][0] + dp[i - 1][1] - dp[i - a - 1][1]) + mod) % mod;
-    if (i > b) dp[i][1] = ((dp[i - 1][0] + dp[i - 1][1] - dp[i - b - 1][0]) + mod) % mod;
-    else dp[i][1] = (dp[i - 1][0] + dp[i - 1][1]) % mod;
-  } cout << (dp[n][0] + dp[n][1]) % mod << ln;
-
-//  for (auto &i : dp) cout << i[0] << ' ' << i[1] << ln;
+  int n;
+  cin >> n;
+  vector <pair <int, pair <int,int>>> dp(3 * n, {INF, {-1, -1}});
+  dp[0] = dp[1] = {0, {-1, -1}};
+  forsn(i,1,n + 1) {
+    if (dp[i].fi + 1 < dp[i + 1].fi) dp[i + 1] = {dp[i].fi + 1, {i, 1}};
+    if (dp[i].fi + 1 < dp[2 * i].fi) dp[2 * i] = {dp[i].fi + 1, {i, 2}};
+    if (dp[i].fi + 1 < dp[3 * i].fi) dp[3 * i] = {dp[i].fi + 1, {i, 3}};
+  } ll p = n;
+  v64 ans;
+  while(dp[p].se.se != -1) {
+    ans.pb(dp[p].se.se);
+    p = dp[p].se.fi;
+  } reverse(all(ans));
+  for (auto &i : ans) cout << i;
 
 }

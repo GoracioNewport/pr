@@ -58,10 +58,10 @@ cmake_force:
 SHELL = /bin/sh
 
 # The CMake executable.
-CMAKE_COMMAND = /snap/clion/149/bin/cmake/linux/bin/cmake
+CMAKE_COMMAND = /snap/clion/151/bin/cmake/linux/bin/cmake
 
 # The command to remove a file.
-RM = /snap/clion/149/bin/cmake/linux/bin/cmake -E rm -f
+RM = /snap/clion/151/bin/cmake/linux/bin/cmake -E rm -f
 
 # Escaping for special characters.
 EQUALS = =
@@ -78,7 +78,7 @@ CMAKE_BINARY_DIR = /mnt/hdd/pr/study/cmake-build-debug
 # Special rule for the target rebuild_cache
 rebuild_cache:
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --cyan "Running CMake to regenerate build system..."
-	/snap/clion/149/bin/cmake/linux/bin/cmake --regenerate-during-build -S$(CMAKE_SOURCE_DIR) -B$(CMAKE_BINARY_DIR)
+	/snap/clion/151/bin/cmake/linux/bin/cmake --regenerate-during-build -S$(CMAKE_SOURCE_DIR) -B$(CMAKE_BINARY_DIR)
 .PHONY : rebuild_cache
 
 # Special rule for the target rebuild_cache
@@ -89,7 +89,7 @@ rebuild_cache/fast: rebuild_cache
 # Special rule for the target edit_cache
 edit_cache:
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --cyan "No interactive CMake dialog available..."
-	/snap/clion/149/bin/cmake/linux/bin/cmake -E echo No\ interactive\ CMake\ dialog\ available.
+	/snap/clion/151/bin/cmake/linux/bin/cmake -E echo No\ interactive\ CMake\ dialog\ available.
 .PHONY : edit_cache
 
 # Special rule for the target edit_cache
@@ -142,32 +142,32 @@ study/fast:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/study.dir/build.make CMakeFiles/study.dir/build
 .PHONY : study/fast
 
-dp/informatics/2F.o: dp/informatics/2F.cpp.o
+dp/informatics/4B.o: dp/informatics/4B.cpp.o
 
-.PHONY : dp/informatics/2F.o
+.PHONY : dp/informatics/4B.o
 
 # target to build an object file
-dp/informatics/2F.cpp.o:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/study.dir/build.make CMakeFiles/study.dir/dp/informatics/2F.cpp.o
-.PHONY : dp/informatics/2F.cpp.o
+dp/informatics/4B.cpp.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/study.dir/build.make CMakeFiles/study.dir/dp/informatics/4B.cpp.o
+.PHONY : dp/informatics/4B.cpp.o
 
-dp/informatics/2F.i: dp/informatics/2F.cpp.i
+dp/informatics/4B.i: dp/informatics/4B.cpp.i
 
-.PHONY : dp/informatics/2F.i
+.PHONY : dp/informatics/4B.i
 
 # target to preprocess a source file
-dp/informatics/2F.cpp.i:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/study.dir/build.make CMakeFiles/study.dir/dp/informatics/2F.cpp.i
-.PHONY : dp/informatics/2F.cpp.i
+dp/informatics/4B.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/study.dir/build.make CMakeFiles/study.dir/dp/informatics/4B.cpp.i
+.PHONY : dp/informatics/4B.cpp.i
 
-dp/informatics/2F.s: dp/informatics/2F.cpp.s
+dp/informatics/4B.s: dp/informatics/4B.cpp.s
 
-.PHONY : dp/informatics/2F.s
+.PHONY : dp/informatics/4B.s
 
 # target to generate assembly for a file
-dp/informatics/2F.cpp.s:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/study.dir/build.make CMakeFiles/study.dir/dp/informatics/2F.cpp.s
-.PHONY : dp/informatics/2F.cpp.s
+dp/informatics/4B.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/study.dir/build.make CMakeFiles/study.dir/dp/informatics/4B.cpp.s
+.PHONY : dp/informatics/4B.cpp.s
 
 # Help Target
 help:
@@ -178,9 +178,9 @@ help:
 	@echo "... edit_cache"
 	@echo "... rebuild_cache"
 	@echo "... study"
-	@echo "... dp/informatics/2F.o"
-	@echo "... dp/informatics/2F.i"
-	@echo "... dp/informatics/2F.s"
+	@echo "... dp/informatics/4B.o"
+	@echo "... dp/informatics/4B.i"
+	@echo "... dp/informatics/4B.s"
 .PHONY : help
 
 
