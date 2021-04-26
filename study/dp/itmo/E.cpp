@@ -50,14 +50,13 @@ int main() {
 	forsn(i,1,n + 1) {
 		forsn(j,1,m + 1) {
 			if (s1[i - 1] == s2[j - 1]) dp[i][j] = dp[i - 1][j - 1];
-			
-
+			else dp[i][j] = min(min(dp[i - 1][j], dp[i][j - 1]), dp[i - 1][j - 1]) + 1;
 		}
 	} cout << dp[n][m] << ln;
 
-	for (auto &i : dp) {
-		for (auto &j : i) cout << j << ' ';
-		cout << ln;
-	}
+//	for (auto &i : dp) {
+//		for (auto &j : i) cout << j << ' ';
+//		cout << ln;
+//	}
 
 }

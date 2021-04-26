@@ -1,4 +1,17 @@
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+// #pragma GCC optimize("Ofast")
+// #pragma GCC target("sse,sse2,sse3,ssse3,sse4,popcnt,abm,mmx,avx,avx2,fma")
+// #pragma GCC optimize("unroll-loops")
+#include <bits/stdc++.h>
+
+// Author: @GoracioNewport
+
+using namespace std;
+
+=======
+>>>>>>> 4cedac459bab408b206c83f5a244494e5c8c244a
 //#pragma GCC optimize("Ofast")
 //#pragma GCC target("sse,sse2,sse3,ssse3,sse4,popcnt,abm,mmx,avx,avx2,fma")
 //#pragma GCC optimize("unroll-loops")
@@ -8,6 +21,7 @@ using namespace std;
 
 // Author: @GoracioNewport
   
+<<<<<<< HEAD
 =======
 // #pragma GCC optimize("Ofast")
 // #pragma GCC target("sse,sse2,sse3,ssse3,sse4,popcnt,abm,mmx,avx,avx2,fma")
@@ -19,6 +33,9 @@ using namespace std;
 using namespace std;
 
 >>>>>>> 3ea0f8c3a53376f9682af1b30d62f919759f2cdf
+=======
+>>>>>>> 687ac2dc6a6be5ff52518558462a7a29bf8e3088
+>>>>>>> 4cedac459bab408b206c83f5a244494e5c8c244a
 typedef long long ll;
 typedef long double ld;
 typedef pair<int,int> p32;
@@ -56,6 +73,7 @@ int main() {
   ll n, a, b;
   cin >> n >> a >> b;
 <<<<<<< HEAD
+<<<<<<< HEAD
   if (b < a) swap(a,b);
   vv64 dpA(n + 1, v64 (2, 0));
   vv64 dpB(n + 1, v64 (2, 0));
@@ -71,6 +89,8 @@ int main() {
 
   
 =======
+=======
+>>>>>>> 4cedac459bab408b206c83f5a244494e5c8c244a
 
   vv64 dp(n + 1, v64 (2, 0));
   dp[0][0] = dp[0][1] = 0;
@@ -96,5 +116,24 @@ int main() {
 //  for (auto &i : dp) {
 //    cout << i[0] << ' ' << i[1] << ln;
 //  }
+<<<<<<< HEAD
 >>>>>>> 3ea0f8c3a53376f9682af1b30d62f919759f2cdf
+=======
+=======
+  if (b < a) swap(a,b);
+  vv64 dpA(n + 1, v64 (2, 0));
+  vv64 dpB(n + 1, v64 (2, 0));
+  dpA[0][0] = dpA[0][1] = 0;
+  dpA[1][0] = dpA[1][1] = 1;
+  dpB[0][0] = dpB[0][1] = 0;
+  dpB[1][0] = dpB[1][1] = 1;
+  // for(ll i = 2; i <= a; i++) {
+  // 	dp[i][0] = (dp[i - 1][0] + dp[i - 1][1]) % mod;
+  // 	dp[i][1] = (dp[i - 1][0] + dp[i - 1][1]) % mod;
+  // }
+
+
+  
+>>>>>>> 687ac2dc6a6be5ff52518558462a7a29bf8e3088
+>>>>>>> 4cedac459bab408b206c83f5a244494e5c8c244a
 }
