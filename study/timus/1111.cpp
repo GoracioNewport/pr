@@ -36,75 +36,59 @@ double eps = 1e-12;
 #define all(x) (x).begin(), (x).end()
 #define sz(x) ((ll)(x).size())
 
-ld getDist(p64 a, p64 b) {
-  return sqrt(abs(a.fi - b.fi) * abs(a.fi - b.fi) + abs(a.se - b.se) * abs(a.se - b.se));
+
+struct Point {
+	ld x, y;
+	// Point (ld X, ld Y) {
+	// 	x = X;
+	// 	y = Y;
+	// }
+};
+
+struct Rect {
+	Point bl, br, tl, tr;
+	Rect (Point Bl, Point Tr) {
+		Point Center({(Bl.x + Tr.x) / 2, (Bl.y + Tr.y) / 2});
+		Point r({abs(Center.x - Bl.x), abs(Center.y - Bl.y)});
+		bl = {Center.x + r.x, Center.y + r.y};
+		br = {Center.x - r.x, Center.y - r.y};
+		tl = {Center.x + r.y, Center.y - r.x};
+		tr = {Center.x - r.y, Center.y + r.x}; 
+	}
+};
+
+struct Line {
+	ld A, B, C;
+	Line (Point a, Point b) {
+		A = a.y - b.y;
+		B = b.x - a.x;
+		C = (a.x * b.y) - (b.x * a.y);
+	}
+};
+
+ld getDist(Point a, Point b) {
+	return hypot(a.x - b.x, a.y - b.y);
 }
 
-struct rect {
-    pair <ld,ld> tl, tr, bl, br;
-    rect(pair <ld,ld> a, pair <ld,ld> b, pair <ld,ld> c, pair <ld,ld> d) {
-      vector <pair <ld,ld>> f = {a,b,c,d};
-      sort(all(f));
-      bl = f[0];
-      tl = f[1];
-      br = f[2];
-      tr = f[3];
-    }
-};
 
 int main() {
   fast_cin();
 
   ll n;
   cin >> n;
-  vector <pair <rect, ll>> a;
-  forn(i,n) {
-    ld x1, y1, x2, y2;
-    cin >> x1 >> y1 >> x2 >> y2;
-    rect r({x1,y1},{x2,y2},{x1,y2},{x2,y1});
-    a.pb({r,i});
-  } ld px, py;
-  cin >> px >> py;
-  bool debug = true;
-  vector <pair <ld, ll>> dist;
-//  for (auto &i : a) {
-//    cout << i.fi.bl.fi << ' ' << i.fi.bl.se << ln;
-//    cout << i.fi.br.fi << ' ' << i.fi.br.se << ln;
-//    cout << i.fi.tl.fi << ' ' << i.fi.tl.se << ln;
-//    cout << i.fi.tr.fi << ' ' << i.fi.tr.se << ln;
-//  }
-  for (auto &i : a) {
-    ld d;
-    rect p = i.fi;
-//    cout << (p.bl.fi >= px) << ln;
-//    cout << (p.br.fi <= px) << ln;
-//    cout << (p.bl.se >= py) << ln;
-//    cout << (p.tl.se <= py) << ln;
-    if (p.bl.fi <= px && p.br.fi >= px && p.bl.se <= py && p.tl.se >= py) {
-      if (debug) cout << "inside" << ln;
-      d = 0;
-    }
-    else if ((p.bl.fi <= px && p.br.fi >= px) || (p.bl.se <= py && p.tl.se >= py)) {
-      if (debug) cout << "side ";
-      if (p.bl.fi <= px && p.br.fi >= px) {
-        if (debug) cout << "x" << ln;
-        if (p.bl.se >= py) d = abs(p.bl.se - py);
-        else d = abs(p.tl.se - py);
-      } else {
-        if (debug) cout << "y" << ln;
-        if (p.bl.fi >= px) d = abs(p.bl.fi - px);
-        else d = abs(p.br.fi - px);
-      }
-    } else {
-      if (debug) cout << "no" << ln;
-      d = min(min(getDist({px, py}, p.tl), getDist({px, py}, p.tr)),
-              min(getDist({px, py}, p.bl), getDist({px, py}, p.br)));
-    }
-    dist.pb({d,i.se});
-  } sort(all(dist));
-  if (debug) for (auto &i : dist) cout << i.fi << ' ';
-  if (debug) cout << ln;
-  for (auto &i : dist) cout << i.se + 1 << ' ';
 
+  vector <Rect> a(n);
+  for (auto &i : a) {
+  	ld x1, y1, x2, y2;
+  	cin >> x1 >> y1 >> x2 >> y2;
+  	Point a(x1, y1), b(x2, y2);
+  	i = Rect(a, b);
+  } vp64 ans(n);
+  ld x, y;
+  cin >> x >> y;
+  Point s(x, y);
+  for (auto &i : a) {
+
+  }
 
 }
