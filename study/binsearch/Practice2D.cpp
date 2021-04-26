@@ -1,29 +1,16 @@
 <<<<<<< HEAD
-<<<<<<< HEAD
-=======
 #pragma GCC optimize("Ofast")
 #pragma GCC target("sse,sse2,sse3,ssse3,sse4,popcnt,abm,mmx,avx,avx2,fma")
 #pragma GCC optimize("unroll-loops")
 #include <bits/stdc++.h>
   
 =======
->>>>>>> 4cedac459bab408b206c83f5a244494e5c8c244a
 // #pragma GCC optimize("Ofast")
 // #pragma GCC target("sse,sse2,sse3,ssse3,sse4,popcnt,abm,mmx,avx,avx2,fma")
 // #pragma GCC optimize("unroll-loops")
 #include <bits/stdc++.h>
 
-<<<<<<< HEAD
-=======
-#pragma GCC optimize("Ofast")
-#pragma GCC target("sse,sse2,sse3,ssse3,sse4,popcnt,abm,mmx,avx,avx2,fma")
-#pragma GCC optimize("unroll-loops")
-#include <bits/stdc++.h>
-  
->>>>>>> 3ea0f8c3a53376f9682af1b30d62f919759f2cdf
-=======
 >>>>>>> 687ac2dc6a6be5ff52518558462a7a29bf8e3088
->>>>>>> 4cedac459bab408b206c83f5a244494e5c8c244a
 using namespace std;
   
 typedef long long ll;
@@ -55,51 +42,6 @@ double eps = 1e-12;
 #define all(x) (x).begin(), (x).end()
 #define sz(x) ((ll)(x).size())
 <<<<<<< HEAD
-<<<<<<< HEAD
-
-struct Human {
-	ll t; // Время надувания одного шара
-	ll z; // Сколько надует перед уставанием
-	ll y; // Сколько отдыхает
-};
-
-ll z, n;
-vector <Human> a;
-
-ll findP(Human i, ll t) {
-	ll ans = 0;
-	ll fullCycleTime = (i.t * i.z) + i.y;
-	ans += (t / fullCycleTime) * i.z;
-	ans += min(i.z, (t % fullCycleTime) / i.t);
-	return ans;
-}
-
-bool good(ll x) {
-	ll ans = 0;
-	for (auto &i : a) ans += findP(i, x);
-	return (ans <= z);
-}
-
-int main() {
-	cin >> z >> n;
-	a.resize(n);
-	for (auto &i : a) cin >> i.t >> i.z >> i.y;
-	ll l = 0;
-	ll r = INF;
-	while(l + 1 < r) {
-		ll m = (l + r) / 2;
-		if (good(m)) l = m;
-		else r = m;
-	} cout << l << ln;
-	for (auto &i : a) {
-		ll x = findP(i,l);
-		cout << min(x, z) << ' ';
-		z -= min(x, z);
-	} 
-}
-=======
-=======
->>>>>>> 4cedac459bab408b206c83f5a244494e5c8c244a
   
 struct Human {
   ll t;
@@ -149,9 +91,6 @@ int main() {
   for (auto &i : a) cout << findB(i, l) << ' ';
 
 }
-<<<<<<< HEAD
->>>>>>> 3ea0f8c3a53376f9682af1b30d62f919759f2cdf
-=======
 =======
 
 struct Human {
@@ -195,4 +134,3 @@ int main() {
 	} 
 }
 >>>>>>> 687ac2dc6a6be5ff52518558462a7a29bf8e3088
->>>>>>> 4cedac459bab408b206c83f5a244494e5c8c244a
