@@ -53,7 +53,11 @@ int main() {
   ll n = sz(s1), m = sz(s2);
   vector <vector <b>> dp(n + 1, vector <b> (m + 1, {0, false, ""}));
   dp[0][0].possible = true;
-  
+  forsn(i,1,n + 1) {
+    if (dp[i - 1][0].possible && s1[i - 1] == '*') dp[i][0].possible = true;
+  } forsn(i,1,m + 1) {
+    if (dp[0][i - 1].possible && s2[i - 1] == '*') dp[0][i].possible = true;
+  }
   forsn(i,1,n + 1) {
     forsn(j,1,m + 1) {
       vector <b> pos;
@@ -67,7 +71,11 @@ int main() {
         x.len++;
         x.p += 'a';
         pos.pb(x);
-      } else if (s1[i - 1] == '*' && s2[j - 1] == '*') pos.pb(dp[i - 1][j - 1]);
+      } else if (s1[i - 1] == '*' && s2[j - 1] == '*') {
+        pos.pb(dp[i - 1][j - 1]);
+        pos.pb(dp[i][j - 1]);
+        pos.pb(dp[i - 1][j]);
+      }
       else if (s1[i - 1] == '?' && isalpha(s2[j - 1])) {
         b x = dp[i - 1][j - 1];
         x.len++;
