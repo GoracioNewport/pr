@@ -7,7 +7,7 @@
 
 using namespace std;
 
-typedef long long ll;
+typedef int ll;
 typedef long double ld;
 typedef pair<int,int> p32;
 typedef pair<ll,ll> p64;
@@ -41,7 +41,7 @@ enum { ADD, REPLACE };
 struct block {
   ll ans;
   bool left;
-  ll type;
+  bool type;
   ll ind;
   bool operator <(const block &o) const {
     return ans < o.ans;
@@ -54,15 +54,16 @@ vector <vector <block>> dp;
 string path;
 
 map <char, char> p = {
-    {'{', '}'},
+    {'[', ']'},
     {'(', ')'},
-    {'}', '{'},
+    {']', '['},
     {')', '('}
 };
 
+// ([(]
 
 string f(ll i, ll j) {
-  cout << i << ' ' << j << ln;
+//  cout << i << ' ' << j << ln;
   string l = "";
   if (i > j) return l;
   if (i == j) {
@@ -72,10 +73,10 @@ string f(ll i, ll j) {
   if (dp[i][j].left && !dp[i][j].type) { // LEFT ADD
     ll k = dp[i][j].ind;
     l += s[i] + f(i + 1, k) + p[s[i]] + f(k + 1, j);
-  } else if (dp[i][j].left && !dp[i][j].type) { // LEFT REPLACE
+  } else if (dp[i][j].left && dp[i][j].type) { // LEFT REPLACE
     ll k = dp[i][j].ind;
     l += s[i] + f(i + 1, k - 1) + p[s[i]] + f(k + 1, j);
-  } else if (dp[i][j].left && !dp[i][j].type) { // RIGHT ADD
+  } else if (!dp[i][j].left && !dp[i][j].type) { // RIGHT ADD
     ll k = dp[i][j].ind;
     l += f(i, k) + p[s[j]] + f(k + 1, j - 1) + s[j];
   } else { // RIGHT REPLACE
@@ -189,9 +190,9 @@ int main() {
 
   cout << f(0, n - 1) << ln;
 
-  for (auto &i : dp) {
-    for (auto &j : i) cout << j.ans << ' ' << j.left << ' ' << j.type << ' ' << j.ind << " - ";
-    cout << ln;
-  }
+//  for (auto &i : dp) {
+//    for (auto &j : i) cout << j.ans << ' ' << j.left << ' ' << j.type << ' ' << j.ind << " - ";
+//    cout << ln;
+//  }
 
 }
