@@ -142,32 +142,32 @@ study/fast:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/study.dir/build.make CMakeFiles/study.dir/build
 .PHONY : study/fast
 
-dp/informatics/5H.o: dp/informatics/5H.cpp.o
+codeforces/1519/D.o: codeforces/1519/D.cpp.o
 
-.PHONY : dp/informatics/5H.o
+.PHONY : codeforces/1519/D.o
 
 # target to build an object file
-dp/informatics/5H.cpp.o:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/study.dir/build.make CMakeFiles/study.dir/dp/informatics/5H.cpp.o
-.PHONY : dp/informatics/5H.cpp.o
+codeforces/1519/D.cpp.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/study.dir/build.make CMakeFiles/study.dir/codeforces/1519/D.cpp.o
+.PHONY : codeforces/1519/D.cpp.o
 
-dp/informatics/5H.i: dp/informatics/5H.cpp.i
+codeforces/1519/D.i: codeforces/1519/D.cpp.i
 
-.PHONY : dp/informatics/5H.i
+.PHONY : codeforces/1519/D.i
 
 # target to preprocess a source file
-dp/informatics/5H.cpp.i:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/study.dir/build.make CMakeFiles/study.dir/dp/informatics/5H.cpp.i
-.PHONY : dp/informatics/5H.cpp.i
+codeforces/1519/D.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/study.dir/build.make CMakeFiles/study.dir/codeforces/1519/D.cpp.i
+.PHONY : codeforces/1519/D.cpp.i
 
-dp/informatics/5H.s: dp/informatics/5H.cpp.s
+codeforces/1519/D.s: codeforces/1519/D.cpp.s
 
-.PHONY : dp/informatics/5H.s
+.PHONY : codeforces/1519/D.s
 
 # target to generate assembly for a file
-dp/informatics/5H.cpp.s:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/study.dir/build.make CMakeFiles/study.dir/dp/informatics/5H.cpp.s
-.PHONY : dp/informatics/5H.cpp.s
+codeforces/1519/D.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/study.dir/build.make CMakeFiles/study.dir/codeforces/1519/D.cpp.s
+.PHONY : codeforces/1519/D.cpp.s
 
 # Help Target
 help:
@@ -178,9 +178,9 @@ help:
 	@echo "... edit_cache"
 	@echo "... rebuild_cache"
 	@echo "... study"
-	@echo "... dp/informatics/5H.o"
-	@echo "... dp/informatics/5H.i"
-	@echo "... dp/informatics/5H.s"
+	@echo "... codeforces/1519/D.o"
+	@echo "... codeforces/1519/D.i"
+	@echo "... codeforces/1519/D.s"
 .PHONY : help
 
 
