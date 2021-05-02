@@ -7,7 +7,7 @@
 
 using namespace std;
 
-typedef int ll;
+typedef long long ll;
 typedef long double ld;
 typedef pair<int,int> p32;
 typedef pair<ll,ll> p64;
@@ -51,7 +51,6 @@ struct block {
 string s;
 ll n;
 vector <vector <block>> dp;
-string path;
 
 map <char, char> p = {
     {'[', ']'},
@@ -60,139 +59,141 @@ map <char, char> p = {
     {')', '('}
 };
 
+map <pair <char, char>, bool> match {
+    {{'(', ')'}, true},
+    {{'[', ']'}, true}
+};
+
 // ([(]
 
 string f(ll i, ll j) {
-//  cout << i << ' ' << j << ln;
-  string l = "";
-  if (i > j) return l;
-  if (i == j) {
-    if (s[i] == '(' || s[i] == '[') return {s[i], p[s[i]]};
-    else return {p[s[i]], s[i]};
-  }
-  if (dp[i][j].left && !dp[i][j].type) { // LEFT ADD
+  if (i > j) return "";
+  string q = "";
+  if (dp[i][j].left && dp[i][j].type == ADD) { // LEFT ADD
     ll k = dp[i][j].ind;
-    l += s[i] + f(i + 1, k) + p[s[i]] + f(k + 1, j);
-  } else if (dp[i][j].left && dp[i][j].type) { // LEFT REPLACE
+    q += s[i - 1] + f(i + 1, k) + p[s[i - 1]] + f(k + 1, j);
+  } else if (dp[i][j].left && dp[i][j].type == REPLACE) { // LEFT REPLACE
     ll k = dp[i][j].ind;
-    l += s[i] + f(i + 1, k - 1) + p[s[i]] + f(k + 1, j);
-  } else if (!dp[i][j].left && !dp[i][j].type) { // RIGHT ADD
+    q += s[i - 1] + f(i + 1, k - 1) + p[s[i - 1]] + f(k + 1, j);
+  } else if (!dp[i][j].left && dp[i][j].type == ADD) { // RIGHT ADD
     ll k = dp[i][j].ind;
-    l += f(i, k) + p[s[j]] + f(k + 1, j - 1) + s[j];
-  } else { // RIGHT REPLACE
+    q += f(i, k) + p[s[j - 1]] + f(k + 1, j - 1) + s[j - 1];
+  } else if (!dp[i][j].left && dp[i][j].type == REPLACE) { // RIGHT REPLACE
     ll k = dp[i][j].ind;
-    l += f(i, k - 1) + p[s[j]] + f(k + 1, j - 1) + s[j];
-  } return l;
+    q += f(i, k - 1) + p[s[j - 1]] + f(k + 1, j - 1) + s[j - 1];
+  } return q;
 }
 
 int main() {
-  fast_cin();
+//  fast_cin();
+
   cin >> s;
   n = sz(s);
-  dp.resize(n, vector <block> (n, {0,0,0,0}));
-  map <pair <char, char>, bool> match = {
-      {{'(', ')'}, true},
-      {{'[', ']'}, true},
-  };
-
-  forn(i,n) {
+  dp.resize(n + 2, vector <block> (n + 2));
+  forsn(i,1,n + 1) {
     dp[i][i].ans = 1;
     dp[i][i].left = true;
     dp[i][i].type = ADD;
-    if (s[i] == '(' || s[i] == '[') dp[i][i].ind = i;
+    if (s[i - 1] == '(' || s[i - 1] == '[') dp[i][i].ind = i;
     else dp[i][i].ind = i - 1;
   }
 
   for (ll len = 2; len <= n; len++) {
-    for (ll i = 0; i < n - len + 1; i++) {
+    for (ll i = 1; i <= n - len + 1; i++) {
       ll j = i + len - 1;
-      block ans = {INF, 0,0,0};
-      // dp[i + 1][j]
-      if (s[i] == ')' || s[i] == ']') {
-        ans = dp[i + 1][j];
-        ans.ans++;
-        ans.left = true;
-        ans.type = ADD;
-        ans.ind = i - 1;
-      } else {
-        { // ADD
-          for (ll k = i; k < j; k++) {
-            block New;
-            New.ans = dp[i + 1][k].ans + dp[k + 1][j].ans + 1;
-            New.left = true;
-            New.type = ADD;
-            New.ind = k;
-            ans = min(ans, New);
+      block ans = {INF, false, ADD, -1};
+
+      { // LEFT
+
+
+        if (s[i - 1] == ')' || s[i - 1] == ']') {
+          cout << "LEFT" << endl;
+          block q;
+          q.ans = dp[i + 1][j].ans + 1;
+          q.left = true;
+          q.type = ADD;
+          q.ind = i - 1;
+          ans = min(ans, q);
+        } else {
+
+          // ADD
+          for (ll k = i; k <= j; k++) {
+            block q;
+            q.ans = dp[i + 1][k].ans + dp[k + 1][j].ans + 1;
+            q.left = true;
+            q.type = ADD;
+            q.ind = k;
+            ans = min(ans, q);
+          }
+
+          // REPLACE
+
+          for (ll k = i + 1; k <= j; k++) {
+            if (!match[{s[i - 1], s[k - 1]}]) continue;
+            block q;
+            q.ans = dp[i + 1][k - 1].ans + dp[k + 1][j].ans;
+            q.left = true;
+            q.type = REPLACE;
+            q.ind = k;
+            ans = min(ans, q);
           }
         }
 
-        { // REPLACE
-          for (ll k = i + 1; k < j; k++) {
-            if (!match[{s[i], s[k]}]) continue;
-            block New;
-            New.ans = dp[i + 1][k - 1].ans + dp[k + 1][j].ans;
-            New.left = true;
-            New.type = REPLACE;
-            New.ind = k;
-            ans = min(ans, New);
-          } if (match[{s[i], s[j]}]) {
-            block New;
-            New.ans = dp[i + 1][j - 1].ans;
-            New.left = true;
-            New.type = REPLACE;
-            New.ind = j;
-            ans = min(ans, New);
-          }
-        }
+
       }
 
-      // dp[i][j - 1]
 
-      if (s[j] == '(' || s[j] == '[') {
-        ans = dp[i][j - 1];
-        ans.ans++;
-        ans.left = false;
-        ans.type = ADD;
-        ans.ind = j;
-      } else {
-        { // ADD
+      { // RIGHT
+
+        if (s[j - 1] == '(' || s[j - 1] == '[') {
+          cout << "RIGHT" << endl;
+          block q;
+          q.ans = dp[i][j - 1].ans + 1;
+          q.left = false;
+          q.type = ADD;
+          q.ind = j;
+          ans = min(ans, q);
+        } else {
+          // ADD
           for (ll k = i - 1; k < j; k++) {
-            block New;
-            New.ans = dp[i][k].ans + dp[k + 1][j - 1].ans + 1;
-            New.left = false;
-            New.type = ADD;
-            New.ind = k;
-            ans = min(ans, New);
+            block q;
+            q.ans = dp[i][k].ans + dp[k + 1][j - 1].ans + 1;
+            q.left = false;
+            q.type = ADD;
+            q.ind = k;
+            ans = min(ans, q);
           }
-        }
 
-        { // REPLACE
-          for (ll k = i + 1; k < j; k++) {
-            if (!match[{s[k], s[j]}]) continue;
-            block New;
-            New.ans = dp[i][k - 1].ans + dp[k + 1][j - 1].ans;
-            New.left = false;
-            New.type = REPLACE;
-            New.ind = k;
-            ans = min(ans, New);
-          } if (match[{s[i], s[j]}]) {
-            block New;
-            New.ans = dp[i + 1][j - 1].ans;
-            New.left = false;
-            New.type = REPLACE;
-            New.ind = i;
-            ans = min(ans, New);
+          // REPLACE
+          for (ll k = i; k < j; k++) {
+            if (!match[{s[k - 1], s[j - 1]}]) continue;
+            block q;
+            q.ans = dp[i][k - 1].ans + dp[k + 1][j - 1].ans;
+            q.left = false;
+            q.type = REPLACE;
+            q.ind = k;
+            ans = min(ans, q);
           }
         }
       } dp[i][j] = ans;
     }
   }
 
-  cout << f(0, n - 1) << ln;
 
-//  for (auto &i : dp) {
-//    for (auto &j : i) cout << j.ans << ' ' << j.left << ' ' << j.type << ' ' << j.ind << " - ";
-//    cout << ln;
-//  }
+  cout << dp[1][n].ans << ln;
+
+  for (auto &i : dp) {
+    for (auto &j : i) cout << j.ans << ' ' << j.left << ' ' << j.type << ' ' << j.ind << " - ";
+    cout << endl;
+  }
+
+  cout << f(1, n) << ln;
 
 }
+
+//3
+//0 0 0 0 - 0 0 0 0 - 0 0 0 0 - 0 0 0 0 - 0 0 0 0 -
+//0 0 0 0 - 1 1 0 1 - 2 1 0 1 - 3 1 0 1 - 0 0 0 0 -
+//0 0 0 0 - 0 0 0 0 - 1 1 0 2 - 2 1 0 2 - 0 0 0 0 -
+//0 0 0 0 - 0 0 0 0 - 0 0 0 0 - 1 1 0 3 - 0 0 0 0 -
+//0 0 0 0 - 0 0 0 0 - 0 0 0 0 - 0 0 0 0 - 0 0 0 0 -
