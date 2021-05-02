@@ -112,8 +112,8 @@ int main() {
 
         if (s[i - 1] == ')' || s[i - 1] == ']') {
           block q;
-          q.ans = dp[i + 1][j].ans + 1;
-          q.left = false;
+          q.ans = INF;
+          q.left = true;
           q.type = ADD;
           q.ind = i - 1;
           ans = min(ans, q);
@@ -150,7 +150,7 @@ int main() {
 
         if (s[j - 1] == '(' || s[j - 1] == '[') {
           block q;
-          q.ans = dp[i][j - 1].ans + 1;
+          q.ans = INF;
           q.left = false;
           q.type = ADD;
           q.ind = j;

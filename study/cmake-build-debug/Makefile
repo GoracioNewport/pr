@@ -142,32 +142,32 @@ study/fast:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/study.dir/build.make CMakeFiles/study.dir/build
 .PHONY : study/fast
 
-timus/1183.o: timus/1183.cpp.o
+codeforces/1515/D.o: codeforces/1515/D.cpp.o
 
-.PHONY : timus/1183.o
+.PHONY : codeforces/1515/D.o
 
 # target to build an object file
-timus/1183.cpp.o:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/study.dir/build.make CMakeFiles/study.dir/timus/1183.cpp.o
-.PHONY : timus/1183.cpp.o
+codeforces/1515/D.cpp.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/study.dir/build.make CMakeFiles/study.dir/codeforces/1515/D.cpp.o
+.PHONY : codeforces/1515/D.cpp.o
 
-timus/1183.i: timus/1183.cpp.i
+codeforces/1515/D.i: codeforces/1515/D.cpp.i
 
-.PHONY : timus/1183.i
+.PHONY : codeforces/1515/D.i
 
 # target to preprocess a source file
-timus/1183.cpp.i:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/study.dir/build.make CMakeFiles/study.dir/timus/1183.cpp.i
-.PHONY : timus/1183.cpp.i
+codeforces/1515/D.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/study.dir/build.make CMakeFiles/study.dir/codeforces/1515/D.cpp.i
+.PHONY : codeforces/1515/D.cpp.i
 
-timus/1183.s: timus/1183.cpp.s
+codeforces/1515/D.s: codeforces/1515/D.cpp.s
 
-.PHONY : timus/1183.s
+.PHONY : codeforces/1515/D.s
 
 # target to generate assembly for a file
-timus/1183.cpp.s:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/study.dir/build.make CMakeFiles/study.dir/timus/1183.cpp.s
-.PHONY : timus/1183.cpp.s
+codeforces/1515/D.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/study.dir/build.make CMakeFiles/study.dir/codeforces/1515/D.cpp.s
+.PHONY : codeforces/1515/D.cpp.s
 
 # Help Target
 help:
@@ -178,9 +178,9 @@ help:
 	@echo "... edit_cache"
 	@echo "... rebuild_cache"
 	@echo "... study"
-	@echo "... timus/1183.o"
-	@echo "... timus/1183.i"
-	@echo "... timus/1183.s"
+	@echo "... codeforces/1515/D.o"
+	@echo "... codeforces/1515/D.i"
+	@echo "... codeforces/1515/D.s"
 .PHONY : help
 
 
