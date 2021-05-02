@@ -92,10 +92,14 @@ int main() {
   dp.resize(n + 2, vector <block> (n + 2));
   forsn(i,1,n + 1) {
     dp[i][i].ans = 1;
-    dp[i][i].left = true;
     dp[i][i].type = ADD;
-    if (s[i - 1] == '(' || s[i - 1] == '[') dp[i][i].ind = i;
-    else dp[i][i].ind = i - 1;
+    if (s[i - 1] == '(' || s[i - 1] == '[') {
+      dp[i][i].ind = i;
+      dp[i][i].left = true;
+    } else {
+      dp[i][i].ind = i - 1;
+      dp[i][i].left = false;
+    }
   }
 
   for (ll len = 2; len <= n; len++) {
@@ -107,10 +111,9 @@ int main() {
 
 
         if (s[i - 1] == ')' || s[i - 1] == ']') {
-          cout << "LEFT" << endl;
           block q;
           q.ans = dp[i + 1][j].ans + 1;
-          q.left = true;
+          q.left = false;
           q.type = ADD;
           q.ind = i - 1;
           ans = min(ans, q);
@@ -146,7 +149,6 @@ int main() {
       { // RIGHT
 
         if (s[j - 1] == '(' || s[j - 1] == '[') {
-          cout << "RIGHT" << endl;
           block q;
           q.ans = dp[i][j - 1].ans + 1;
           q.left = false;
@@ -180,12 +182,12 @@ int main() {
   }
 
 
-  cout << dp[1][n].ans << ln;
-
-  for (auto &i : dp) {
-    for (auto &j : i) cout << j.ans << ' ' << j.left << ' ' << j.type << ' ' << j.ind << " - ";
-    cout << endl;
-  }
+//  cout << dp[1][n].ans << ln;
+//
+//  for (auto &i : dp) {
+//    for (auto &j : i) cout << j.ans << ' ' << j.left << ' ' << j.type << ' ' << j.ind << " - ";
+//    cout << endl;
+//  }
 
   cout << f(1, n) << ln;
 
