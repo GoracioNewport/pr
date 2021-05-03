@@ -142,32 +142,32 @@ study/fast:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/study.dir/build.make CMakeFiles/study.dir/build
 .PHONY : study/fast
 
-codeforces/1515/D.o: codeforces/1515/D.cpp.o
+codeforces/practice/1517D.o: codeforces/practice/1517D.cpp.o
 
-.PHONY : codeforces/1515/D.o
+.PHONY : codeforces/practice/1517D.o
 
 # target to build an object file
-codeforces/1515/D.cpp.o:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/study.dir/build.make CMakeFiles/study.dir/codeforces/1515/D.cpp.o
-.PHONY : codeforces/1515/D.cpp.o
+codeforces/practice/1517D.cpp.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/study.dir/build.make CMakeFiles/study.dir/codeforces/practice/1517D.cpp.o
+.PHONY : codeforces/practice/1517D.cpp.o
 
-codeforces/1515/D.i: codeforces/1515/D.cpp.i
+codeforces/practice/1517D.i: codeforces/practice/1517D.cpp.i
 
-.PHONY : codeforces/1515/D.i
+.PHONY : codeforces/practice/1517D.i
 
 # target to preprocess a source file
-codeforces/1515/D.cpp.i:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/study.dir/build.make CMakeFiles/study.dir/codeforces/1515/D.cpp.i
-.PHONY : codeforces/1515/D.cpp.i
+codeforces/practice/1517D.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/study.dir/build.make CMakeFiles/study.dir/codeforces/practice/1517D.cpp.i
+.PHONY : codeforces/practice/1517D.cpp.i
 
-codeforces/1515/D.s: codeforces/1515/D.cpp.s
+codeforces/practice/1517D.s: codeforces/practice/1517D.cpp.s
 
-.PHONY : codeforces/1515/D.s
+.PHONY : codeforces/practice/1517D.s
 
 # target to generate assembly for a file
-codeforces/1515/D.cpp.s:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/study.dir/build.make CMakeFiles/study.dir/codeforces/1515/D.cpp.s
-.PHONY : codeforces/1515/D.cpp.s
+codeforces/practice/1517D.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/study.dir/build.make CMakeFiles/study.dir/codeforces/practice/1517D.cpp.s
+.PHONY : codeforces/practice/1517D.cpp.s
 
 # Help Target
 help:
@@ -178,9 +178,9 @@ help:
 	@echo "... edit_cache"
 	@echo "... rebuild_cache"
 	@echo "... study"
-	@echo "... codeforces/1515/D.o"
-	@echo "... codeforces/1515/D.i"
-	@echo "... codeforces/1515/D.s"
+	@echo "... codeforces/practice/1517D.o"
+	@echo "... codeforces/practice/1517D.i"
+	@echo "... codeforces/practice/1517D.s"
 .PHONY : help
 
 
