@@ -43,6 +43,6 @@ int main() {
   cin >> n;
   v64 a(n);
   for (auto &i : a) cin >> i;
-  
+
 
 }

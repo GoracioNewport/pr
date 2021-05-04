@@ -36,12 +36,12 @@ double eps = 1e-12;
 #define all(x) (x).begin(), (x).end()
 #define sz(x) ((ll)(x).size())
 
-enum { ADD, REPLACE };
+enum { ADD, REPLACE, EDGE };
 
 struct block {
   ll ans;
   bool left;
-  bool type;
+  ll type;
   ll ind;
   bool operator <(const block &o) const {
     return ans < o.ans;
@@ -81,7 +81,18 @@ string f(ll i, ll j) {
   } else if (!dp[i][j].left && dp[i][j].type == REPLACE) { // RIGHT REPLACE
     ll k = dp[i][j].ind;
     q += f(i, k - 1) + p[s[j - 1]] + f(k + 1, j - 1) + s[j - 1];
-  } return q;
+  } else if (dp[i][j].left && dp[i][j].type == EDGE) {
+    ll k = dp[i][j].ind;
+    q += {p[s[i - 1]], s[i - 1]};
+    q += f(i + 1, j);
+  } else if (!dp[i][j].left && dp[i][j].type == EDGE) {
+    ll k = dp[i][j].ind;
+    q += f(i, j - 1);
+    q += {s[j - 1], p[s[j - 1]]};
+  }
+
+
+  return q;
 }
 
 int main() {
@@ -112,9 +123,9 @@ int main() {
 
         if (s[i - 1] == ')' || s[i - 1] == ']') {
           block q;
-          q.ans = INF;
+          q.ans = dp[i + 1][j].ans + 1;
           q.left = true;
-          q.type = ADD;
+          q.type = EDGE;
           q.ind = i - 1;
           ans = min(ans, q);
         } else {
@@ -150,9 +161,9 @@ int main() {
 
         if (s[j - 1] == '(' || s[j - 1] == '[') {
           block q;
-          q.ans = INF;
+          q.ans = dp[i][j - 1].ans + 1;
           q.left = false;
-          q.type = ADD;
+          q.type = EDGE;
           q.ind = j;
           ans = min(ans, q);
         } else {

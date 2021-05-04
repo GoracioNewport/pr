@@ -1,1 +1,1 @@
-/usr/bin/c++ -g CMakeFiles/study.dir/codeforces/practice/1517D.cpp.o -o study 
+/usr/bin/c++ -g CMakeFiles/study.dir/timus/1183.cpp.o -o study 

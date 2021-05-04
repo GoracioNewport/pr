@@ -76,27 +76,27 @@ include CMakeFiles/study.dir/progress.make
 # Include the compile flags for this target's objects.
 include CMakeFiles/study.dir/flags.make
 
-CMakeFiles/study.dir/codeforces/practice/1517D.cpp.o: CMakeFiles/study.dir/flags.make
-CMakeFiles/study.dir/codeforces/practice/1517D.cpp.o: ../codeforces/practice/1517D.cpp
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/mnt/hdd/pr/study/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_1) "Building CXX object CMakeFiles/study.dir/codeforces/practice/1517D.cpp.o"
-	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/study.dir/codeforces/practice/1517D.cpp.o -c /mnt/hdd/pr/study/codeforces/practice/1517D.cpp
+CMakeFiles/study.dir/timus/1183.cpp.o: CMakeFiles/study.dir/flags.make
+CMakeFiles/study.dir/timus/1183.cpp.o: ../timus/1183.cpp
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/mnt/hdd/pr/study/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_1) "Building CXX object CMakeFiles/study.dir/timus/1183.cpp.o"
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/study.dir/timus/1183.cpp.o -c /mnt/hdd/pr/study/timus/1183.cpp
 
-CMakeFiles/study.dir/codeforces/practice/1517D.cpp.i: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/study.dir/codeforces/practice/1517D.cpp.i"
-	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /mnt/hdd/pr/study/codeforces/practice/1517D.cpp > CMakeFiles/study.dir/codeforces/practice/1517D.cpp.i
+CMakeFiles/study.dir/timus/1183.cpp.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/study.dir/timus/1183.cpp.i"
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /mnt/hdd/pr/study/timus/1183.cpp > CMakeFiles/study.dir/timus/1183.cpp.i
 
-CMakeFiles/study.dir/codeforces/practice/1517D.cpp.s: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/study.dir/codeforces/practice/1517D.cpp.s"
-	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /mnt/hdd/pr/study/codeforces/practice/1517D.cpp -o CMakeFiles/study.dir/codeforces/practice/1517D.cpp.s
+CMakeFiles/study.dir/timus/1183.cpp.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/study.dir/timus/1183.cpp.s"
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /mnt/hdd/pr/study/timus/1183.cpp -o CMakeFiles/study.dir/timus/1183.cpp.s
 
 # Object files for target study
 study_OBJECTS = \
-"CMakeFiles/study.dir/codeforces/practice/1517D.cpp.o"
+"CMakeFiles/study.dir/timus/1183.cpp.o"
 
 # External object files for target study
 study_EXTERNAL_OBJECTS =
 
-study: CMakeFiles/study.dir/codeforces/practice/1517D.cpp.o
+study: CMakeFiles/study.dir/timus/1183.cpp.o
 study: CMakeFiles/study.dir/build.make
 study: CMakeFiles/study.dir/link.txt
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --bold --progress-dir=/mnt/hdd/pr/study/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_2) "Linking CXX executable study"

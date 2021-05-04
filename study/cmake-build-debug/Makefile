@@ -142,32 +142,32 @@ study/fast:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/study.dir/build.make CMakeFiles/study.dir/build
 .PHONY : study/fast
 
-codeforces/practice/1517D.o: codeforces/practice/1517D.cpp.o
+timus/1183.o: timus/1183.cpp.o
 
-.PHONY : codeforces/practice/1517D.o
+.PHONY : timus/1183.o
 
 # target to build an object file
-codeforces/practice/1517D.cpp.o:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/study.dir/build.make CMakeFiles/study.dir/codeforces/practice/1517D.cpp.o
-.PHONY : codeforces/practice/1517D.cpp.o
+timus/1183.cpp.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/study.dir/build.make CMakeFiles/study.dir/timus/1183.cpp.o
+.PHONY : timus/1183.cpp.o
 
-codeforces/practice/1517D.i: codeforces/practice/1517D.cpp.i
+timus/1183.i: timus/1183.cpp.i
 
-.PHONY : codeforces/practice/1517D.i
+.PHONY : timus/1183.i
 
 # target to preprocess a source file
-codeforces/practice/1517D.cpp.i:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/study.dir/build.make CMakeFiles/study.dir/codeforces/practice/1517D.cpp.i
-.PHONY : codeforces/practice/1517D.cpp.i
+timus/1183.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/study.dir/build.make CMakeFiles/study.dir/timus/1183.cpp.i
+.PHONY : timus/1183.cpp.i
 
-codeforces/practice/1517D.s: codeforces/practice/1517D.cpp.s
+timus/1183.s: timus/1183.cpp.s
 
-.PHONY : codeforces/practice/1517D.s
+.PHONY : timus/1183.s
 
 # target to generate assembly for a file
-codeforces/practice/1517D.cpp.s:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/study.dir/build.make CMakeFiles/study.dir/codeforces/practice/1517D.cpp.s
-.PHONY : codeforces/practice/1517D.cpp.s
+timus/1183.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/study.dir/build.make CMakeFiles/study.dir/timus/1183.cpp.s
+.PHONY : timus/1183.cpp.s
 
 # Help Target
 help:
@@ -178,9 +178,9 @@ help:
 	@echo "... edit_cache"
 	@echo "... rebuild_cache"
 	@echo "... study"
-	@echo "... codeforces/practice/1517D.o"
-	@echo "... codeforces/practice/1517D.i"
-	@echo "... codeforces/practice/1517D.s"
+	@echo "... timus/1183.o"
+	@echo "... timus/1183.i"
+	@echo "... timus/1183.s"
 .PHONY : help
 
 
