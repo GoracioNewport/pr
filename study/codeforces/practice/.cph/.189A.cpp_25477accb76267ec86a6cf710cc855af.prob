@@ -1,1 +1,0 @@
-{"name":"Local: 189A","url":"/mnt/hdd/pr/study/codeforces/practice/189A.cpp","tests":[{"id":1611672555000,"input":"5 5 3 2\n","output":"2"},{"id":1611672563060,"input":"7 5 5 2\n","output":"2"}],"interactive":false,"memoryLimit":1024,"timeLimit":3000,"srcPath":"/mnt/hdd/pr/study/codeforces/practice/189A.cpp","group":"local","local":true}
