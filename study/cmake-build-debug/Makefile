@@ -58,10 +58,10 @@ cmake_force:
 SHELL = /bin/sh
 
 # The CMake executable.
-CMAKE_COMMAND = /snap/clion/151/bin/cmake/linux/bin/cmake
+CMAKE_COMMAND = /snap/clion/152/bin/cmake/linux/bin/cmake
 
 # The command to remove a file.
-RM = /snap/clion/151/bin/cmake/linux/bin/cmake -E rm -f
+RM = /snap/clion/152/bin/cmake/linux/bin/cmake -E rm -f
 
 # Escaping for special characters.
 EQUALS = =
@@ -78,7 +78,7 @@ CMAKE_BINARY_DIR = /mnt/hdd/pr/study/cmake-build-debug
 # Special rule for the target rebuild_cache
 rebuild_cache:
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --cyan "Running CMake to regenerate build system..."
-	/snap/clion/151/bin/cmake/linux/bin/cmake --regenerate-during-build -S$(CMAKE_SOURCE_DIR) -B$(CMAKE_BINARY_DIR)
+	/snap/clion/152/bin/cmake/linux/bin/cmake --regenerate-during-build -S$(CMAKE_SOURCE_DIR) -B$(CMAKE_BINARY_DIR)
 .PHONY : rebuild_cache
 
 # Special rule for the target rebuild_cache
@@ -89,7 +89,7 @@ rebuild_cache/fast: rebuild_cache
 # Special rule for the target edit_cache
 edit_cache:
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --cyan "No interactive CMake dialog available..."
-	/snap/clion/151/bin/cmake/linux/bin/cmake -E echo No\ interactive\ CMake\ dialog\ available.
+	/snap/clion/152/bin/cmake/linux/bin/cmake -E echo No\ interactive\ CMake\ dialog\ available.
 .PHONY : edit_cache
 
 # Special rule for the target edit_cache
@@ -142,32 +142,32 @@ study/fast:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/study.dir/build.make CMakeFiles/study.dir/build
 .PHONY : study/fast
 
-timus/1183.o: timus/1183.cpp.o
+codeforces/1536/C.o: codeforces/1536/C.cpp.o
 
-.PHONY : timus/1183.o
+.PHONY : codeforces/1536/C.o
 
 # target to build an object file
-timus/1183.cpp.o:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/study.dir/build.make CMakeFiles/study.dir/timus/1183.cpp.o
-.PHONY : timus/1183.cpp.o
+codeforces/1536/C.cpp.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/study.dir/build.make CMakeFiles/study.dir/codeforces/1536/C.cpp.o
+.PHONY : codeforces/1536/C.cpp.o
 
-timus/1183.i: timus/1183.cpp.i
+codeforces/1536/C.i: codeforces/1536/C.cpp.i
 
-.PHONY : timus/1183.i
+.PHONY : codeforces/1536/C.i
 
 # target to preprocess a source file
-timus/1183.cpp.i:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/study.dir/build.make CMakeFiles/study.dir/timus/1183.cpp.i
-.PHONY : timus/1183.cpp.i
+codeforces/1536/C.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/study.dir/build.make CMakeFiles/study.dir/codeforces/1536/C.cpp.i
+.PHONY : codeforces/1536/C.cpp.i
 
-timus/1183.s: timus/1183.cpp.s
+codeforces/1536/C.s: codeforces/1536/C.cpp.s
 
-.PHONY : timus/1183.s
+.PHONY : codeforces/1536/C.s
 
 # target to generate assembly for a file
-timus/1183.cpp.s:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/study.dir/build.make CMakeFiles/study.dir/timus/1183.cpp.s
-.PHONY : timus/1183.cpp.s
+codeforces/1536/C.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/study.dir/build.make CMakeFiles/study.dir/codeforces/1536/C.cpp.s
+.PHONY : codeforces/1536/C.cpp.s
 
 # Help Target
 help:
@@ -178,9 +178,9 @@ help:
 	@echo "... edit_cache"
 	@echo "... rebuild_cache"
 	@echo "... study"
-	@echo "... timus/1183.o"
-	@echo "... timus/1183.i"
-	@echo "... timus/1183.s"
+	@echo "... codeforces/1536/C.o"
+	@echo "... codeforces/1536/C.i"
+	@echo "... codeforces/1536/C.s"
 .PHONY : help
 
 
