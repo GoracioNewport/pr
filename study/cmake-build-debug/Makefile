@@ -142,32 +142,32 @@ study/fast:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/study.dir/build.make CMakeFiles/study.dir/build
 .PHONY : study/fast
 
-codeforces/1536/C.o: codeforces/1536/C.cpp.o
+codeforces/technocup/final2021/CNew.o: codeforces/technocup/final2021/CNew.cpp.o
 
-.PHONY : codeforces/1536/C.o
+.PHONY : codeforces/technocup/final2021/CNew.o
 
 # target to build an object file
-codeforces/1536/C.cpp.o:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/study.dir/build.make CMakeFiles/study.dir/codeforces/1536/C.cpp.o
-.PHONY : codeforces/1536/C.cpp.o
+codeforces/technocup/final2021/CNew.cpp.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/study.dir/build.make CMakeFiles/study.dir/codeforces/technocup/final2021/CNew.cpp.o
+.PHONY : codeforces/technocup/final2021/CNew.cpp.o
 
-codeforces/1536/C.i: codeforces/1536/C.cpp.i
+codeforces/technocup/final2021/CNew.i: codeforces/technocup/final2021/CNew.cpp.i
 
-.PHONY : codeforces/1536/C.i
+.PHONY : codeforces/technocup/final2021/CNew.i
 
 # target to preprocess a source file
-codeforces/1536/C.cpp.i:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/study.dir/build.make CMakeFiles/study.dir/codeforces/1536/C.cpp.i
-.PHONY : codeforces/1536/C.cpp.i
+codeforces/technocup/final2021/CNew.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/study.dir/build.make CMakeFiles/study.dir/codeforces/technocup/final2021/CNew.cpp.i
+.PHONY : codeforces/technocup/final2021/CNew.cpp.i
 
-codeforces/1536/C.s: codeforces/1536/C.cpp.s
+codeforces/technocup/final2021/CNew.s: codeforces/technocup/final2021/CNew.cpp.s
 
-.PHONY : codeforces/1536/C.s
+.PHONY : codeforces/technocup/final2021/CNew.s
 
 # target to generate assembly for a file
-codeforces/1536/C.cpp.s:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/study.dir/build.make CMakeFiles/study.dir/codeforces/1536/C.cpp.s
-.PHONY : codeforces/1536/C.cpp.s
+codeforces/technocup/final2021/CNew.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/study.dir/build.make CMakeFiles/study.dir/codeforces/technocup/final2021/CNew.cpp.s
+.PHONY : codeforces/technocup/final2021/CNew.cpp.s
 
 # Help Target
 help:
@@ -178,9 +178,9 @@ help:
 	@echo "... edit_cache"
 	@echo "... rebuild_cache"
 	@echo "... study"
-	@echo "... codeforces/1536/C.o"
-	@echo "... codeforces/1536/C.i"
-	@echo "... codeforces/1536/C.s"
+	@echo "... codeforces/technocup/final2021/CNew.o"
+	@echo "... codeforces/technocup/final2021/CNew.i"
+	@echo "... codeforces/technocup/final2021/CNew.s"
 .PHONY : help
 
 

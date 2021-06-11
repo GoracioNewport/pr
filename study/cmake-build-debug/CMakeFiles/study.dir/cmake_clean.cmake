@@ -1,5 +1,5 @@
 file(REMOVE_RECURSE
-  "CMakeFiles/study.dir/codeforces/1536/C.cpp.o"
+  "CMakeFiles/study.dir/codeforces/technocup/final2021/CNew.cpp.o"
   "study"
   "study.pdb"
 )
