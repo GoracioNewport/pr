@@ -76,27 +76,27 @@ include CMakeFiles/study.dir/progress.make
 # Include the compile flags for this target's objects.
 include CMakeFiles/study.dir/flags.make
 
-CMakeFiles/study.dir/codeforces/technocup/final2021/CNew.cpp.o: CMakeFiles/study.dir/flags.make
-CMakeFiles/study.dir/codeforces/technocup/final2021/CNew.cpp.o: ../codeforces/technocup/final2021/CNew.cpp
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/mnt/hdd/pr/study/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_1) "Building CXX object CMakeFiles/study.dir/codeforces/technocup/final2021/CNew.cpp.o"
-	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/study.dir/codeforces/technocup/final2021/CNew.cpp.o -c /mnt/hdd/pr/study/codeforces/technocup/final2021/CNew.cpp
+CMakeFiles/study.dir/codeforces/practice/1343D.cpp.o: CMakeFiles/study.dir/flags.make
+CMakeFiles/study.dir/codeforces/practice/1343D.cpp.o: ../codeforces/practice/1343D.cpp
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/mnt/hdd/pr/study/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_1) "Building CXX object CMakeFiles/study.dir/codeforces/practice/1343D.cpp.o"
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/study.dir/codeforces/practice/1343D.cpp.o -c /mnt/hdd/pr/study/codeforces/practice/1343D.cpp
 
-CMakeFiles/study.dir/codeforces/technocup/final2021/CNew.cpp.i: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/study.dir/codeforces/technocup/final2021/CNew.cpp.i"
-	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /mnt/hdd/pr/study/codeforces/technocup/final2021/CNew.cpp > CMakeFiles/study.dir/codeforces/technocup/final2021/CNew.cpp.i
+CMakeFiles/study.dir/codeforces/practice/1343D.cpp.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/study.dir/codeforces/practice/1343D.cpp.i"
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /mnt/hdd/pr/study/codeforces/practice/1343D.cpp > CMakeFiles/study.dir/codeforces/practice/1343D.cpp.i
 
-CMakeFiles/study.dir/codeforces/technocup/final2021/CNew.cpp.s: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/study.dir/codeforces/technocup/final2021/CNew.cpp.s"
-	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /mnt/hdd/pr/study/codeforces/technocup/final2021/CNew.cpp -o CMakeFiles/study.dir/codeforces/technocup/final2021/CNew.cpp.s
+CMakeFiles/study.dir/codeforces/practice/1343D.cpp.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/study.dir/codeforces/practice/1343D.cpp.s"
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /mnt/hdd/pr/study/codeforces/practice/1343D.cpp -o CMakeFiles/study.dir/codeforces/practice/1343D.cpp.s
 
 # Object files for target study
 study_OBJECTS = \
-"CMakeFiles/study.dir/codeforces/technocup/final2021/CNew.cpp.o"
+"CMakeFiles/study.dir/codeforces/practice/1343D.cpp.o"
 
 # External object files for target study
 study_EXTERNAL_OBJECTS =
 
-study: CMakeFiles/study.dir/codeforces/technocup/final2021/CNew.cpp.o
+study: CMakeFiles/study.dir/codeforces/practice/1343D.cpp.o
 study: CMakeFiles/study.dir/build.make
 study: CMakeFiles/study.dir/link.txt
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --bold --progress-dir=/mnt/hdd/pr/study/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_2) "Linking CXX executable study"

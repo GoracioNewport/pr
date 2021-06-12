@@ -82,7 +82,7 @@
 				</MakeCommands>
 			</Target>
 		</Build>
-		<Unit filename="/mnt/hdd/pr/study/codeforces/technocup/final2021/CNew.cpp">
+		<Unit filename="/mnt/hdd/pr/study/codeforces/practice/1343D.cpp">
 			<Option target="study"/>
 		</Unit>
 		<Unit filename="/mnt/hdd/pr/study/CMakeLists.txt">

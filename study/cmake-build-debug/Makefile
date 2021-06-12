@@ -142,32 +142,32 @@ study/fast:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/study.dir/build.make CMakeFiles/study.dir/build
 .PHONY : study/fast
 
-codeforces/technocup/final2021/CNew.o: codeforces/technocup/final2021/CNew.cpp.o
+codeforces/practice/1343D.o: codeforces/practice/1343D.cpp.o
 
-.PHONY : codeforces/technocup/final2021/CNew.o
+.PHONY : codeforces/practice/1343D.o
 
 # target to build an object file
-codeforces/technocup/final2021/CNew.cpp.o:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/study.dir/build.make CMakeFiles/study.dir/codeforces/technocup/final2021/CNew.cpp.o
-.PHONY : codeforces/technocup/final2021/CNew.cpp.o
+codeforces/practice/1343D.cpp.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/study.dir/build.make CMakeFiles/study.dir/codeforces/practice/1343D.cpp.o
+.PHONY : codeforces/practice/1343D.cpp.o
 
-codeforces/technocup/final2021/CNew.i: codeforces/technocup/final2021/CNew.cpp.i
+codeforces/practice/1343D.i: codeforces/practice/1343D.cpp.i
 
-.PHONY : codeforces/technocup/final2021/CNew.i
+.PHONY : codeforces/practice/1343D.i
 
 # target to preprocess a source file
-codeforces/technocup/final2021/CNew.cpp.i:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/study.dir/build.make CMakeFiles/study.dir/codeforces/technocup/final2021/CNew.cpp.i
-.PHONY : codeforces/technocup/final2021/CNew.cpp.i
+codeforces/practice/1343D.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/study.dir/build.make CMakeFiles/study.dir/codeforces/practice/1343D.cpp.i
+.PHONY : codeforces/practice/1343D.cpp.i
 
-codeforces/technocup/final2021/CNew.s: codeforces/technocup/final2021/CNew.cpp.s
+codeforces/practice/1343D.s: codeforces/practice/1343D.cpp.s
 
-.PHONY : codeforces/technocup/final2021/CNew.s
+.PHONY : codeforces/practice/1343D.s
 
 # target to generate assembly for a file
-codeforces/technocup/final2021/CNew.cpp.s:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/study.dir/build.make CMakeFiles/study.dir/codeforces/technocup/final2021/CNew.cpp.s
-.PHONY : codeforces/technocup/final2021/CNew.cpp.s
+codeforces/practice/1343D.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/study.dir/build.make CMakeFiles/study.dir/codeforces/practice/1343D.cpp.s
+.PHONY : codeforces/practice/1343D.cpp.s
 
 # Help Target
 help:
@@ -178,9 +178,9 @@ help:
 	@echo "... edit_cache"
 	@echo "... rebuild_cache"
 	@echo "... study"
-	@echo "... codeforces/technocup/final2021/CNew.o"
-	@echo "... codeforces/technocup/final2021/CNew.i"
-	@echo "... codeforces/technocup/final2021/CNew.s"
+	@echo "... codeforces/practice/1343D.o"
+	@echo "... codeforces/practice/1343D.i"
+	@echo "... codeforces/practice/1343D.s"
 .PHONY : help
 
 

@@ -4,7 +4,7 @@ set(CMAKE_DEPENDS_LANGUAGES
   )
 # The set of files for implicit dependencies of each language:
 set(CMAKE_DEPENDS_CHECK_CXX
-  "/mnt/hdd/pr/study/codeforces/technocup/final2021/CNew.cpp" "/mnt/hdd/pr/study/cmake-build-debug/CMakeFiles/study.dir/codeforces/technocup/final2021/CNew.cpp.o"
+  "/mnt/hdd/pr/study/codeforces/practice/1343D.cpp" "/mnt/hdd/pr/study/cmake-build-debug/CMakeFiles/study.dir/codeforces/practice/1343D.cpp.o"
   )
 set(CMAKE_CXX_COMPILER_ID "GNU")
 
