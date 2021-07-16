@@ -46,25 +46,33 @@ int main() {
     cin >> n >> k;
     v64 a(n);
     for (auto &i : a) cin >> i;
-    v64 h;
     map <ll, ll> sums;
     forn(i,n/2) {
-      h.pb(min(a[i], a[n - i - 1]));
       sums[a[i] + a[n - i - 1]]++;
     }
 
-    sort(all(h));
+    v64 p(2 * k + 2);
+    forn(i,n/2) {
+      ll mi = min(a[i], a[n - i - 1]) + 1;
+      ll ma = max(a[i], a[n - i - 1]) + k;
+      p[mi]++;
+      p[ma + 1]--;
+    } v64 psums(sz(p) + 1, 0);
+    forn(i,sz(p)) {
+      psums[i + 1] = psums[i] + p[i];
+    }
+
+//    for (auto &i : p) cout << i << ' ';
+//    cout << ln;
+//    for (auto &i : psums) cout << i << ' ';
+//    cout << ln;
+
     ll ans = INF;
-    for (auto &i : h) cout << i << ' ';
-    cout << ln;
-    forn(i, n / 2) {
-      ll x = a[i] + a[n - i - 1] - k;
-      cout << x << ln;
-      auto it = upper_bound(all(h), x);
-      ll y = (it - h.begin()) * 2 + ((n / 2) - (it - h.begin()));
-      y -= sums[x + k];
-      ans = min(ans, y);
-    } cout << ans << ln;
+    for(ll x = 2; x <= 2 * k; x++) {
+      ll locAns = (psums[x + 1] - sums[x]) + ((n / 2) - psums[x + 1]) * 2;
+//      cout << x << " - " << locAns << ln;
+      ans = min(ans, locAns);
+    }  cout << ans << ln;
   }
 
 }
