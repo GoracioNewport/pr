@@ -38,8 +38,9 @@ double eps = 1e-12;
 
 struct Node {
 	ll key, prior;
-	Node* l;
-	Node* r;
+	Node *l;
+	Node *r;
+
 	Node (ll key): key(key), prior(rand()) {
 		l = r = nullptr;
 	}
@@ -63,11 +64,11 @@ Node* merge(Node* a, Node* b) {
 pair <Node*, Node*> split(Node* a, ll x) {
 	if (a == nullptr) return {nullptr, nullptr};
 
-	if (x <= a->key) {
+	if (x <= a->key) { 
 		auto p = split(a->l, x);
 		a->l = p.se;
 		return {p.fi, a};
-	} else { 
+	} else {
 		auto p = split(a->r, x);
 		a->r = p.fi;
 		return {a, p.se};
@@ -80,7 +81,7 @@ ll findMin(Node *a) {
 	return a->key;
 }
 
-ll findMax(Node *a) {
+ll findMax(Node* a) {
 	if (a == nullptr) return -INF;
 	if (a->r) return findMax(a->r);
 	return a->key;
@@ -95,10 +96,11 @@ void insert(ll x) {
 	root = merge(root, p.se);
 }
 
-void remove(ll x) {
+void erase(ll x) {
 	auto p = split(root, x);
 	auto q = split(p.se, x + 1);
 	root = merge(p.fi, q.se);
+	return;
 }
 
 bool exists(ll x) {
@@ -124,12 +126,13 @@ ll prev(ll x) {
 
 int main() {
   fast_cin();
+  srand(time(0));
 
   string s;
   ll x;
   while(cin >> s >> x) {
   	if (s[0] == 'i') insert(x);
-  	if (s[0] == 'd') remove(x);
+  	if (s[0] == 'd') erase(x);
   	if (s[0] == 'e') cout << (exists(x) ? "true" : "false") << ln;
   	if (s[0] == 'n') cout << (next(x) == INF ? "none" : to_string(next(x))) << ln;
   	if (s[0] == 'p') cout << (prev(x) == -INF ? "none" : to_string(prev(x))) << ln;
