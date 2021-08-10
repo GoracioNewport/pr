@@ -36,7 +36,7 @@ double eps = 1e-12;
 #define all(x) (x).begin(), (x).end()
 #define sz(x) ((ll)(x).size())
 
-bool DEBUG = true;
+bool DEBUG = false;
 
 struct Node {
 	Node* l;
@@ -44,7 +44,7 @@ struct Node {
 	ll key, prior;
 	ll size, sum;
 
-	Node (ll key): key(key), prior(rand()), size(1), sum(key) {};
+	Node (ll key): key(key), prior(rand()), size(1), sum(key), l(nullptr), r(nullptr) {};
 };
 
 ll getSize(Node* a) {
@@ -68,11 +68,11 @@ Node* merge(Node* a, Node* b) {
 	if (!b) return a;
 
 	if (a->prior > b->prior) {
-		a->r = b;
+		a->r = merge(a->r, b);
 		upd(a);
 		return a;
 	} else {
-		b->l = a;
+		b->l = merge(a, b->l);
 		upd(b);
 		return b;
 	}
@@ -105,17 +105,20 @@ int main() {
   fast_cin();
   ll ind = 0;
 
+  freopen("swapper.in", "r", stdin);
+  freopen("swapper.out", "w", stdout);
+
   while(true) {
-  	if (!DEBUG) cout << "Swapper " << ++ind << ":" << ln;
   	ll n, m;
   	cin >> n >> m;
   	if (n == 0 && m == 0) break;
+  	if (!DEBUG) cout << "Swapper " << ++ind << ":" << ln;
 
   	v64 a(n);
   	for (auto& i : a) cin >> i;
   	
-  	Node *even = nullptr;
- 		Node *odd = nullptr;
+  	Node* even = nullptr;
+ 		Node* odd = nullptr;
 
  		forn(i,n) {
  			if (i % 2) odd = merge(odd, new Node(a[i]));
@@ -154,10 +157,10 @@ int main() {
  			}
 
  			auto evenP = splitSize(even, evenR);
-			auto evenQ = splitSize(even, evenL);
+			auto evenQ = splitSize(evenP.fi, evenL);
 
 			auto oddP = splitSize(odd, oddR);
-			auto oddQ = splitSize(odd, oddL);
+			auto oddQ = splitSize(oddP.fi, oddL);
 
  			if (t == 1) {
 
@@ -189,8 +192,8 @@ int main() {
 				cout << endl;
 				print(odd);
 				cout << endl;
-			}
- 		}
+			} 
+ 		} cout << ln;
   }
 
 }
