@@ -41,8 +41,9 @@ mt19937_64 rng(chrono::high_resolution_clock::now().time_since_epoch().count());
 struct Node {
 	Node* l;
 	Node* r;
-	ll key, prior, size, sum;
-	Node (ll key): l(nullptr), r(nullptr), key(key), prior(rng()), size(1), sum(key * key) {};
+	ll key, prior, size, min;
+
+	Node (ll key): l(nullptr), r(nullptr), key(key), prior(rng()), size(1), min(key) {};
 };
 
 Node* root = nullptr;
@@ -52,15 +53,15 @@ ll getSize(Node* a) {
 	return a->size;
 }
 
-ll getSum(Node* a) {
-	if (!a) return 0;
-	return a->sum;
+ll getMin(Node* a) {
+	if (!a) return INF;
+	return a->min;
 }
 
 void upd(Node* a) {
 	if (!a) return;
 	a->size = getSize(a->l) + getSize(a->r) + 1;
-	a->sum = getSum(a->l) + getSum(a->r) + (a->key * a->key);
+	a->min = min(min(getMin(a->l), getMin(a->r)), a->key);
 }
 
 Node* merge(Node* a, Node* b) {
@@ -91,73 +92,44 @@ pair <Node*, Node*> splitSize(Node* a, ll i) {
 		a->r = p.fi;
 		upd(a);
 		return {a, p.se};
-	}	
+	}
 }
 
-// void print(Node *a) {
-//   if (!a) return;
-//   upd(a);
-//   print(a->l);
-//   cout << a->key << ' ';
-//   print(a->r);
-// }
+void print(Node *a) {
+  if (!a) return;
+  upd(a);
+  print(a->l);
+  cout << a->key << ' ';
+  print(a->r);
+}
 
-bool DEBUG = false;
+
 
 int main() {
   fast_cin();
 
-  // freopen("river.in", "r", stdin);
-  // freopen("river.out", "w", stdout);
+  freopen("rmq.in", "r", stdin);
+  freopen("rmq.out", "w", stdout);
 
-  ll n, k;
-  cin >> n >> k;
-  forn(i,n) {
-  	ll x; cin >> x;
-  	root = merge(root, new Node(x));
-  } ll q;
+  ll q;
   cin >> q;
-  cout << getSum(root) << ln;
   while(q--) {
-  	ll t, i;
-  	cin >> t >> i; i--;
-  	if (t == 1) {
-  		if (i == 0) {
-  			auto p = splitSize(root, 2);
-  			auto q = splitSize(p.fi, 1);
-  			ll x = q.fi->key;
-  			q.se->key += x;
-  			upd(q.se);
-  			root = merge(q.se, p.se);
-  		} else if (i == n - 1) {
-  			auto p = splitSize(root, i - 1);
-  			auto q = splitSize(p.se, 1);
-  			ll x = q.se->key;
-  			q.fi->key += x;
-  			upd(q.fi);
-  			root = merge(p.fi, q.fi);
-  		} else {
-  			auto d = splitSize(root, i + 2);
-  			auto c = splitSize(d.fi, i + 1);
-  			auto b = splitSize(c.fi, i);
-  			auto a = splitSize(b.fi, i - 1);
-  			ll x = b.se->key;
-  			a.se->key += (x / 2);
-  			c.se->key += x - (x / 2);
-  			upd(a.se);
-  			upd(c.se);
-  			root = merge(a.fi, a.se);
-  			root = merge(root, c.se);
-  			root = merge(root, d.se);
-  		} n--;
-  	} else {
-  		auto q = splitSize(root, i + 1);
-  		auto p = splitSize(q.fi, i);
-  		ll x = p.se->key;
-  		root = merge(p.fi, new Node(x / 2));
-  		root = merge(root, new Node(x - (x / 2)));
+  	char c;
+  	ll l, r;
+  	cin >> c >> l >> r; l--;
+  	if (c == '?') {
+  		auto q = splitSize(root, r);
+  		auto p = splitSize(q.fi, l);
+  		cout << getMin(p.se) << ln;
+  		root = merge(p.fi, p.se);
   		root = merge(root, q.se);
-  		n++;
-  	} cout << getSum(root) << ln;
-  } 
+  	} else {
+  		auto p = splitSize(root, l + 1);
+  		root = merge(p.fi, new Node(r));
+  		root = merge(root, p.se);
+  		// print(root);
+  		// cout << endl;
+  	}
+  }
+
 }
