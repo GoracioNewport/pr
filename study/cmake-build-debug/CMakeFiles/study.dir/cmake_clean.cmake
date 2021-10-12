@@ -1,5 +1,5 @@
 file(REMOVE_RECURSE
-  "CMakeFiles/study.dir/codeforces/practice/1542B.cpp.obj"
+  "CMakeFiles/study.dir/tinkoff/classes/thematicContests/scanlineSegrtree/E.cpp.obj"
   "libstudy.dll.a"
   "study.exe"
   "study.exe.manifest"
