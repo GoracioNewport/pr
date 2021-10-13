@@ -129,29 +129,29 @@ study/fast:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/study.dir/build.make CMakeFiles/study.dir/build
 .PHONY : study/fast
 
-cpm/dp/G2.o: cpm/dp/G2.cpp.o
-.PHONY : cpm/dp/G2.o
+cpm/dp/F2.o: cpm/dp/F2.cpp.o
+.PHONY : cpm/dp/F2.o
 
 # target to build an object file
-cpm/dp/G2.cpp.o:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/study.dir/build.make CMakeFiles/study.dir/cpm/dp/G2.cpp.o
-.PHONY : cpm/dp/G2.cpp.o
+cpm/dp/F2.cpp.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/study.dir/build.make CMakeFiles/study.dir/cpm/dp/F2.cpp.o
+.PHONY : cpm/dp/F2.cpp.o
 
-cpm/dp/G2.i: cpm/dp/G2.cpp.i
-.PHONY : cpm/dp/G2.i
+cpm/dp/F2.i: cpm/dp/F2.cpp.i
+.PHONY : cpm/dp/F2.i
 
 # target to preprocess a source file
-cpm/dp/G2.cpp.i:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/study.dir/build.make CMakeFiles/study.dir/cpm/dp/G2.cpp.i
-.PHONY : cpm/dp/G2.cpp.i
+cpm/dp/F2.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/study.dir/build.make CMakeFiles/study.dir/cpm/dp/F2.cpp.i
+.PHONY : cpm/dp/F2.cpp.i
 
-cpm/dp/G2.s: cpm/dp/G2.cpp.s
-.PHONY : cpm/dp/G2.s
+cpm/dp/F2.s: cpm/dp/F2.cpp.s
+.PHONY : cpm/dp/F2.s
 
 # target to generate assembly for a file
-cpm/dp/G2.cpp.s:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/study.dir/build.make CMakeFiles/study.dir/cpm/dp/G2.cpp.s
-.PHONY : cpm/dp/G2.cpp.s
+cpm/dp/F2.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/study.dir/build.make CMakeFiles/study.dir/cpm/dp/F2.cpp.s
+.PHONY : cpm/dp/F2.cpp.s
 
 # Help Target
 help:
@@ -162,9 +162,9 @@ help:
 	@echo "... edit_cache"
 	@echo "... rebuild_cache"
 	@echo "... study"
-	@echo "... cpm/dp/G2.o"
-	@echo "... cpm/dp/G2.i"
-	@echo "... cpm/dp/G2.s"
+	@echo "... cpm/dp/F2.o"
+	@echo "... cpm/dp/F2.i"
+	@echo "... cpm/dp/F2.s"
 .PHONY : help
 
 

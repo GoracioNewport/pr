@@ -36,9 +36,60 @@ double eps = 1e-12;
 #define all(x) (x).begin(), (x).end()
 #define sz(x) ((ll)(x).size())
 
+enum { OPEN, CLOSE };
+
+string Max(string a, string b) {
+  if (sz(a) > sz(b)) return a;
+  else return b;
+}
+
+bool isValid(ll i, ll j, ll n) {
+  return (i <= j && i >= 0 && j >= 0 && i < n && j < n);
+}
+
 int main() {
   fast_cin();
 
+  string s;
+  cin >> s;
+  ll n = sz(s);
 
+  map <char, char> m = {
+      {'(', ')'},
+      {'[', ']'},
+      {'{', '}'},
+  };
+
+  map <char, bool> type = {
+      {'(', OPEN },
+      {'[', OPEN },
+      {'{', OPEN },
+      {')', CLOSE },
+      {']', CLOSE },
+      {'}', CLOSE },
+  };
+
+  vector <vector <string>> dp(n, vector <string> (n, ""));
+  for (ll len = 2; len <= n; len++) {
+    for (ll l = 0; l < n - len + 1; l++) {
+      ll r = l + len - 1;
+      { // Пересчитываемся из dp[l + 1][r];
+        if (type[s[l]] == CLOSE) dp[l][r] = Max(dp[l][r], dp[l + 1][r]);
+        for (ll i = l + 1; i <= r; i++) {
+          if (m[s[l]] != s[i]) continue;
+          string x = s[l] + (isValid(l + 1, i - 1, n) ? dp[l + 1][i - 1] : "") + s[i] + (isValid(i + 1, r, n) ? dp[i + 1][r] : "");
+          dp[l][r] = Max(dp[l][r], x);
+        }
+      }
+      { // Пересчитываемся из dp[l][r - 1]
+        if (type[s[r]] == OPEN) dp[l][r] = Max(dp[l][r], dp[l][r - 1]);
+        for (ll i = l; i < r; i++) {
+          if (m[s[i]] != s[r]) continue;
+          string x = (isValid(l, i - 1, n) ? dp[l][i - 1] : "") + s[i] + (isValid(i + 1, r - 1, n) ? dp[i + 1][r - 1] : "") + s[r];
+          dp[l][r] = Max(dp[l][r], x);
+        }
+      }
+    }
+  } cout << dp[0][n - 1] << ln;
 
 }

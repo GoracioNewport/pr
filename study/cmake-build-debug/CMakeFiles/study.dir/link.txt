@@ -1,1 +1,1 @@
-/usr/bin/c++ -g CMakeFiles/study.dir/cpm/dp/G2.cpp.o -o study 
+/usr/bin/c++ -g CMakeFiles/study.dir/cpm/dp/F2.cpp.o -o study 
