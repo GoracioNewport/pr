@@ -8,7 +8,7 @@ set(CMAKE_DEPENDS_LANGUAGES
   )
 # The set of files for implicit dependencies of each language:
 set(CMAKE_DEPENDS_CHECK_CXX
-  "D:/pr/study/tinkoff/classes/thematicContests/scanlineSegrtree/E.cpp" "D:/pr/study/cmake-build-debug/CMakeFiles/study.dir/tinkoff/classes/thematicContests/scanlineSegrtree/E.cpp.obj"
+  "/mnt/hdd/pr/study/cpm/dp/G2.cpp" "/mnt/hdd/pr/study/cmake-build-debug/CMakeFiles/study.dir/cpm/dp/G2.cpp.o"
   )
 set(CMAKE_CXX_COMPILER_ID "GNU")
 

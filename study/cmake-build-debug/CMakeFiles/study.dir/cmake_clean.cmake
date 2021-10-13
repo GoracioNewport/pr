@@ -1,8 +1,6 @@
 file(REMOVE_RECURSE
-  "CMakeFiles/study.dir/tinkoff/classes/thematicContests/scanlineSegrtree/E.cpp.obj"
-  "libstudy.dll.a"
-  "study.exe"
-  "study.exe.manifest"
+  "CMakeFiles/study.dir/cpm/dp/G2.cpp.o"
+  "study"
   "study.pdb"
 )
 
