@@ -39,8 +39,8 @@ double eps = 1e-12;
 int main() {
   fast_cin();
 
-  freopen("forest.in", "r", stdin);
-  freopen("forest.out", "w", stdout);
+//  freopen("forest.in", "r", stdin);
+//  freopen("forest.out", "w", stdout);
 
   ll a, k, b, m, x;
   cin >> a >> k >> b >> m >> x;
