@@ -39,14 +39,17 @@ double eps = 1e-12;
 int main() {
   fast_cin();
 
-  ll n, k;
-  cin >> n >> k;
-  vector <string> s(n);
-  for (auto& i : s) cin >> i;
-  reverse(all(s));
+  freopen("forest.in", "r", stdin);
+  freopen("forest.out", "w", stdout);
 
-  vector <vector <bool>> dp(n + 1, vector <bool> (k + 1, false)); // dp[i][j] - Можно ли
-
-
+  ll a, k, b, m, x;
+  cin >> a >> k >> b >> m >> x;
+  ll cnt = 0;
+  ll t = 1;
+  while(cnt < x) {
+    if (t % k) cnt += a;
+    if (t % m) cnt += b;
+    t++;
+  } cout << t - 1 << ln;
 
 }

@@ -46,10 +46,17 @@ int main() {
 
   vector <vector <ld>> dp(n, vector <ld> (n, 0));
   forn(i,n) dp[i][i] = a[i];
-  for(ll len = 2; len <= n; len++) {
+  forn(i, n - 1) dp[i][i + 1] = (a[i] + a[i + 1]) / 2;
+  for(ll len = 3; len <= n; len++) {
     for(ll l = 0; l < n - len + 1; l++) {
       ll r = l + len - 1;
-      dp[l][r] = max((a[l] + dp[l + 1][r]) / 2, (a[r] + dp[l][r - 1]) / 2);
+      for(ll i = l + 1; i < r; i++) {
+        dp[l][r] = max(dp[l][r], max(
+            (((dp[l][i - 1] + a[i]) / 2) + dp[i + 1][r]) / 2,
+            (dp[l][i - 1] + ((a[i] + dp[i + 1][r]) / 2)) / 2));
+      } dp[l][r] = max(dp[l][r], max(
+          (dp[l][r - 1] + a[r]) / 2,
+          (a[l] + dp[l + 1][r]) / 2));
     }
   } cout << setprecision(20) << fixed << dp[0][n - 1] << ln;
 

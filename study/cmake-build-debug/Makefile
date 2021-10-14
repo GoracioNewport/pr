@@ -129,29 +129,29 @@ study/fast:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/study.dir/build.make CMakeFiles/study.dir/build
 .PHONY : study/fast
 
-cpm/dp/F2.o: cpm/dp/F2.cpp.o
-.PHONY : cpm/dp/F2.o
+distours/region/10.14.2021/BStupid.o: distours/region/10.14.2021/BStupid.cpp.o
+.PHONY : distours/region/10.14.2021/BStupid.o
 
 # target to build an object file
-cpm/dp/F2.cpp.o:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/study.dir/build.make CMakeFiles/study.dir/cpm/dp/F2.cpp.o
-.PHONY : cpm/dp/F2.cpp.o
+distours/region/10.14.2021/BStupid.cpp.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/study.dir/build.make CMakeFiles/study.dir/distours/region/10.14.2021/BStupid.cpp.o
+.PHONY : distours/region/10.14.2021/BStupid.cpp.o
 
-cpm/dp/F2.i: cpm/dp/F2.cpp.i
-.PHONY : cpm/dp/F2.i
+distours/region/10.14.2021/BStupid.i: distours/region/10.14.2021/BStupid.cpp.i
+.PHONY : distours/region/10.14.2021/BStupid.i
 
 # target to preprocess a source file
-cpm/dp/F2.cpp.i:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/study.dir/build.make CMakeFiles/study.dir/cpm/dp/F2.cpp.i
-.PHONY : cpm/dp/F2.cpp.i
+distours/region/10.14.2021/BStupid.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/study.dir/build.make CMakeFiles/study.dir/distours/region/10.14.2021/BStupid.cpp.i
+.PHONY : distours/region/10.14.2021/BStupid.cpp.i
 
-cpm/dp/F2.s: cpm/dp/F2.cpp.s
-.PHONY : cpm/dp/F2.s
+distours/region/10.14.2021/BStupid.s: distours/region/10.14.2021/BStupid.cpp.s
+.PHONY : distours/region/10.14.2021/BStupid.s
 
 # target to generate assembly for a file
-cpm/dp/F2.cpp.s:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/study.dir/build.make CMakeFiles/study.dir/cpm/dp/F2.cpp.s
-.PHONY : cpm/dp/F2.cpp.s
+distours/region/10.14.2021/BStupid.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/study.dir/build.make CMakeFiles/study.dir/distours/region/10.14.2021/BStupid.cpp.s
+.PHONY : distours/region/10.14.2021/BStupid.cpp.s
 
 # Help Target
 help:
@@ -162,9 +162,9 @@ help:
 	@echo "... edit_cache"
 	@echo "... rebuild_cache"
 	@echo "... study"
-	@echo "... cpm/dp/F2.o"
-	@echo "... cpm/dp/F2.i"
-	@echo "... cpm/dp/F2.s"
+	@echo "... distours/region/10.14.2021/BStupid.o"
+	@echo "... distours/region/10.14.2021/BStupid.i"
+	@echo "... distours/region/10.14.2021/BStupid.s"
 .PHONY : help
 
 
