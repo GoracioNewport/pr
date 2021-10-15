@@ -1,5 +1,5 @@
 file(REMOVE_RECURSE
-  "CMakeFiles/study.dir/distours/region/10.14.2021/B.cpp.o"
+  "CMakeFiles/study.dir/tinkoff/classes/thematicContests/geomerty/C.cpp.o"
   "study"
   "study.pdb"
 )
