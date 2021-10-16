@@ -1,1 +1,1 @@
-/usr/bin/c++ -g CMakeFiles/study.dir/tinkoff/classes/thematicContests/geomerty/C.cpp.o -o study 
+/usr/bin/c++ -g CMakeFiles/study.dir/distours/vseros/10.16.2021/B.cpp.o -o study 

@@ -36,52 +36,22 @@ double eps = 1e-12;
 #define all(x) (x).begin(), (x).end()
 #define sz(x) ((ll)(x).size())
 
-struct r {
-  ld x, y;
-  r(ld x, ld y) : x(x), y(y) {};
-
-  ld len() {
-   return hypot(x, y);
-  }
-
-  ld angle() {
-    return atan2(y, x);
-  }
-
-  ld operator^(r o) {
-    return (x * o.y - o.x * y);
-  }
-};
-
 int main() {
   fast_cin();
 
-  ll n, k, m;
-  cin >> n >> m >> k;
-  vector <r> p(n), q(m);
-  for (auto& i : p) cin >> i.x >> i.y;
-  for (auto& i : q) cin >> i.x >> i.y;
-  ld startX = q[0].x, startY = q[0].y;
+  ll n;
+  cin >> n;
+  v64 a(n);
+  for (auto& i : a) cin >> i;
+  sort(all(a));
+  ll ans = n;
+  forn(i,n) {
+    ll l = i;
+    ll r = prev(lower_bound(a.begin(), a.end(), a[i] + n)) - a.begin();
+    ans = min(ans, n - (r - l + 1));
 
-  for (auto& i : p) {
-    i.x -= startX;
-    i.y -= startY;
-  } for (auto& i : q) {
-    i.x -= startX;
-    i.y -= startY;
-  }
+//    cout << l << ' ' <<
 
-  ll cnt = 0;
-  for (auto& i : q) {
-    ll l = 0;
-    ll r = n;
-    while(l + 1 < r) {
-      ll m = (l + r) / 2;
-      if ((p[m]^i) < 0) r = m;
-      else l = m;
-    }
-  }
-
-
+  } cout << ans << ln;
 
 }

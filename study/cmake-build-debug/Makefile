@@ -129,29 +129,29 @@ study/fast:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/study.dir/build.make CMakeFiles/study.dir/build
 .PHONY : study/fast
 
-tinkoff/classes/thematicContests/geomerty/C.o: tinkoff/classes/thematicContests/geomerty/C.cpp.o
-.PHONY : tinkoff/classes/thematicContests/geomerty/C.o
+distours/vseros/10.16.2021/B.o: distours/vseros/10.16.2021/B.cpp.o
+.PHONY : distours/vseros/10.16.2021/B.o
 
 # target to build an object file
-tinkoff/classes/thematicContests/geomerty/C.cpp.o:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/study.dir/build.make CMakeFiles/study.dir/tinkoff/classes/thematicContests/geomerty/C.cpp.o
-.PHONY : tinkoff/classes/thematicContests/geomerty/C.cpp.o
+distours/vseros/10.16.2021/B.cpp.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/study.dir/build.make CMakeFiles/study.dir/distours/vseros/10.16.2021/B.cpp.o
+.PHONY : distours/vseros/10.16.2021/B.cpp.o
 
-tinkoff/classes/thematicContests/geomerty/C.i: tinkoff/classes/thematicContests/geomerty/C.cpp.i
-.PHONY : tinkoff/classes/thematicContests/geomerty/C.i
+distours/vseros/10.16.2021/B.i: distours/vseros/10.16.2021/B.cpp.i
+.PHONY : distours/vseros/10.16.2021/B.i
 
 # target to preprocess a source file
-tinkoff/classes/thematicContests/geomerty/C.cpp.i:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/study.dir/build.make CMakeFiles/study.dir/tinkoff/classes/thematicContests/geomerty/C.cpp.i
-.PHONY : tinkoff/classes/thematicContests/geomerty/C.cpp.i
+distours/vseros/10.16.2021/B.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/study.dir/build.make CMakeFiles/study.dir/distours/vseros/10.16.2021/B.cpp.i
+.PHONY : distours/vseros/10.16.2021/B.cpp.i
 
-tinkoff/classes/thematicContests/geomerty/C.s: tinkoff/classes/thematicContests/geomerty/C.cpp.s
-.PHONY : tinkoff/classes/thematicContests/geomerty/C.s
+distours/vseros/10.16.2021/B.s: distours/vseros/10.16.2021/B.cpp.s
+.PHONY : distours/vseros/10.16.2021/B.s
 
 # target to generate assembly for a file
-tinkoff/classes/thematicContests/geomerty/C.cpp.s:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/study.dir/build.make CMakeFiles/study.dir/tinkoff/classes/thematicContests/geomerty/C.cpp.s
-.PHONY : tinkoff/classes/thematicContests/geomerty/C.cpp.s
+distours/vseros/10.16.2021/B.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/study.dir/build.make CMakeFiles/study.dir/distours/vseros/10.16.2021/B.cpp.s
+.PHONY : distours/vseros/10.16.2021/B.cpp.s
 
 # Help Target
 help:
@@ -162,9 +162,9 @@ help:
 	@echo "... edit_cache"
 	@echo "... rebuild_cache"
 	@echo "... study"
-	@echo "... tinkoff/classes/thematicContests/geomerty/C.o"
-	@echo "... tinkoff/classes/thematicContests/geomerty/C.i"
-	@echo "... tinkoff/classes/thematicContests/geomerty/C.s"
+	@echo "... distours/vseros/10.16.2021/B.o"
+	@echo "... distours/vseros/10.16.2021/B.i"
+	@echo "... distours/vseros/10.16.2021/B.s"
 .PHONY : help
 
 

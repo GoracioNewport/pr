@@ -36,52 +36,54 @@ double eps = 1e-12;
 #define all(x) (x).begin(), (x).end()
 #define sz(x) ((ll)(x).size())
 
-struct r {
-  ld x, y;
-  r(ld x, ld y) : x(x), y(y) {};
+vv64 p;
+vp64 w;
+v64 used;
 
-  ld len() {
-   return hypot(x, y);
-  }
+p64 dfs(ll v, ll c) {
+  used[v] = c;
+  ll l = -INF;
+  ll r = INF;
 
-  ld angle() {
-    return atan2(y, x);
-  }
-
-  ld operator^(r o) {
-    return (x * o.y - o.x * y);
-  }
-};
+  for (auto& u : p[v]) {
+    if (used[u] != c) {
+      auto q = dfs(u, c);
+      l = max(l, q.fi);
+      r = min(r, q.se);
+    }
+  } if (l == -INF && r == INF) return {w[v].fi, w[v].se};
+  return {l + w[v].fi, r + w[v].se};
+}
 
 int main() {
   fast_cin();
 
-  ll n, k, m;
-  cin >> n >> m >> k;
-  vector <r> p(n), q(m);
-  for (auto& i : p) cin >> i.x >> i.y;
-  for (auto& i : q) cin >> i.x >> i.y;
-  ld startX = q[0].x, startY = q[0].y;
+  ll n;
+  cin >> n;
+  p.resize(n, v64());
+  w.resize(n);
+  used.resize(n);
 
-  for (auto& i : p) {
-    i.x -= startX;
-    i.y -= startY;
-  } for (auto& i : q) {
-    i.x -= startX;
-    i.y -= startY;
+  forn(z,n - 1) {
+    ll x, y;
+    cin >> x >> y; x--; y--;
+    p[x].pb(y);
+    p[y].pb(x);
+  } forn(z,n) {
+    ll l, r;
+    cin >> l >> r;
+    w[z] = {l, r};
+  } forn(i,n) {
+    ll l = -INF;
+    ll r = INF;
+    used[i] = i + 1;
+    for (auto& u : p[i]) {
+      auto q = dfs(u, i + 1);
+      l = max(l, q.fi);
+      r = min(r, q.se);
+    } cout << (l <= r ? 1 : 0) << ' ';
+//    cout << l << ' ' << r << ln;
   }
-
-  ll cnt = 0;
-  for (auto& i : q) {
-    ll l = 0;
-    ll r = n;
-    while(l + 1 < r) {
-      ll m = (l + r) / 2;
-      if ((p[m]^i) < 0) r = m;
-      else l = m;
-    }
-  }
-
 
 
 }
