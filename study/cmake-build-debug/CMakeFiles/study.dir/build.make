@@ -44,10 +44,10 @@ cmake_force:
 SHELL = /bin/sh
 
 # The CMake executable.
-CMAKE_COMMAND = /snap/clion/164/bin/cmake/linux/bin/cmake
+CMAKE_COMMAND = /snap/clion/169/bin/cmake/linux/bin/cmake
 
 # The command to remove a file.
-RM = /snap/clion/164/bin/cmake/linux/bin/cmake -E rm -f
+RM = /snap/clion/169/bin/cmake/linux/bin/cmake -E rm -f
 
 # Escaping for special characters.
 EQUALS = =
@@ -66,27 +66,27 @@ include CMakeFiles/study.dir/progress.make
 # Include the compile flags for this target's objects.
 include CMakeFiles/study.dir/flags.make
 
-CMakeFiles/study.dir/distours/vseros/10.16.2021/B.cpp.o: CMakeFiles/study.dir/flags.make
-CMakeFiles/study.dir/distours/vseros/10.16.2021/B.cpp.o: ../distours/vseros/10.16.2021/B.cpp
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/mnt/hdd/pr/study/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_1) "Building CXX object CMakeFiles/study.dir/distours/vseros/10.16.2021/B.cpp.o"
-	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/study.dir/distours/vseros/10.16.2021/B.cpp.o -c /mnt/hdd/pr/study/distours/vseros/10.16.2021/B.cpp
+CMakeFiles/study.dir/cpm/stack/F.cpp.o: CMakeFiles/study.dir/flags.make
+CMakeFiles/study.dir/cpm/stack/F.cpp.o: ../cpm/stack/F.cpp
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/mnt/hdd/pr/study/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_1) "Building CXX object CMakeFiles/study.dir/cpm/stack/F.cpp.o"
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/study.dir/cpm/stack/F.cpp.o -c /mnt/hdd/pr/study/cpm/stack/F.cpp
 
-CMakeFiles/study.dir/distours/vseros/10.16.2021/B.cpp.i: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/study.dir/distours/vseros/10.16.2021/B.cpp.i"
-	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /mnt/hdd/pr/study/distours/vseros/10.16.2021/B.cpp > CMakeFiles/study.dir/distours/vseros/10.16.2021/B.cpp.i
+CMakeFiles/study.dir/cpm/stack/F.cpp.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/study.dir/cpm/stack/F.cpp.i"
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /mnt/hdd/pr/study/cpm/stack/F.cpp > CMakeFiles/study.dir/cpm/stack/F.cpp.i
 
-CMakeFiles/study.dir/distours/vseros/10.16.2021/B.cpp.s: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/study.dir/distours/vseros/10.16.2021/B.cpp.s"
-	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /mnt/hdd/pr/study/distours/vseros/10.16.2021/B.cpp -o CMakeFiles/study.dir/distours/vseros/10.16.2021/B.cpp.s
+CMakeFiles/study.dir/cpm/stack/F.cpp.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/study.dir/cpm/stack/F.cpp.s"
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /mnt/hdd/pr/study/cpm/stack/F.cpp -o CMakeFiles/study.dir/cpm/stack/F.cpp.s
 
 # Object files for target study
 study_OBJECTS = \
-"CMakeFiles/study.dir/distours/vseros/10.16.2021/B.cpp.o"
+"CMakeFiles/study.dir/cpm/stack/F.cpp.o"
 
 # External object files for target study
 study_EXTERNAL_OBJECTS =
 
-study: CMakeFiles/study.dir/distours/vseros/10.16.2021/B.cpp.o
+study: CMakeFiles/study.dir/cpm/stack/F.cpp.o
 study: CMakeFiles/study.dir/build.make
 study: CMakeFiles/study.dir/link.txt
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --bold --progress-dir=/mnt/hdd/pr/study/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_2) "Linking CXX executable study"

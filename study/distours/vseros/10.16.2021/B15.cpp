@@ -40,30 +40,7 @@ vv64 p;
 vp64 w;
 v64 used;
 
-bool DEBUG = false;
 
-p64 dfs(ll v, ll c) {
-  used[v] = c;
-  ll l = -INF;
-  ll r = INF;
-  ll cnt = 0;
-
-  for (auto& u : p[v]) {
-    if (used[u] != c) {
-      auto q = dfs(u, c);
-      l = max(l, q.fi);
-      r = min(r, q.se);
-      cnt++;
-    }
-  } if (!cnt) {
-    if (DEBUG) cout << v + 1 << " Leaf. Return: " << w[v].fi << ' ' << w[v].se << ln;
-    return {w[v].fi, w[v].se};
-  } else {
-    if (DEBUG) cout << v + 1 << " Node. Return: " << l + w[v].fi << ' ' << r + w[v].se << ln;
-    if (l + w[v].fi > r + w[v].se || l > r) return {2e9, -2e9};
-    return {l + w[v].fi, r + w[v].se};
-  }
-}
 
 int main() {
   fast_cin();
@@ -84,18 +61,11 @@ int main() {
     cin >> l >> r;
     w[z] = {l, r};
   } forn(i,n) {
-//    if (i != 5) continue;
-    if (DEBUG) cout << i + 1 << " -------" << ln;
-    ll l = -INF;
-    ll r = INF;
-    used[i] = i + 1;
-    for (auto& u : p[i]) {
-      auto q = dfs(u, i + 1);
-      if (DEBUG) cout << u << ' ' << q.fi << ' ' << q.se << ln;
-      l = max(l, q.fi);
-      r = min(r, q.se);
-    } cout << (l <= r ? 1 : 0) << ' ';
-    if (DEBUG) cout << l << ' ' << r << ln;
+
+    for(z,15) {
+
+    }
+
   }
 
 

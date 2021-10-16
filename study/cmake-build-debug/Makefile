@@ -48,10 +48,10 @@ cmake_force:
 SHELL = /bin/sh
 
 # The CMake executable.
-CMAKE_COMMAND = /snap/clion/164/bin/cmake/linux/bin/cmake
+CMAKE_COMMAND = /snap/clion/169/bin/cmake/linux/bin/cmake
 
 # The command to remove a file.
-RM = /snap/clion/164/bin/cmake/linux/bin/cmake -E rm -f
+RM = /snap/clion/169/bin/cmake/linux/bin/cmake -E rm -f
 
 # Escaping for special characters.
 EQUALS = =
@@ -68,7 +68,7 @@ CMAKE_BINARY_DIR = /mnt/hdd/pr/study/cmake-build-debug
 # Special rule for the target rebuild_cache
 rebuild_cache:
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --cyan "Running CMake to regenerate build system..."
-	/snap/clion/164/bin/cmake/linux/bin/cmake --regenerate-during-build -S$(CMAKE_SOURCE_DIR) -B$(CMAKE_BINARY_DIR)
+	/snap/clion/169/bin/cmake/linux/bin/cmake --regenerate-during-build -S$(CMAKE_SOURCE_DIR) -B$(CMAKE_BINARY_DIR)
 .PHONY : rebuild_cache
 
 # Special rule for the target rebuild_cache
@@ -78,7 +78,7 @@ rebuild_cache/fast: rebuild_cache
 # Special rule for the target edit_cache
 edit_cache:
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --cyan "No interactive CMake dialog available..."
-	/snap/clion/164/bin/cmake/linux/bin/cmake -E echo No\ interactive\ CMake\ dialog\ available.
+	/snap/clion/169/bin/cmake/linux/bin/cmake -E echo No\ interactive\ CMake\ dialog\ available.
 .PHONY : edit_cache
 
 # Special rule for the target edit_cache
@@ -129,29 +129,29 @@ study/fast:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/study.dir/build.make CMakeFiles/study.dir/build
 .PHONY : study/fast
 
-distours/vseros/10.16.2021/B.o: distours/vseros/10.16.2021/B.cpp.o
-.PHONY : distours/vseros/10.16.2021/B.o
+cpm/stack/F.o: cpm/stack/F.cpp.o
+.PHONY : cpm/stack/F.o
 
 # target to build an object file
-distours/vseros/10.16.2021/B.cpp.o:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/study.dir/build.make CMakeFiles/study.dir/distours/vseros/10.16.2021/B.cpp.o
-.PHONY : distours/vseros/10.16.2021/B.cpp.o
+cpm/stack/F.cpp.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/study.dir/build.make CMakeFiles/study.dir/cpm/stack/F.cpp.o
+.PHONY : cpm/stack/F.cpp.o
 
-distours/vseros/10.16.2021/B.i: distours/vseros/10.16.2021/B.cpp.i
-.PHONY : distours/vseros/10.16.2021/B.i
+cpm/stack/F.i: cpm/stack/F.cpp.i
+.PHONY : cpm/stack/F.i
 
 # target to preprocess a source file
-distours/vseros/10.16.2021/B.cpp.i:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/study.dir/build.make CMakeFiles/study.dir/distours/vseros/10.16.2021/B.cpp.i
-.PHONY : distours/vseros/10.16.2021/B.cpp.i
+cpm/stack/F.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/study.dir/build.make CMakeFiles/study.dir/cpm/stack/F.cpp.i
+.PHONY : cpm/stack/F.cpp.i
 
-distours/vseros/10.16.2021/B.s: distours/vseros/10.16.2021/B.cpp.s
-.PHONY : distours/vseros/10.16.2021/B.s
+cpm/stack/F.s: cpm/stack/F.cpp.s
+.PHONY : cpm/stack/F.s
 
 # target to generate assembly for a file
-distours/vseros/10.16.2021/B.cpp.s:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/study.dir/build.make CMakeFiles/study.dir/distours/vseros/10.16.2021/B.cpp.s
-.PHONY : distours/vseros/10.16.2021/B.cpp.s
+cpm/stack/F.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/study.dir/build.make CMakeFiles/study.dir/cpm/stack/F.cpp.s
+.PHONY : cpm/stack/F.cpp.s
 
 # Help Target
 help:
@@ -162,9 +162,9 @@ help:
 	@echo "... edit_cache"
 	@echo "... rebuild_cache"
 	@echo "... study"
-	@echo "... distours/vseros/10.16.2021/B.o"
-	@echo "... distours/vseros/10.16.2021/B.i"
-	@echo "... distours/vseros/10.16.2021/B.s"
+	@echo "... cpm/stack/F.o"
+	@echo "... cpm/stack/F.i"
+	@echo "... cpm/stack/F.s"
 .PHONY : help
 
 
