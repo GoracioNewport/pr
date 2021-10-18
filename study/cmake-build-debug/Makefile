@@ -129,29 +129,29 @@ study/fast:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/study.dir/build.make CMakeFiles/study.dir/build
 .PHONY : study/fast
 
-cpm/stack/F.o: cpm/stack/F.cpp.o
-.PHONY : cpm/stack/F.o
+tinkoff/classes/thematicContests/multitreap/FenwickSum.o: tinkoff/classes/thematicContests/multitreap/FenwickSum.cpp.o
+.PHONY : tinkoff/classes/thematicContests/multitreap/FenwickSum.o
 
 # target to build an object file
-cpm/stack/F.cpp.o:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/study.dir/build.make CMakeFiles/study.dir/cpm/stack/F.cpp.o
-.PHONY : cpm/stack/F.cpp.o
+tinkoff/classes/thematicContests/multitreap/FenwickSum.cpp.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/study.dir/build.make CMakeFiles/study.dir/tinkoff/classes/thematicContests/multitreap/FenwickSum.cpp.o
+.PHONY : tinkoff/classes/thematicContests/multitreap/FenwickSum.cpp.o
 
-cpm/stack/F.i: cpm/stack/F.cpp.i
-.PHONY : cpm/stack/F.i
+tinkoff/classes/thematicContests/multitreap/FenwickSum.i: tinkoff/classes/thematicContests/multitreap/FenwickSum.cpp.i
+.PHONY : tinkoff/classes/thematicContests/multitreap/FenwickSum.i
 
 # target to preprocess a source file
-cpm/stack/F.cpp.i:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/study.dir/build.make CMakeFiles/study.dir/cpm/stack/F.cpp.i
-.PHONY : cpm/stack/F.cpp.i
+tinkoff/classes/thematicContests/multitreap/FenwickSum.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/study.dir/build.make CMakeFiles/study.dir/tinkoff/classes/thematicContests/multitreap/FenwickSum.cpp.i
+.PHONY : tinkoff/classes/thematicContests/multitreap/FenwickSum.cpp.i
 
-cpm/stack/F.s: cpm/stack/F.cpp.s
-.PHONY : cpm/stack/F.s
+tinkoff/classes/thematicContests/multitreap/FenwickSum.s: tinkoff/classes/thematicContests/multitreap/FenwickSum.cpp.s
+.PHONY : tinkoff/classes/thematicContests/multitreap/FenwickSum.s
 
 # target to generate assembly for a file
-cpm/stack/F.cpp.s:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/study.dir/build.make CMakeFiles/study.dir/cpm/stack/F.cpp.s
-.PHONY : cpm/stack/F.cpp.s
+tinkoff/classes/thematicContests/multitreap/FenwickSum.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/study.dir/build.make CMakeFiles/study.dir/tinkoff/classes/thematicContests/multitreap/FenwickSum.cpp.s
+.PHONY : tinkoff/classes/thematicContests/multitreap/FenwickSum.cpp.s
 
 # Help Target
 help:
@@ -162,9 +162,9 @@ help:
 	@echo "... edit_cache"
 	@echo "... rebuild_cache"
 	@echo "... study"
-	@echo "... cpm/stack/F.o"
-	@echo "... cpm/stack/F.i"
-	@echo "... cpm/stack/F.s"
+	@echo "... tinkoff/classes/thematicContests/multitreap/FenwickSum.o"
+	@echo "... tinkoff/classes/thematicContests/multitreap/FenwickSum.i"
+	@echo "... tinkoff/classes/thematicContests/multitreap/FenwickSum.s"
 .PHONY : help
 
 

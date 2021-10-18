@@ -1,5 +1,5 @@
 file(REMOVE_RECURSE
-  "CMakeFiles/study.dir/cpm/stack/F.cpp.o"
+  "CMakeFiles/study.dir/tinkoff/classes/thematicContests/multitreap/FenwickSum.cpp.o"
   "study"
   "study.pdb"
 )
