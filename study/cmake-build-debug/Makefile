@@ -129,29 +129,29 @@ study/fast:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/study.dir/build.make CMakeFiles/study.dir/build
 .PHONY : study/fast
 
-distours/vseros/10.19.2021/B.o: distours/vseros/10.19.2021/B.cpp.o
-.PHONY : distours/vseros/10.19.2021/B.o
+tinkoff/classes/thematicContests/codeonly/problem_C.o: tinkoff/classes/thematicContests/codeonly/problem_C.cpp.o
+.PHONY : tinkoff/classes/thematicContests/codeonly/problem_C.o
 
 # target to build an object file
-distours/vseros/10.19.2021/B.cpp.o:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/study.dir/build.make CMakeFiles/study.dir/distours/vseros/10.19.2021/B.cpp.o
-.PHONY : distours/vseros/10.19.2021/B.cpp.o
+tinkoff/classes/thematicContests/codeonly/problem_C.cpp.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/study.dir/build.make CMakeFiles/study.dir/tinkoff/classes/thematicContests/codeonly/problem_C.cpp.o
+.PHONY : tinkoff/classes/thematicContests/codeonly/problem_C.cpp.o
 
-distours/vseros/10.19.2021/B.i: distours/vseros/10.19.2021/B.cpp.i
-.PHONY : distours/vseros/10.19.2021/B.i
+tinkoff/classes/thematicContests/codeonly/problem_C.i: tinkoff/classes/thematicContests/codeonly/problem_C.cpp.i
+.PHONY : tinkoff/classes/thematicContests/codeonly/problem_C.i
 
 # target to preprocess a source file
-distours/vseros/10.19.2021/B.cpp.i:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/study.dir/build.make CMakeFiles/study.dir/distours/vseros/10.19.2021/B.cpp.i
-.PHONY : distours/vseros/10.19.2021/B.cpp.i
+tinkoff/classes/thematicContests/codeonly/problem_C.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/study.dir/build.make CMakeFiles/study.dir/tinkoff/classes/thematicContests/codeonly/problem_C.cpp.i
+.PHONY : tinkoff/classes/thematicContests/codeonly/problem_C.cpp.i
 
-distours/vseros/10.19.2021/B.s: distours/vseros/10.19.2021/B.cpp.s
-.PHONY : distours/vseros/10.19.2021/B.s
+tinkoff/classes/thematicContests/codeonly/problem_C.s: tinkoff/classes/thematicContests/codeonly/problem_C.cpp.s
+.PHONY : tinkoff/classes/thematicContests/codeonly/problem_C.s
 
 # target to generate assembly for a file
-distours/vseros/10.19.2021/B.cpp.s:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/study.dir/build.make CMakeFiles/study.dir/distours/vseros/10.19.2021/B.cpp.s
-.PHONY : distours/vseros/10.19.2021/B.cpp.s
+tinkoff/classes/thematicContests/codeonly/problem_C.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/study.dir/build.make CMakeFiles/study.dir/tinkoff/classes/thematicContests/codeonly/problem_C.cpp.s
+.PHONY : tinkoff/classes/thematicContests/codeonly/problem_C.cpp.s
 
 # Help Target
 help:
@@ -162,9 +162,9 @@ help:
 	@echo "... edit_cache"
 	@echo "... rebuild_cache"
 	@echo "... study"
-	@echo "... distours/vseros/10.19.2021/B.o"
-	@echo "... distours/vseros/10.19.2021/B.i"
-	@echo "... distours/vseros/10.19.2021/B.s"
+	@echo "... tinkoff/classes/thematicContests/codeonly/problem_C.o"
+	@echo "... tinkoff/classes/thematicContests/codeonly/problem_C.i"
+	@echo "... tinkoff/classes/thematicContests/codeonly/problem_C.s"
 .PHONY : help
 
 

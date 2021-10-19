@@ -1,5 +1,5 @@
 file(REMOVE_RECURSE
-  "CMakeFiles/study.dir/distours/vseros/10.19.2021/B.cpp.o"
+  "CMakeFiles/study.dir/tinkoff/classes/thematicContests/codeonly/problem_C.cpp.o"
   "study"
   "study.pdb"
 )

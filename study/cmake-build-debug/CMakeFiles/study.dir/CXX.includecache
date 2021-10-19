@@ -6,7 +6,43 @@
 
 #IncludeRegexTransform: 
 
-/mnt/hdd/pr/study/distours/vseros/10.19.2021/B.cpp
-bits/stdc++.h
+/mnt/hdd/pr/study/tinkoff/classes/thematicContests/codeonly/problem_C.cpp
+iostream
+-
+vector
+-
+map
+-
+set
+-
+queue
+-
+algorithm
+-
+string
+-
+cmath
+-
+cstdio
+-
+iomanip
+-
+fstream
+-
+cassert
+-
+cstring
+-
+unordered_set
+-
+unordered_map
+-
+numeric
+-
+ctime
+-
+bitset
+-
+complex
 -
 

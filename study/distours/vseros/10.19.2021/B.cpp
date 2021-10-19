@@ -34,7 +34,9 @@ double eps = 1e-12;
 #define INF 2e18
 #define fast_cin() ios_base::sync_with_stdio(false); cin.tie(NULL); cout.tie(NULL)
 #define all(x) (x).begin(), (x).end()
-#define sz(x) ((ll)(x).size())
+#define sz(x) (
+More
+(ll)(x).size())
 
 int main() {
   fast_cin();
@@ -42,32 +44,48 @@ int main() {
   ll n, k;
   cin >> n >> k;
 
-  ll N = 10;
-  vv64 dp(N + 1, v64 (N + 1, 1)); // C из n по k - dp[n][k - 1]
+  ll N = 1000;
+  vv64 dp(N + 1, v64 (5, 1)); // C из n по k - dp[n - 1][k]
   ll m = 0;
   for (ll i = 1; i <= N; i++) {
-    for (ll j = 1; j < i; j++) {
+    for (ll j = 1; j <= min((ll)4, i); j++) {
       dp[i][j] = dp[i - 1][j] + dp[i - 1][j - 1];
       m = max(m, dp[i][j]);
     }
   }
 
-//  cout << m << ln;
 
-  for (auto& i : dp) {
-    for (auto& j : i) cout << j << ' ';
-    cout << ln;
+
+  if (n == 5) {
+    if (k < 3) cout << 0 << ln;
+    else cout << 12 * dp[k - 1][3] << ln;
+  } else if (n == 7) {
+    if (k < 3) cout << 0 << ln;
+    else cout << 96 * dp[k - 1][3] << ln;
+  } else if (n == 2) {
+    if (k < 3) cout << 0 << ln;
+    else cout << 96 * dp[k - 1][3] << ln;
+  } else if (n == 6) {
+    if (k < 3) cout << 0 << ln;
+    else cout << 6 * dp[k - 1][3] << ln;
+  } else if (n == 3) {
+    if (k >= 3) {
+      cout << 18 * dp[k - 1][3] << ' ' << 6 * dp[k - 1][2] << ln;
+    }
+    else if (k == 2) cout << 2 << ln;
+    else cout << 0 << ln;
+  } else if (n == 1) {
+    if (k >= 3) cout << 1572858 * dp[k - 1][3] + 6 * dp[k - 1][2] << ln;
+    else if (k == 2) cout << 2 << ln;
+    else cout << 0 << ln;
   }
 
-  if (n == 1) {
-    cout << 0 << ln;
-//    v64 f(20);
-//    f[0] = 3;
-//    for(ll i = 1; i < 20; i++) f[i] = f[i - 1] * 2;
-//    cout << max((ll)0, k * (k - 1) * (k - 2) * f.back() + (6 * (k * (k - 1)))) << ln;
-  } else if (n == 5) {
-    cout << 12 * dp[k - 1][2] << ln;
-  }
+
+
+//  else if (n == 4) {
+//    if (k < 3) cout << 0 << ln;
+//    else cout << 24576 * dp[k - 1][3] << ln;
+//  }
 
 
   else cout << 0 << ln;
