@@ -7,7 +7,7 @@
 
 using namespace std;
 
-typedef long long ll;
+typedef int ll;
 typedef long double ld;
 typedef pair<int,int> p32;
 typedef pair<ll,ll> p64;
@@ -38,10 +38,12 @@ double eps = 1e-12;
 
 struct Fenwick {
   v64 t; // cnt of zeros
-  ll n;
+  ll n, logn;
 
   Fenwick(v64& a) {
     n = sz(a) + 1;
+    logn = 0;
+    while((1 << logn) < n) logn++;
     t.assign(n, 0);
     forn(i,n-1) if (a[i] == 0) update(i, 1);
   }
@@ -61,11 +63,47 @@ struct Fenwick {
   ll getSum(ll l, ll r) {
     return getSum(r) - getSum(l - 1);
   }
+
+  ll lower_bound(ll s) {
+    ll k = 0;
+    for (ll l = logn; l >= 0; l--) {
+      if (k + (1 << l) < n && t[k + (1 << l)] < s) {
+        k += (1 << l);
+        s -= t[k];
+      }
+    } return k;
+  }
+
 };
 
 int main() {
   fast_cin();
 
+  ll n;
+  cin >> n;
+  v64 a(n);
+  for (auto& i : a) cin >> i;
+  Fenwick tree(a);
+  ll q;
+  cin >> q;
+  while(q--) {
+    char cmd;
+    cin >> cmd;
+    if (cmd == 'u') {
+      ll i, x;
+      cin >> i >> x; i--;
+      if (a[i] != 0 && x == 0) tree.update(i, 1);
+      if (a[i] == 0 && x != 0) tree.update(i, -1);
+      a[i] = x;
+    } else {
+      ll l, r, k;
+      cin >> l >> r >> k;
+      k += tree.getSum(0, l - 2);
+//      cout << k << ln;
+      ll x = tree.lower_bound(k);
+      cout << (x < r ? x + 1 : -1) << ln;
+    }
+  }
 
 
 }

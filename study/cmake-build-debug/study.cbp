@@ -82,7 +82,7 @@
 				</MakeCommands>
 			</Target>
 		</Build>
-		<Unit filename="/mnt/hdd/pr/study/tinkoff/classes/thematicContests/multitreap/FenwickSum.cpp">
+		<Unit filename="/mnt/hdd/pr/study/distours/vseros/10.19.2021/A.cpp">
 			<Option target="study"/>
 		</Unit>
 		<Unit filename="/mnt/hdd/pr/study/CMakeLists.txt">

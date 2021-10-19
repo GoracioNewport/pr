@@ -129,29 +129,29 @@ study/fast:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/study.dir/build.make CMakeFiles/study.dir/build
 .PHONY : study/fast
 
-tinkoff/classes/thematicContests/multitreap/FenwickSum.o: tinkoff/classes/thematicContests/multitreap/FenwickSum.cpp.o
-.PHONY : tinkoff/classes/thematicContests/multitreap/FenwickSum.o
+distours/vseros/10.19.2021/A.o: distours/vseros/10.19.2021/A.cpp.o
+.PHONY : distours/vseros/10.19.2021/A.o
 
 # target to build an object file
-tinkoff/classes/thematicContests/multitreap/FenwickSum.cpp.o:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/study.dir/build.make CMakeFiles/study.dir/tinkoff/classes/thematicContests/multitreap/FenwickSum.cpp.o
-.PHONY : tinkoff/classes/thematicContests/multitreap/FenwickSum.cpp.o
+distours/vseros/10.19.2021/A.cpp.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/study.dir/build.make CMakeFiles/study.dir/distours/vseros/10.19.2021/A.cpp.o
+.PHONY : distours/vseros/10.19.2021/A.cpp.o
 
-tinkoff/classes/thematicContests/multitreap/FenwickSum.i: tinkoff/classes/thematicContests/multitreap/FenwickSum.cpp.i
-.PHONY : tinkoff/classes/thematicContests/multitreap/FenwickSum.i
+distours/vseros/10.19.2021/A.i: distours/vseros/10.19.2021/A.cpp.i
+.PHONY : distours/vseros/10.19.2021/A.i
 
 # target to preprocess a source file
-tinkoff/classes/thematicContests/multitreap/FenwickSum.cpp.i:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/study.dir/build.make CMakeFiles/study.dir/tinkoff/classes/thematicContests/multitreap/FenwickSum.cpp.i
-.PHONY : tinkoff/classes/thematicContests/multitreap/FenwickSum.cpp.i
+distours/vseros/10.19.2021/A.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/study.dir/build.make CMakeFiles/study.dir/distours/vseros/10.19.2021/A.cpp.i
+.PHONY : distours/vseros/10.19.2021/A.cpp.i
 
-tinkoff/classes/thematicContests/multitreap/FenwickSum.s: tinkoff/classes/thematicContests/multitreap/FenwickSum.cpp.s
-.PHONY : tinkoff/classes/thematicContests/multitreap/FenwickSum.s
+distours/vseros/10.19.2021/A.s: distours/vseros/10.19.2021/A.cpp.s
+.PHONY : distours/vseros/10.19.2021/A.s
 
 # target to generate assembly for a file
-tinkoff/classes/thematicContests/multitreap/FenwickSum.cpp.s:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/study.dir/build.make CMakeFiles/study.dir/tinkoff/classes/thematicContests/multitreap/FenwickSum.cpp.s
-.PHONY : tinkoff/classes/thematicContests/multitreap/FenwickSum.cpp.s
+distours/vseros/10.19.2021/A.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/study.dir/build.make CMakeFiles/study.dir/distours/vseros/10.19.2021/A.cpp.s
+.PHONY : distours/vseros/10.19.2021/A.cpp.s
 
 # Help Target
 help:
@@ -162,9 +162,9 @@ help:
 	@echo "... edit_cache"
 	@echo "... rebuild_cache"
 	@echo "... study"
-	@echo "... tinkoff/classes/thematicContests/multitreap/FenwickSum.o"
-	@echo "... tinkoff/classes/thematicContests/multitreap/FenwickSum.i"
-	@echo "... tinkoff/classes/thematicContests/multitreap/FenwickSum.s"
+	@echo "... distours/vseros/10.19.2021/A.o"
+	@echo "... distours/vseros/10.19.2021/A.i"
+	@echo "... distours/vseros/10.19.2021/A.s"
 .PHONY : help
 
 
