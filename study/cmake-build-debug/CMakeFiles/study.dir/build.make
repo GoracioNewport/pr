@@ -66,27 +66,27 @@ include CMakeFiles/study.dir/progress.make
 # Include the compile flags for this target's objects.
 include CMakeFiles/study.dir/flags.make
 
-CMakeFiles/study.dir/tinkoff/classes/thematicContests/sqrt/C.cpp.o: CMakeFiles/study.dir/flags.make
-CMakeFiles/study.dir/tinkoff/classes/thematicContests/sqrt/C.cpp.o: ../tinkoff/classes/thematicContests/sqrt/C.cpp
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/mnt/hdd/pr/study/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_1) "Building CXX object CMakeFiles/study.dir/tinkoff/classes/thematicContests/sqrt/C.cpp.o"
-	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/study.dir/tinkoff/classes/thematicContests/sqrt/C.cpp.o -c /mnt/hdd/pr/study/tinkoff/classes/thematicContests/sqrt/C.cpp
+CMakeFiles/study.dir/tinkoff/classes/thematicContests/codeonly/problem_G.cpp.o: CMakeFiles/study.dir/flags.make
+CMakeFiles/study.dir/tinkoff/classes/thematicContests/codeonly/problem_G.cpp.o: ../tinkoff/classes/thematicContests/codeonly/problem_G.cpp
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/mnt/hdd/pr/study/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_1) "Building CXX object CMakeFiles/study.dir/tinkoff/classes/thematicContests/codeonly/problem_G.cpp.o"
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/study.dir/tinkoff/classes/thematicContests/codeonly/problem_G.cpp.o -c /mnt/hdd/pr/study/tinkoff/classes/thematicContests/codeonly/problem_G.cpp
 
-CMakeFiles/study.dir/tinkoff/classes/thematicContests/sqrt/C.cpp.i: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/study.dir/tinkoff/classes/thematicContests/sqrt/C.cpp.i"
-	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /mnt/hdd/pr/study/tinkoff/classes/thematicContests/sqrt/C.cpp > CMakeFiles/study.dir/tinkoff/classes/thematicContests/sqrt/C.cpp.i
+CMakeFiles/study.dir/tinkoff/classes/thematicContests/codeonly/problem_G.cpp.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/study.dir/tinkoff/classes/thematicContests/codeonly/problem_G.cpp.i"
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /mnt/hdd/pr/study/tinkoff/classes/thematicContests/codeonly/problem_G.cpp > CMakeFiles/study.dir/tinkoff/classes/thematicContests/codeonly/problem_G.cpp.i
 
-CMakeFiles/study.dir/tinkoff/classes/thematicContests/sqrt/C.cpp.s: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/study.dir/tinkoff/classes/thematicContests/sqrt/C.cpp.s"
-	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /mnt/hdd/pr/study/tinkoff/classes/thematicContests/sqrt/C.cpp -o CMakeFiles/study.dir/tinkoff/classes/thematicContests/sqrt/C.cpp.s
+CMakeFiles/study.dir/tinkoff/classes/thematicContests/codeonly/problem_G.cpp.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/study.dir/tinkoff/classes/thematicContests/codeonly/problem_G.cpp.s"
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /mnt/hdd/pr/study/tinkoff/classes/thematicContests/codeonly/problem_G.cpp -o CMakeFiles/study.dir/tinkoff/classes/thematicContests/codeonly/problem_G.cpp.s
 
 # Object files for target study
 study_OBJECTS = \
-"CMakeFiles/study.dir/tinkoff/classes/thematicContests/sqrt/C.cpp.o"
+"CMakeFiles/study.dir/tinkoff/classes/thematicContests/codeonly/problem_G.cpp.o"
 
 # External object files for target study
 study_EXTERNAL_OBJECTS =
 
-study: CMakeFiles/study.dir/tinkoff/classes/thematicContests/sqrt/C.cpp.o
+study: CMakeFiles/study.dir/tinkoff/classes/thematicContests/codeonly/problem_G.cpp.o
 study: CMakeFiles/study.dir/build.make
 study: CMakeFiles/study.dir/link.txt
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --bold --progress-dir=/mnt/hdd/pr/study/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_2) "Linking CXX executable study"

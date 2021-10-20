@@ -31,7 +31,7 @@ double eps = 1e-12;
 #define pb push_back
 #define fi first
 #define se second
-#define INF 2e18
+#define INF 2e9
 #define fast_cin() ios_base::sync_with_stdio(false); cin.tie(NULL); cout.tie(NULL)
 #define all(x) (x).begin(), (x).end()
 #define sz(x) ((ll)(x).size())
@@ -47,30 +47,29 @@ int main() {
   fast_cin();
 
   string s;
-//  cin >> s;
-  scanf("%s", &s);
-  int n = sz(s);
+  cin >> s;
+  ll n = sz(s);
 
   hs.resize(n + 1, 0);
   ks.resize(n + 1, 1);
   forn(i,n) {
     ks[i + 1] = (ks[i] * k) % mod;
     hs[i + 1] = (hs[i] * k + (s[i] - '0' + 1)) % mod;
-  } ll blockSize = 0;
+  } ll blockSize = 5;
 
-//  unordered_map <ll, ll> Z;
-//  vv64 z;
+  unordered_map <ll, ll> Z;
+  vv64 z;
 
-//  for (ll l = 0; l < n; l++) {
-//    for (ll len = 1; len <= min(blockSize, n - l); len++) {
-//      ll r = l + len;
-//      ll h = subhash(l, r);
-//      if (Z[h] == 0) {
-//        z.pb(v64());
-//        Z[h] = sz(z);
-//      } z[Z[h] - 1].pb(l);
-//    }
-//  }
+  for (ll l = 0; l < n; l++) {
+    for (ll len = 1; len <= min(blockSize, n - l); len++) {
+      ll r = l + len;
+      ll h = subhash(l, r);
+      if (Z[h] == 0) {
+        z.pb(v64());
+        Z[h] = sz(z);
+      } z[Z[h] - 1].pb(l);
+    }
+  }
 
   ll q;
   cin >> q;
@@ -82,21 +81,21 @@ int main() {
     ll h = 0;
     forn(i,sz(m)) h = (h * k + (m[i] - '0' + 1)) % mod;
 
-//    if (sz(m) <= blockSize) {
-//      ll ans = INF;
-//      ll X = Z[h] - 1;
-//      for (ll i = 0; i < sz(z[X]) - t + 1; i++) {
-//        ans = min(ans, z[X][i + t - 1] - z[X][i] + sz(m));
-//      } cout << (ans == INF ? -1 : ans) << ln;
-//    } else {
-      int ans = 2e9;
+    if (sz(m) <= blockSize) {
+      int ans = INF;
+      ll X = Z[h] - 1;
+      for (ll i = 0; i < sz(z[X]) - t + 1; i++) {
+        ans = min(ans, (int)(z[X][i + t - 1] - z[X][i] + sz(m)));
+      } cout << (ans == INF ? -1 : ans) << ln;
+    } else {
+      int ans = INF;
       v32 inds;
       for (int i = 0; i < sz(s) - sz(m) + 1; i++) {
         if (subhash(i, i + sz(m)) == h) inds.pb(i);
       } for (int i = 0; i < sz(inds) - t + 1; i++) {
         ans = min(ans, inds[i + t - 1] - inds[i] + (int)m.size());
-      } cout << (ans == 2e9 ? -1 : ans) << ln;
-//    }
+      } cout << (ans == INF ? -1 : ans) << ln;
+    }
   }
 
 }
