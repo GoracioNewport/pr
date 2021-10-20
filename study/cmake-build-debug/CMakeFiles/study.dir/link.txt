@@ -1,1 +1,1 @@
-/usr/bin/c++ -g CMakeFiles/study.dir/tinkoff/classes/thematicContests/codeonly/problem_C.cpp.o -o study 
+/usr/bin/c++ -g CMakeFiles/study.dir/tinkoff/classes/thematicContests/sqrt/C.cpp.o -o study 

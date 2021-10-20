@@ -129,29 +129,29 @@ study/fast:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/study.dir/build.make CMakeFiles/study.dir/build
 .PHONY : study/fast
 
-tinkoff/classes/thematicContests/codeonly/problem_C.o: tinkoff/classes/thematicContests/codeonly/problem_C.cpp.o
-.PHONY : tinkoff/classes/thematicContests/codeonly/problem_C.o
+tinkoff/classes/thematicContests/sqrt/C.o: tinkoff/classes/thematicContests/sqrt/C.cpp.o
+.PHONY : tinkoff/classes/thematicContests/sqrt/C.o
 
 # target to build an object file
-tinkoff/classes/thematicContests/codeonly/problem_C.cpp.o:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/study.dir/build.make CMakeFiles/study.dir/tinkoff/classes/thematicContests/codeonly/problem_C.cpp.o
-.PHONY : tinkoff/classes/thematicContests/codeonly/problem_C.cpp.o
+tinkoff/classes/thematicContests/sqrt/C.cpp.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/study.dir/build.make CMakeFiles/study.dir/tinkoff/classes/thematicContests/sqrt/C.cpp.o
+.PHONY : tinkoff/classes/thematicContests/sqrt/C.cpp.o
 
-tinkoff/classes/thematicContests/codeonly/problem_C.i: tinkoff/classes/thematicContests/codeonly/problem_C.cpp.i
-.PHONY : tinkoff/classes/thematicContests/codeonly/problem_C.i
+tinkoff/classes/thematicContests/sqrt/C.i: tinkoff/classes/thematicContests/sqrt/C.cpp.i
+.PHONY : tinkoff/classes/thematicContests/sqrt/C.i
 
 # target to preprocess a source file
-tinkoff/classes/thematicContests/codeonly/problem_C.cpp.i:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/study.dir/build.make CMakeFiles/study.dir/tinkoff/classes/thematicContests/codeonly/problem_C.cpp.i
-.PHONY : tinkoff/classes/thematicContests/codeonly/problem_C.cpp.i
+tinkoff/classes/thematicContests/sqrt/C.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/study.dir/build.make CMakeFiles/study.dir/tinkoff/classes/thematicContests/sqrt/C.cpp.i
+.PHONY : tinkoff/classes/thematicContests/sqrt/C.cpp.i
 
-tinkoff/classes/thematicContests/codeonly/problem_C.s: tinkoff/classes/thematicContests/codeonly/problem_C.cpp.s
-.PHONY : tinkoff/classes/thematicContests/codeonly/problem_C.s
+tinkoff/classes/thematicContests/sqrt/C.s: tinkoff/classes/thematicContests/sqrt/C.cpp.s
+.PHONY : tinkoff/classes/thematicContests/sqrt/C.s
 
 # target to generate assembly for a file
-tinkoff/classes/thematicContests/codeonly/problem_C.cpp.s:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/study.dir/build.make CMakeFiles/study.dir/tinkoff/classes/thematicContests/codeonly/problem_C.cpp.s
-.PHONY : tinkoff/classes/thematicContests/codeonly/problem_C.cpp.s
+tinkoff/classes/thematicContests/sqrt/C.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/study.dir/build.make CMakeFiles/study.dir/tinkoff/classes/thematicContests/sqrt/C.cpp.s
+.PHONY : tinkoff/classes/thematicContests/sqrt/C.cpp.s
 
 # Help Target
 help:
@@ -162,9 +162,9 @@ help:
 	@echo "... edit_cache"
 	@echo "... rebuild_cache"
 	@echo "... study"
-	@echo "... tinkoff/classes/thematicContests/codeonly/problem_C.o"
-	@echo "... tinkoff/classes/thematicContests/codeonly/problem_C.i"
-	@echo "... tinkoff/classes/thematicContests/codeonly/problem_C.s"
+	@echo "... tinkoff/classes/thematicContests/sqrt/C.o"
+	@echo "... tinkoff/classes/thematicContests/sqrt/C.i"
+	@echo "... tinkoff/classes/thematicContests/sqrt/C.s"
 .PHONY : help
 
 
