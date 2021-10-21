@@ -82,7 +82,7 @@
 				</MakeCommands>
 			</Target>
 		</Build>
-		<Unit filename="/mnt/hdd/pr/study/tinkoff/classes/thematicContests/codeonly/problem_G.cpp">
+		<Unit filename="/mnt/hdd/pr/study/distours/region/10.21.2021/D.cpp">
 			<Option target="study"/>
 		</Unit>
 		<Unit filename="/mnt/hdd/pr/study/CMakeLists.txt">

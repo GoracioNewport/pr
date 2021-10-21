@@ -129,29 +129,29 @@ study/fast:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/study.dir/build.make CMakeFiles/study.dir/build
 .PHONY : study/fast
 
-tinkoff/classes/thematicContests/codeonly/problem_G.o: tinkoff/classes/thematicContests/codeonly/problem_G.cpp.o
-.PHONY : tinkoff/classes/thematicContests/codeonly/problem_G.o
+distours/region/10.21.2021/D.o: distours/region/10.21.2021/D.cpp.o
+.PHONY : distours/region/10.21.2021/D.o
 
 # target to build an object file
-tinkoff/classes/thematicContests/codeonly/problem_G.cpp.o:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/study.dir/build.make CMakeFiles/study.dir/tinkoff/classes/thematicContests/codeonly/problem_G.cpp.o
-.PHONY : tinkoff/classes/thematicContests/codeonly/problem_G.cpp.o
+distours/region/10.21.2021/D.cpp.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/study.dir/build.make CMakeFiles/study.dir/distours/region/10.21.2021/D.cpp.o
+.PHONY : distours/region/10.21.2021/D.cpp.o
 
-tinkoff/classes/thematicContests/codeonly/problem_G.i: tinkoff/classes/thematicContests/codeonly/problem_G.cpp.i
-.PHONY : tinkoff/classes/thematicContests/codeonly/problem_G.i
+distours/region/10.21.2021/D.i: distours/region/10.21.2021/D.cpp.i
+.PHONY : distours/region/10.21.2021/D.i
 
 # target to preprocess a source file
-tinkoff/classes/thematicContests/codeonly/problem_G.cpp.i:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/study.dir/build.make CMakeFiles/study.dir/tinkoff/classes/thematicContests/codeonly/problem_G.cpp.i
-.PHONY : tinkoff/classes/thematicContests/codeonly/problem_G.cpp.i
+distours/region/10.21.2021/D.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/study.dir/build.make CMakeFiles/study.dir/distours/region/10.21.2021/D.cpp.i
+.PHONY : distours/region/10.21.2021/D.cpp.i
 
-tinkoff/classes/thematicContests/codeonly/problem_G.s: tinkoff/classes/thematicContests/codeonly/problem_G.cpp.s
-.PHONY : tinkoff/classes/thematicContests/codeonly/problem_G.s
+distours/region/10.21.2021/D.s: distours/region/10.21.2021/D.cpp.s
+.PHONY : distours/region/10.21.2021/D.s
 
 # target to generate assembly for a file
-tinkoff/classes/thematicContests/codeonly/problem_G.cpp.s:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/study.dir/build.make CMakeFiles/study.dir/tinkoff/classes/thematicContests/codeonly/problem_G.cpp.s
-.PHONY : tinkoff/classes/thematicContests/codeonly/problem_G.cpp.s
+distours/region/10.21.2021/D.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/study.dir/build.make CMakeFiles/study.dir/distours/region/10.21.2021/D.cpp.s
+.PHONY : distours/region/10.21.2021/D.cpp.s
 
 # Help Target
 help:
@@ -162,9 +162,9 @@ help:
 	@echo "... edit_cache"
 	@echo "... rebuild_cache"
 	@echo "... study"
-	@echo "... tinkoff/classes/thematicContests/codeonly/problem_G.o"
-	@echo "... tinkoff/classes/thematicContests/codeonly/problem_G.i"
-	@echo "... tinkoff/classes/thematicContests/codeonly/problem_G.s"
+	@echo "... distours/region/10.21.2021/D.o"
+	@echo "... distours/region/10.21.2021/D.i"
+	@echo "... distours/region/10.21.2021/D.s"
 .PHONY : help
 
 

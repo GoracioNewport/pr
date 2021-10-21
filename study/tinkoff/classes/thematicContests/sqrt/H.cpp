@@ -38,13 +38,16 @@ double eps = 1e-12;
 
 vvp64 p;
 v64 used;
-vp64 path;
+vector <pair <ll, p64>> path;
 
-void dfs(ll v) {
+void dfs(ll v, p64 parent) { // <num, ind>
   used[v] = true;
-  path.pb(v);
-  for (auto &u : p[v]) if (!used[u.fi]) dfs(u.fi);
-  path.pb(v);
+  for (auto &u : p[v]) {
+    if (!used[u.fi]) {
+      path.pb({u.se, {v, u.fi}});
+      dfs(u.fi, {u.se, v});
+    }
+  } path.pb({parent.fi, {v, parent.se}});
 }
 
 int main() {
@@ -59,6 +62,14 @@ int main() {
     cin >> x >> y >> v; x--; y--;
     p[x].pb({y,v});
     p[y].pb({x,v});
-  }
+  } dfs(0, {-1, -1});
+  path.pop_back();
+
+  for (auto& i : path) cout << i.fi << ' ';
+  cout << ln;
+  for (auto& i : path) cout << i.se.fi + 1 << ' ';
+  cout << ln;
+  for (auto& i : path) cout << i.se.se + 1 << ' ';
+  cout << ln;
 
 }
