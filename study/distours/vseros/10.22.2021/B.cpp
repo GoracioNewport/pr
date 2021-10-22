@@ -85,7 +85,7 @@ int main() {
   reverse(all(a));
   for (ll c = 0; c < k; c++) {
 
-    
+      
     for (auto& i : a) {
       if (i.dir == RIGHT) {
 
