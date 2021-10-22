@@ -129,29 +129,29 @@ study/fast:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/study.dir/build.make CMakeFiles/study.dir/build
 .PHONY : study/fast
 
-distours/region/10.21.2021/D.o: distours/region/10.21.2021/D.cpp.o
-.PHONY : distours/region/10.21.2021/D.o
+distours/vseros/10.22.2021/D.o: distours/vseros/10.22.2021/D.cpp.o
+.PHONY : distours/vseros/10.22.2021/D.o
 
 # target to build an object file
-distours/region/10.21.2021/D.cpp.o:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/study.dir/build.make CMakeFiles/study.dir/distours/region/10.21.2021/D.cpp.o
-.PHONY : distours/region/10.21.2021/D.cpp.o
+distours/vseros/10.22.2021/D.cpp.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/study.dir/build.make CMakeFiles/study.dir/distours/vseros/10.22.2021/D.cpp.o
+.PHONY : distours/vseros/10.22.2021/D.cpp.o
 
-distours/region/10.21.2021/D.i: distours/region/10.21.2021/D.cpp.i
-.PHONY : distours/region/10.21.2021/D.i
+distours/vseros/10.22.2021/D.i: distours/vseros/10.22.2021/D.cpp.i
+.PHONY : distours/vseros/10.22.2021/D.i
 
 # target to preprocess a source file
-distours/region/10.21.2021/D.cpp.i:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/study.dir/build.make CMakeFiles/study.dir/distours/region/10.21.2021/D.cpp.i
-.PHONY : distours/region/10.21.2021/D.cpp.i
+distours/vseros/10.22.2021/D.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/study.dir/build.make CMakeFiles/study.dir/distours/vseros/10.22.2021/D.cpp.i
+.PHONY : distours/vseros/10.22.2021/D.cpp.i
 
-distours/region/10.21.2021/D.s: distours/region/10.21.2021/D.cpp.s
-.PHONY : distours/region/10.21.2021/D.s
+distours/vseros/10.22.2021/D.s: distours/vseros/10.22.2021/D.cpp.s
+.PHONY : distours/vseros/10.22.2021/D.s
 
 # target to generate assembly for a file
-distours/region/10.21.2021/D.cpp.s:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/study.dir/build.make CMakeFiles/study.dir/distours/region/10.21.2021/D.cpp.s
-.PHONY : distours/region/10.21.2021/D.cpp.s
+distours/vseros/10.22.2021/D.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/study.dir/build.make CMakeFiles/study.dir/distours/vseros/10.22.2021/D.cpp.s
+.PHONY : distours/vseros/10.22.2021/D.cpp.s
 
 # Help Target
 help:
@@ -162,9 +162,9 @@ help:
 	@echo "... edit_cache"
 	@echo "... rebuild_cache"
 	@echo "... study"
-	@echo "... distours/region/10.21.2021/D.o"
-	@echo "... distours/region/10.21.2021/D.i"
-	@echo "... distours/region/10.21.2021/D.s"
+	@echo "... distours/vseros/10.22.2021/D.o"
+	@echo "... distours/vseros/10.22.2021/D.i"
+	@echo "... distours/vseros/10.22.2021/D.s"
 .PHONY : help
 
 

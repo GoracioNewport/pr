@@ -8,7 +8,7 @@ set(CMAKE_DEPENDS_LANGUAGES
   )
 # The set of files for implicit dependencies of each language:
 set(CMAKE_DEPENDS_CHECK_CXX
-  "/mnt/hdd/pr/study/distours/region/10.21.2021/D.cpp" "/mnt/hdd/pr/study/cmake-build-debug/CMakeFiles/study.dir/distours/region/10.21.2021/D.cpp.o"
+  "/mnt/hdd/pr/study/distours/vseros/10.22.2021/D.cpp" "/mnt/hdd/pr/study/cmake-build-debug/CMakeFiles/study.dir/distours/vseros/10.22.2021/D.cpp.o"
   )
 set(CMAKE_CXX_COMPILER_ID "GNU")
 

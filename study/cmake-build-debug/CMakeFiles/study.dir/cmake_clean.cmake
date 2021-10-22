@@ -1,5 +1,5 @@
 file(REMOVE_RECURSE
-  "CMakeFiles/study.dir/distours/region/10.21.2021/D.cpp.o"
+  "CMakeFiles/study.dir/distours/vseros/10.22.2021/D.cpp.o"
   "study"
   "study.pdb"
 )

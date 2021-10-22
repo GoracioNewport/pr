@@ -41,9 +41,9 @@ enum { BEGIN, END };
 struct event {
   ll x, y, type;
   bool operator< (event& o) {
-      if (x != o.x) return x < o.x;
-      else if (type != o.type) return type < o.type;
-      else return y < o.y;
+    if (x != o.x) return x < o.x;
+    else if (type != o.type) return type < o.type;
+    else return y < o.y;
   }
 };
 
@@ -66,8 +66,8 @@ int main() {
   }
   for (ll i = 0; i < k; i++) {
     if (!sz(ks[i])) {
-      if (1 <= n) q.pb({1, n, BEGIN});
-      if (1 <= n) q.pb({n, 1, END});
+      if (1 <= n) q.pb({1, n + 1, BEGIN});
+      if (1 <= n) q.pb({n + 1, 1, END});
     } else {
       if (1 < ks[i][0].fi) q.pb({1, ks[i][0].fi, BEGIN});
       if (1 < ks[i][0].fi) q.pb({ks[i][0].fi, 1, END});
@@ -82,23 +82,34 @@ int main() {
   ll next = -1;
   multiset <ll> p;
 
-  for (auto& i : q) cout << i.x << ' ' << i.y << ' ' << i.type << ln;
-  cout << ln;
+//  for (auto& i : q) cout << i.x << ' ' << i.y << ' ' << i.type << ln;
+//  cout << ln;
 
   ll ans = 1;
 
   for (auto& i : q) {
     if (i.x > r) break;
-    if (i.type == BEGIN) {
+    if (i.type == BEGIN) p.insert(-i.y);
+    else {
+      if (i.x >= r) break;
+      p.erase(p.find(-i.x));
       if (i.x == next || (i.x > l && next == -1)) {
-        cout << i.x << ' ' << i.y << ' ' << i.type << ln;
+//        cout << i.x << ' ' << i.y << ' ' << i.type << ln;
         if (!sz(p)) {
           cout << -1 << ln;
           return 0;
-        } next = -(*p.begin());
-        ans++;
-      } p.insert(-i.y);
-    } else p.erase(p.find(-i.x));
+        } ans++;
+        next = -(*p.begin());
+      }
+    }
   } cout << ans << ln;
 
 }
+
+//5 4 2
+//1 2 1
+//2 3 2
+//3 4 1
+//4 5 2
+//1
+//1 5
