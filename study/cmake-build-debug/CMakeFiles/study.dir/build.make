@@ -66,27 +66,27 @@ include CMakeFiles/study.dir/progress.make
 # Include the compile flags for this target's objects.
 include CMakeFiles/study.dir/flags.make
 
-CMakeFiles/study.dir/distours/vseros/10.22.2021/D.cpp.o: CMakeFiles/study.dir/flags.make
-CMakeFiles/study.dir/distours/vseros/10.22.2021/D.cpp.o: ../distours/vseros/10.22.2021/D.cpp
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/mnt/hdd/pr/study/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_1) "Building CXX object CMakeFiles/study.dir/distours/vseros/10.22.2021/D.cpp.o"
-	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/study.dir/distours/vseros/10.22.2021/D.cpp.o -c /mnt/hdd/pr/study/distours/vseros/10.22.2021/D.cpp
+CMakeFiles/study.dir/distours/vseros/10.22.2021/B.cpp.o: CMakeFiles/study.dir/flags.make
+CMakeFiles/study.dir/distours/vseros/10.22.2021/B.cpp.o: ../distours/vseros/10.22.2021/B.cpp
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/mnt/hdd/pr/study/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_1) "Building CXX object CMakeFiles/study.dir/distours/vseros/10.22.2021/B.cpp.o"
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/study.dir/distours/vseros/10.22.2021/B.cpp.o -c /mnt/hdd/pr/study/distours/vseros/10.22.2021/B.cpp
 
-CMakeFiles/study.dir/distours/vseros/10.22.2021/D.cpp.i: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/study.dir/distours/vseros/10.22.2021/D.cpp.i"
-	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /mnt/hdd/pr/study/distours/vseros/10.22.2021/D.cpp > CMakeFiles/study.dir/distours/vseros/10.22.2021/D.cpp.i
+CMakeFiles/study.dir/distours/vseros/10.22.2021/B.cpp.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/study.dir/distours/vseros/10.22.2021/B.cpp.i"
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /mnt/hdd/pr/study/distours/vseros/10.22.2021/B.cpp > CMakeFiles/study.dir/distours/vseros/10.22.2021/B.cpp.i
 
-CMakeFiles/study.dir/distours/vseros/10.22.2021/D.cpp.s: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/study.dir/distours/vseros/10.22.2021/D.cpp.s"
-	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /mnt/hdd/pr/study/distours/vseros/10.22.2021/D.cpp -o CMakeFiles/study.dir/distours/vseros/10.22.2021/D.cpp.s
+CMakeFiles/study.dir/distours/vseros/10.22.2021/B.cpp.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/study.dir/distours/vseros/10.22.2021/B.cpp.s"
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /mnt/hdd/pr/study/distours/vseros/10.22.2021/B.cpp -o CMakeFiles/study.dir/distours/vseros/10.22.2021/B.cpp.s
 
 # Object files for target study
 study_OBJECTS = \
-"CMakeFiles/study.dir/distours/vseros/10.22.2021/D.cpp.o"
+"CMakeFiles/study.dir/distours/vseros/10.22.2021/B.cpp.o"
 
 # External object files for target study
 study_EXTERNAL_OBJECTS =
 
-study: CMakeFiles/study.dir/distours/vseros/10.22.2021/D.cpp.o
+study: CMakeFiles/study.dir/distours/vseros/10.22.2021/B.cpp.o
 study: CMakeFiles/study.dir/build.make
 study: CMakeFiles/study.dir/link.txt
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --bold --progress-dir=/mnt/hdd/pr/study/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_2) "Linking CXX executable study"

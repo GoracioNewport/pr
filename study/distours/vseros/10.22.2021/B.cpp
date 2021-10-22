@@ -46,33 +46,57 @@ int main() {
 
   ll n, k, l;
   cin >> n >> k >> l;
-  vector <event> a(n);
-  vector <event> left;
+  vector <event> a(n), left;
+  vp64 right;
   vector <ld> ans(k);
+
   for (auto& i : a) {
     cin >> i.x >> i.color;
-    i.x = l - i.x;
     char c;
     cin >> c;
-    if (c == 'L') i.dir = RIGHT;
-    else {
-      ans[i.color - 1] += i.x;
+    if (c == 'L') {
       left.pb(i);
       i.dir = LEFT;
+    } else {
+      i.dir = RIGHT;
+      ans[i.color] += l - i.x;
+      right.pb({i.x, i.color});
     }
   }
 
-  v64 buf(k); ll prev = 0;
-  for(ll i = 0; i < sz(left) - 1; i++) {
-    buf[(left[i].color + prev) % k] += left[i + 1].x - left[i].x;
-    prev += left[i + 1].color;
-  } if (sz(left)) buf[(left.back().color + prev) % k] += l - left.back().x;
+  cout << fixed << setprecision(1);
+//  reverse(all(left));
+//  for (auto& i : left) {
+//    if (sz(right)) {
+//      auto it = prev(lower_bound(all(right), make_pair(i.x, (ll)0)));
+//      if (it == prev(right.begin())) {
+//        ans[i.color] += i.x;
+//        continue;
+//      }
+//      ans[i.color] += ((ld)i.x - (ld)(*it).fi) / 2;
+//      ll prevC = i.color;
+//      for (ll j = it - right.begin(); j > 0; j--) {
+//        ans[(prevC + right[j].se) % k] += ((ld)right[j].fi - (ld)right[j - 1].fi) / 2;
+//        prevC = (prevC + right[j].se) % k;
+//      } if (i.x > right[0].fi) ans[(prevC + right[0].se) % k] += ((ld)(i.x - right[0].fi) / 2) + (ld)right[0].fi;
+//    } else ans[i.color] += i.x;
+//  }
 
-  for (auto& i : a) {
-    if (i.dir == LEFT) {
+  reverse(all(a));
+  for (ll c = 0; c < k; c++) {
 
+    
+    for (auto& i : a) {
+      if (i.dir == RIGHT) {
+
+      } else {
+
+      }
     }
   }
 
-  for (auto&i : ans) cout << fixed << setprecision(1) << i << ln;
+
+
+  for (auto& i : ans) cout << i << ln;
+
 }

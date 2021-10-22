@@ -69,8 +69,8 @@ int main() {
     } for (ll v = 0; v < n; v++) {
       ll d = abs(i - v);
       if ((v - d + n) % n == (v + d + n) % n) continue;
-      if (a[v] == a[(v - d + n) % n] && a[v] == a[(v + d + n) % n]) ans--;
-    } // if ((n % 3 == 0) && a[i] == a[i + (n / 3)] && a[i + (n / 3)] == a[i + 2 * (n / 3)]) ans += 4;
+      if (a[v] == a[(v - d + n) % n] && a[v] == a[(v + d + n) % n]) ans -= 2;
+    } if ((n % 3 == 0) && (a[i] == a[(i + (n / 3)) % n]) && (a[(i + (n / 3)) % n] == a[(i + 2 * (n / 3)) % n])) ans += 4;
 
     a[i] = !a[i];
 
@@ -80,9 +80,9 @@ int main() {
     } for (ll v = 0; v < n; v++) {
       ll d = abs(i - v);
       if ((v - d + n) % n == (v + d + n) % n) continue;
-      if (a[v] == a[(v - d + n) % n] && a[v] == a[(v + d + n) % n]) ans++;
-    } // if ((n % 3 == 0) && a[i] == a[i + (n / 3)] && a[i + (n / 3)] == a[i + 2 * (n / 3)]) ans -= 4;
-    cout << ans << ln;
+      if (a[v] == a[(v - d + n) % n] && a[v] == a[(v + d + n) % n]) ans += 2;
+    } if ((n % 3 == 0) && a[i] == a[(i + (n / 3)) % n] && a[(i + (n / 3)) % n] == a[(i + 2 * (n / 3)) % n]) ans -= 4;
+    cout << ans / 2 << ln;
   }
 
 }
