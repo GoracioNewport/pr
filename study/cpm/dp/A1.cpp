@@ -3,10 +3,10 @@
 //#pragma GCC optimize("unroll-loops")
 #include <bits/stdc++.h>
 
+// Author: @GoracioNewport
+
 using namespace std;
 
-// Author: @GoracioNewport
-  
 typedef long long ll;
 typedef long double ld;
 typedef pair<int,int> p32;
@@ -37,17 +37,44 @@ double eps = 1e-12;
 #define sz(x) ((ll)(x).size())
 
 int main() {
-  fast_cin();
-
   ll n;
   cin >> n;
   v64 a(n);
   for (auto& i : a) cin >> i;
-  v64 dp(n + 1, INF);
-	dp[0] = INF;
-	forn(i,n) {
-		ll x = upper_bound(all(dp), a[i]);
-		
-	}
 
+  v64 p(n, -1), dp(n + 1, INF), ind_dp(n + 1, -1);
+  dp[0] = -INF;
+
+  forn(i,n) {
+    ll l = 0, r = n + 1;
+    // dp[l]: dp[l] < a[i] и l - max
+
+    while (r - l > 1) { // [l; r)
+      ll m = (r + l) / 2;
+      if (dp[m] < a[i])
+        l = m;
+      else
+        r = m;
+    }
+
+    dp[l + 1] = a[i];
+    ind_dp[l + 1] = i;
+    p[i] = ind_dp[l];
+  }
+
+  ll i = 1;
+  while (i < n && dp[i + 1] != INF)
+    ++i;
+
+  i = ind_dp[i]; // индекс (из a) последнего элемента самой длинной ВП
+  vector<ll> ans;
+  ans.push_back(a[i]);
+  while (p[i] != -1) {
+    i = p[i];
+    ans.push_back(a[i]);
+  }
+
+  reverse(ans.begin(), ans.end());
+  cout << sz(ans) << ln;
+  for (auto& i : ans) cout << i << ' ';
 }

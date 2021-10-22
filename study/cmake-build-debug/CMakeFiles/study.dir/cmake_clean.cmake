@@ -1,8 +1,6 @@
 file(REMOVE_RECURSE
-  "CMakeFiles/study.dir/codeforces/practice/1542B.cpp.obj"
-  "libstudy.dll.a"
-  "study.exe"
-  "study.exe.manifest"
+  "CMakeFiles/study.dir/distours/vseros/10.22.2021/B.cpp.o"
+  "study"
   "study.pdb"
 )
 
