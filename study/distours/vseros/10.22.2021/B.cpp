@@ -38,16 +38,16 @@ double eps = 1e-12;
 
 enum { LEFT, RIGHT };
 struct event {
-  ll x, color, dir;
+  ld x, color, dir;
 };
 
 int main() {
   fast_cin();
 
-  ll n, k, l;
+  ld n, k, l;
   cin >> n >> k >> l;
   vector <event> a(n), left;
-  vp64 right;
+  vector <ld> right;
   vector <ld> ans(k);
 
   for (auto& i : a) {
@@ -60,7 +60,7 @@ int main() {
     } else {
       i.dir = RIGHT;
       ans[i.color] += l - i.x;
-      right.pb({i.x, i.color});
+      right.pb(i.x);
     }
   }
 
@@ -84,13 +84,13 @@ int main() {
 
   reverse(all(a));
   for (ll c = 0; c < k; c++) {
-
-      
+    ll curC = c;
+    ld nextX = (sz(right) ? right.back() : 0);
     for (auto& i : a) {
       if (i.dir == RIGHT) {
-
+        curC = (ll)(curC + i.color) % (ll)k;
       } else {
-
+        ans[curC] += (i.x - nextX) / 2;
       }
     }
   }

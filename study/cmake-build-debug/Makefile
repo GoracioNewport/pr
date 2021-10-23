@@ -129,29 +129,29 @@ study/fast:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/study.dir/build.make CMakeFiles/study.dir/build
 .PHONY : study/fast
 
-distours/vseros/10.22.2021/B.o: distours/vseros/10.22.2021/B.cpp.o
-.PHONY : distours/vseros/10.22.2021/B.o
+cpm/stlbinsearch/I.o: cpm/stlbinsearch/I.cpp.o
+.PHONY : cpm/stlbinsearch/I.o
 
 # target to build an object file
-distours/vseros/10.22.2021/B.cpp.o:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/study.dir/build.make CMakeFiles/study.dir/distours/vseros/10.22.2021/B.cpp.o
-.PHONY : distours/vseros/10.22.2021/B.cpp.o
+cpm/stlbinsearch/I.cpp.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/study.dir/build.make CMakeFiles/study.dir/cpm/stlbinsearch/I.cpp.o
+.PHONY : cpm/stlbinsearch/I.cpp.o
 
-distours/vseros/10.22.2021/B.i: distours/vseros/10.22.2021/B.cpp.i
-.PHONY : distours/vseros/10.22.2021/B.i
+cpm/stlbinsearch/I.i: cpm/stlbinsearch/I.cpp.i
+.PHONY : cpm/stlbinsearch/I.i
 
 # target to preprocess a source file
-distours/vseros/10.22.2021/B.cpp.i:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/study.dir/build.make CMakeFiles/study.dir/distours/vseros/10.22.2021/B.cpp.i
-.PHONY : distours/vseros/10.22.2021/B.cpp.i
+cpm/stlbinsearch/I.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/study.dir/build.make CMakeFiles/study.dir/cpm/stlbinsearch/I.cpp.i
+.PHONY : cpm/stlbinsearch/I.cpp.i
 
-distours/vseros/10.22.2021/B.s: distours/vseros/10.22.2021/B.cpp.s
-.PHONY : distours/vseros/10.22.2021/B.s
+cpm/stlbinsearch/I.s: cpm/stlbinsearch/I.cpp.s
+.PHONY : cpm/stlbinsearch/I.s
 
 # target to generate assembly for a file
-distours/vseros/10.22.2021/B.cpp.s:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/study.dir/build.make CMakeFiles/study.dir/distours/vseros/10.22.2021/B.cpp.s
-.PHONY : distours/vseros/10.22.2021/B.cpp.s
+cpm/stlbinsearch/I.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/study.dir/build.make CMakeFiles/study.dir/cpm/stlbinsearch/I.cpp.s
+.PHONY : cpm/stlbinsearch/I.cpp.s
 
 # Help Target
 help:
@@ -162,9 +162,9 @@ help:
 	@echo "... edit_cache"
 	@echo "... rebuild_cache"
 	@echo "... study"
-	@echo "... distours/vseros/10.22.2021/B.o"
-	@echo "... distours/vseros/10.22.2021/B.i"
-	@echo "... distours/vseros/10.22.2021/B.s"
+	@echo "... cpm/stlbinsearch/I.o"
+	@echo "... cpm/stlbinsearch/I.i"
+	@echo "... cpm/stlbinsearch/I.s"
 .PHONY : help
 
 
