@@ -36,33 +36,49 @@ double eps = 1e-12;
 #define all(x) (x).begin(), (x).end()
 #define sz(x) ((ll)(x).size())
 
+enum { BEGIN, END };
+
+struct event {
+  ll c, type, x, y;
+  bool operator< (event& o) {
+    if (c != o.c) return c < o.c;
+    else return type < o.type;
+  }
+};
+
 int main() {
   fast_cin();
 
   ll n;
   cin >> n;
-  v64 a(n);
+  v64 a(n), f(n), b(n);
+  v64 ans(n, -1);
   for (auto& i : a) cin >> i;
+  for (auto& i : f) cin >> i;
+  forn(i,n) if (f[i] > a[i]) ans[i] = 0;
 
-  ll ans = INF;
+  ll q;
+  cin >> q;
+  vector <pair <p64, p64>> Q(q);
+  for (auto& i : Q) cin >> i.fi.fi >> i.fi.se >> i.se.fi >> i.se.se;
 
-  for (ll i = 0; i < n - 1; i++) {
-    ll locAns = 0;
-    v64 b(n);
-    b[i] = a[i];
-    b[i + 1] = a[i + 1];
-    for (ll j = i - 1; j >= 0; j--) {
-      b[j] = b[j + 1] - b[j + 2];
-    } for (ll j = i + 2; j < n; j++) {
-      b[j] = b[j - 1] - b[j - 2];
-    } forn(j,n) locAns += abs(a[j] - b[j]);
+  ll len = sqrt(q);
+  for (ll start = 0; start < q; start += len) {
+    vector <event> e;
+    for (ll i = start; i < min(q, i + len); i++) {
+      e.pb({Q[i].fi.fi + 1, BEGIN, Q[i].se.fi, Q[i].se.se});
+      e.pb({Q[i].fi.se + 1, END, Q[i].se.fi, Q[i].se.se});
+    } sort(all(e));
 
-//    cout << i << ln;
-//    for (auto&i : b) cout << i << ' ';
-//    cout << ln;
+    ll ind = 0;
+    b = a;
 
-    ans = min(ans, locAns);
-  } cout << ans << ln;
+    for (ll i = 0; i < n; i++) {
+      while(ind < sz(e) && e[ind].c == i) {
+        
+      }
+    }
 
+  }
 
 }

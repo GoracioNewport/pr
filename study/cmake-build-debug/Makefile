@@ -129,29 +129,29 @@ study/fast:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/study.dir/build.make CMakeFiles/study.dir/build
 .PHONY : study/fast
 
-distours/region/10.24.2021/C.o: distours/region/10.24.2021/C.cpp.o
-.PHONY : distours/region/10.24.2021/C.o
+tinkoff/classes/thematicContests/sqrt/B.o: tinkoff/classes/thematicContests/sqrt/B.cpp.o
+.PHONY : tinkoff/classes/thematicContests/sqrt/B.o
 
 # target to build an object file
-distours/region/10.24.2021/C.cpp.o:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/study.dir/build.make CMakeFiles/study.dir/distours/region/10.24.2021/C.cpp.o
-.PHONY : distours/region/10.24.2021/C.cpp.o
+tinkoff/classes/thematicContests/sqrt/B.cpp.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/study.dir/build.make CMakeFiles/study.dir/tinkoff/classes/thematicContests/sqrt/B.cpp.o
+.PHONY : tinkoff/classes/thematicContests/sqrt/B.cpp.o
 
-distours/region/10.24.2021/C.i: distours/region/10.24.2021/C.cpp.i
-.PHONY : distours/region/10.24.2021/C.i
+tinkoff/classes/thematicContests/sqrt/B.i: tinkoff/classes/thematicContests/sqrt/B.cpp.i
+.PHONY : tinkoff/classes/thematicContests/sqrt/B.i
 
 # target to preprocess a source file
-distours/region/10.24.2021/C.cpp.i:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/study.dir/build.make CMakeFiles/study.dir/distours/region/10.24.2021/C.cpp.i
-.PHONY : distours/region/10.24.2021/C.cpp.i
+tinkoff/classes/thematicContests/sqrt/B.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/study.dir/build.make CMakeFiles/study.dir/tinkoff/classes/thematicContests/sqrt/B.cpp.i
+.PHONY : tinkoff/classes/thematicContests/sqrt/B.cpp.i
 
-distours/region/10.24.2021/C.s: distours/region/10.24.2021/C.cpp.s
-.PHONY : distours/region/10.24.2021/C.s
+tinkoff/classes/thematicContests/sqrt/B.s: tinkoff/classes/thematicContests/sqrt/B.cpp.s
+.PHONY : tinkoff/classes/thematicContests/sqrt/B.s
 
 # target to generate assembly for a file
-distours/region/10.24.2021/C.cpp.s:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/study.dir/build.make CMakeFiles/study.dir/distours/region/10.24.2021/C.cpp.s
-.PHONY : distours/region/10.24.2021/C.cpp.s
+tinkoff/classes/thematicContests/sqrt/B.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/study.dir/build.make CMakeFiles/study.dir/tinkoff/classes/thematicContests/sqrt/B.cpp.s
+.PHONY : tinkoff/classes/thematicContests/sqrt/B.cpp.s
 
 # Help Target
 help:
@@ -162,9 +162,9 @@ help:
 	@echo "... edit_cache"
 	@echo "... rebuild_cache"
 	@echo "... study"
-	@echo "... distours/region/10.24.2021/C.o"
-	@echo "... distours/region/10.24.2021/C.i"
-	@echo "... distours/region/10.24.2021/C.s"
+	@echo "... tinkoff/classes/thematicContests/sqrt/B.o"
+	@echo "... tinkoff/classes/thematicContests/sqrt/B.i"
+	@echo "... tinkoff/classes/thematicContests/sqrt/B.s"
 .PHONY : help
 
 
