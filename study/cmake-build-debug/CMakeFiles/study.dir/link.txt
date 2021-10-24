@@ -1,1 +1,1 @@
-/usr/bin/c++ -g CMakeFiles/study.dir/cpm/stlbinsearch/I.cpp.o -o study 
+/usr/bin/c++ -g CMakeFiles/study.dir/distours/region/10.24.2021/A.cpp.o -o study 
