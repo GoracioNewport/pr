@@ -39,35 +39,18 @@ double eps = 1e-12;
 int main() {
   fast_cin();
 
-  ll n, k;
-  cin >> n >> k;
+  ll n;
+  cin >> n;
   v64 a(n);
-  map <ll, ll> cnt;
-  for (auto& i : a) {
-    cin >> i;
-    cnt[i]++;
-  } sort(all(a));
-  a.erase(unique(all(a)), a.end());
-  ll ans = 0;
-  v64 dbs;
-  for (auto& i : cnt) {
-    if (i.se > 1) dbs.pb(i.fi);
-  }
-
-  for (ll i = 0; i < sz(a); i++) { // ok
-    ll x = (upper_bound(all(a), a[i] * k) - a.begin()) - i;
-    ans += max((ll)0, 3 * (x - 2) * (x - 1));
-  }
-
-  for (ll i = 0; i < sz(a); i++) {
-    if (cnt[a[i]] > 1) {
-      ll x = (upper_bound(all(a), a[i] * k) - a.begin()) - i - 1;
-      ans += max((ll) 0, x * 3);
-    } ll y = ((upper_bound(all(dbs), a[i] * k) - dbs.begin()) - (upper_bound(all(dbs), a[i]) - dbs.begin()));
-    ans += max((ll) 0, y * 3);
-  }
-
-  for (auto& i : cnt) if (i.se > 2) ans++; // ok
+  for (auto& i : a) cin >> i;
+  v64 b(n);
+  b[0] = a[0];
+  b[1] = a[1];
+  for (ll i = 2; i < n; i++) {
+    b[i] = b[i - 1] - b[i - 2];
+  } ll ans = 0;
+  forn(i,n) ans += abs(a[i] - b[i]);
   cout << ans << ln;
+
 
 }
