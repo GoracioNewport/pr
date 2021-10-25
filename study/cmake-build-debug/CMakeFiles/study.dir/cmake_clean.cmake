@@ -1,5 +1,5 @@
 file(REMOVE_RECURSE
-  "CMakeFiles/study.dir/tinkoff/classes/thematicContests/sqrt/B.cpp.o"
+  "CMakeFiles/study.dir/tinkoff/classes/thematicContests/sqrt/H.cpp.o"
   "study"
   "study.pdb"
 )

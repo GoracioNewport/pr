@@ -55,17 +55,21 @@ int main() {
   v64 ans(n, -1);
   for (auto& i : a) cin >> i;
   for (auto& i : f) cin >> i;
-  forn(i,n) if (f[i] > a[i]) ans[i] = 0;
+  forn(i,n) if (a[i] >= f[i]) ans[i] = 0;
 
   ll q;
   cin >> q;
   vector <pair <p64, p64>> Q(q);
-  for (auto& i : Q) cin >> i.fi.fi >> i.fi.se >> i.se.fi >> i.se.se;
+  for (auto& i : Q) {
+    cin >> i.fi.fi >> i.fi.se >> i.se.fi >> i.se.se;
+    i.fi.fi--;
+    i.fi.se--;
+  }
 
   ll len = sqrt(q);
   for (ll start = 0; start < q; start += len) {
     vector <event> e;
-    for (ll i = start; i < min(q, i + len); i++) {
+    for (ll i = start; i < min(q, start + len); i++) {
       e.pb({Q[i].fi.fi, BEGIN, Q[i].se.fi, Q[i].se.se, Q[i].fi.se + 1});
       e.pb({Q[i].fi.se + 1, END, Q[i].se.fi, Q[i].se.se, Q[i].fi.fi});
     } sort(all(e));
@@ -86,16 +90,34 @@ int main() {
           step -= e[ind].y;
         } ind++;
       } b[i] += p;
-      if (ans[i] == -1 && b[i] >= f[i]) inds.pb(i);
-      p += step;
-    } 
-
-    for (auto& i : inds) {
-      for (ll j = start; j < min(q, i + len); j++) {
-        if (i >= Q[j].fi.fi && i <= Q[j].fi.se)
+      if (ans[i] == -1 && b[i] >= f[i]) {
+        inds.pb(i);
+        ans[i] = 0;
       }
+      p += step;
     }
 
-  }
+//    cout << start << ln;
+//
+//    for (auto& i : a) cout << i << ' ';
+//    cout << ln;
+//
+//    for (auto& i : b) cout << i << ' ';
+//    cout << ln;
+
+
+    for (auto& i : inds) {
+      for (ll j = start; j < min(q, start + len); j++) {
+        if (i >= Q[j].fi.fi && i <= Q[j].fi.se) a[i] += Q[j].se.fi + (Q[j].se.se * (i - Q[j].fi.fi));
+        if (a[i] >= f[i]) {
+          a[i] = b[i];
+          ans[i] = j + 1;
+          break;
+        }
+      }
+    } a = b;
+
+  } for (auto& i : ans) cout << i << ' ';
+  cout << ln;
 
 }

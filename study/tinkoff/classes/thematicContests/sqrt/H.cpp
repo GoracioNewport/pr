@@ -50,6 +50,49 @@ void dfs(ll v, p64 parent) { // <num, ind>
   } path.pb({parent.fi, {v, parent.se}});
 }
 
+struct block {
+  ll len, sum;
+};
+
+struct sqrtD {
+  ll l, r, len, n; // [l, r]
+  vector <bool> a;
+  vector <block> t;
+
+  sqrtD(ll _n) {
+    n = _n;
+    len = sqrt(n);
+    t.resize(n / len + 1, {0, 0});
+    forn(i,n) t[i / len].len++;
+    a.resize(n, 0);
+    l = 0;
+    r = -1;
+  }
+
+  void toggleX(ll i) {
+    t[i / len].sum -= a[i];
+    a[i] = !a[i];
+    t[i / len].sum += a[i];
+  }
+
+  ll getFirst() {
+    for (ll i = 0; i < n;) {
+      if (t[i / len].sum == t[i / len].len) i += len;
+      else {
+        if (a[i] == 0) return i;
+        i++;
+      }
+    } return n;
+  }
+};
+
+ll LEN;
+
+bool comp(p64 a, p64 b) {
+  return make_pair(a.fi / LEN, a.se) < make_pair(b.fi / LEN, b.se);
+}
+
+
 int main() {
   fast_cin();
 
@@ -69,7 +112,53 @@ int main() {
   cout << ln;
   for (auto& i : path) cout << i.se.fi + 1 << ' ';
   cout << ln;
-  for (auto& i : path) cout << i.se.se + 1 << ' ';
-  cout << ln;
+//  for (auto& i : path) cout << i.se.se + 1 << ' ';
+//  cout << ln;
+
+  v64 d(n, INF);
+  forn(i,sz(path)) d[path[i].se.fi] = min(d[path[i].se.fi], i);
+
+//  for (auto& i : d) cout << i << ' ';
+//  cout << ln;
+
+  vp64 Q;
+  LEN = sqrt(n + 1);
+  sqrtD sd(n + 1);
+  while(q--) {
+    ll u, v;
+    cin >> u >> v; u--; v--;
+    if (d[u] <= d[v] - 1) Q.pb({d[u], d[v] - 1});
+    else Q.pb({d[v], d[u] - 1});
+  } sort(all(Q), comp);
+
+
+
+  for (auto& i : Q) cout << i.fi << ' ' << i.se << ln;
+
+  // HANDLE EQUAL!!!
+
+  for (auto& i : Q) {
+
+    if (i.fi > i.se) {
+      cout << 0 << ln;
+      continue;
+    }
+
+
+    while(sd.r < i.se) {
+      sd.r++;
+      if (path[sd.r].fi <= n) sd.toggleX(path[sd.r].fi);
+    } while (sd.l > i.fi) {
+      sd.l--;
+      if (path[sd.l].fi <= n) sd.toggleX(path[sd.l].fi);
+    } while(sd.r > i.se) {
+      if (path[sd.r].fi <= n) sd.toggleX(path[sd.r].fi);
+      sd.r--;
+    } while(sd.l < i.fi) {
+      if (path[sd.l].fi <= n) sd.toggleX(path[sd.l].fi);
+      sd.l++;
+    } cout << sd.getFirst() << ln;
+  }
+
 
 }
