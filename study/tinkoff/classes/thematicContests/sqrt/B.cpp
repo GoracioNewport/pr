@@ -39,7 +39,7 @@ double eps = 1e-12;
 enum { BEGIN, END };
 
 struct event {
-  ll c, type, x, y;
+  ll c, type, x, y, e;
   bool operator< (event& o) {
     if (c != o.c) return c < o.c;
     else return type < o.type;
@@ -66,16 +66,33 @@ int main() {
   for (ll start = 0; start < q; start += len) {
     vector <event> e;
     for (ll i = start; i < min(q, i + len); i++) {
-      e.pb({Q[i].fi.fi + 1, BEGIN, Q[i].se.fi, Q[i].se.se});
-      e.pb({Q[i].fi.se + 1, END, Q[i].se.fi, Q[i].se.se});
+      e.pb({Q[i].fi.fi, BEGIN, Q[i].se.fi, Q[i].se.se, Q[i].fi.se + 1});
+      e.pb({Q[i].fi.se + 1, END, Q[i].se.fi, Q[i].se.se, Q[i].fi.fi});
     } sort(all(e));
 
     ll ind = 0;
     b = a;
+    ll p = 0;
+    ll step = 0;
 
+    v64 inds;
     for (ll i = 0; i < n; i++) {
       while(ind < sz(e) && e[ind].c == i) {
-        
+        if (e[ind].type == BEGIN) {
+          p += e[ind].x;
+          step += e[ind].y;
+        } else {
+          p -= e[ind].x + (e[ind].y * (e[ind].c - e[ind].e));
+          step -= e[ind].y;
+        } ind++;
+      } b[i] += p;
+      if (ans[i] == -1 && b[i] >= f[i]) inds.pb(i);
+      p += step;
+    } 
+
+    for (auto& i : inds) {
+      for (ll j = start; j < min(q, i + len); j++) {
+        if (i >= Q[j].fi.fi && i <= Q[j].fi.se)
       }
     }
 
