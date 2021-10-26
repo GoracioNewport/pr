@@ -42,12 +42,12 @@ vector <pair <ll, p64>> path;
 
 ll cnt = 0;
 
-void dfs(ll v, p64 parent) { // < color, <> >
+void dfs(ll v, p64 parent) { // < color, cnt >
   used[v] = true;
   for (auto &u : p[v]) {
     if (!used[u.fi]) {
-      path.pb({u.se, {v, u.fi}});
-      dfs(u.fi, {u.se, v});
+      path.pb({u.se, {v, cnt}});
+      dfs(u.fi, {u.se, cnt++});
     }
   } path.pb({parent.fi, {v, parent.se}});
 }
@@ -58,7 +58,8 @@ struct block {
 
 struct sqrtD {
   ll l, r, len, n; // [l, r]
-  vector <bool> a;
+  vector <bool> a, b;
+  v64 cnt;
   vector <block> t;
 
   sqrtD(ll _n) {
@@ -67,14 +68,28 @@ struct sqrtD {
     t.resize(n / len + 1, {0, 0});
     forn(i,n) t[i / len].len++;
     a.resize(n, 0);
+    b.resize(n, 0);
+    cnt.resize(n, 0);
     l = 0;
     r = -1;
   }
 
-  void toggleX(ll i, ll x) {
-    t[i / len].sum -= a[i];
-    a[i] = !a[i];
-    t[i / len].sum += a[i];
+  void toggleX(ll i, ll x) { // color, id
+
+    if (b[x]) {
+      cnt[i]--;
+      if (cnt[i] == 0) {
+        t[i / len].sum--;
+        a[i] = 0;
+      }
+    } else {
+      cnt[i]++;
+      if (cnt[i] == 1) {
+        t[i / len].sum++;
+        a[i] = 1;
+      }
+    } b[x] = !b[x];
+
   }
 
   ll getFirst() {
@@ -90,8 +105,8 @@ struct sqrtD {
 
 ll LEN;
 
-bool comp(p64 a, p64 b) {
-  return make_pair(a.fi / LEN, a.se) < make_pair(b.fi / LEN, b.se);
+bool comp(pair <p64, ll> a, pair <p64, ll> b) {
+  return make_pair(a.fi.fi / LEN, a.fi.se) < make_pair(b.fi.fi / LEN, b.fi.se);
 }
 
 
@@ -110,12 +125,13 @@ int main() {
   } dfs(0, {-1, -1});
   path.pop_back();
 
-  for (auto& i : path) cout << i.fi << ' ';
-  cout << ln;
-  for (auto& i : path) cout << i.se.fi + 1 << ' ';
-  cout << ln;
+//  for (auto& i : path) cout << i.fi << ' ';
+//  cout << ln;
+//  for (auto& i : path) cout << i.se.fi + 1 << ' ';
+//  cout << ln;
 //  for (auto& i : path) cout << i.se.se + 1 << ' ';
 //  cout << ln;
+
 
   v64 d(n, INF);
   forn(i,sz(path)) d[path[i].se.fi] = min(d[path[i].se.fi], i);
@@ -123,44 +139,47 @@ int main() {
 //  for (auto& i : d) cout << i << ' ';
 //  cout << ln;
 
-  vp64 Q;
+  vector <pair <p64, ll>> Q; // cords, ind
+  ll MAXN = n + 10;
   LEN = sqrt(n + 1);
-  sqrtD sd(n + 1);
-  while(q--) {
+  sqrtD sd(MAXN);
+  v64 ans(q);
+  forn(i,q) {
     ll u, v;
     cin >> u >> v; u--; v--;
-    if (d[u] <= d[v] - 1) Q.pb({d[u], d[v] - 1});
-    else Q.pb({d[v], d[u] - 1});
+    if (d[u] <= d[v] - 1) Q.pb({{d[u], d[v] - 1}, i});
+    else Q.pb({{d[v], d[u] - 1}, i});
   } sort(all(Q), comp);
 
 
 
-  for (auto& i : Q) cout << i.fi << ' ' << i.se << ln;
+//  for (auto& i : Q) cout << i.fi << ' ' << i.se << ln;
 
   // HANDLE EQUAL!!!
 
+
   for (auto& i : Q) {
 
-    if (i.fi > i.se) {
-      cout << 0 << ln;
+    if (i.fi.fi > i.fi.se) {
+      ans[i.se] = 0;
       continue;
     }
 
 
-    while(sd.r < i.se) {
+    while(sd.r < i.fi.se) {
       sd.r++;
-      if (path[sd.r].fi <= n) sd.toggleX(path[sd.r].fi);
-    } while (sd.l > i.fi) {
+      if (path[sd.r].fi < MAXN) sd.toggleX(path[sd.r].fi, path[sd.r].se.se);
+    } while (sd.l > i.fi.fi) {
       sd.l--;
-      if (path[sd.l].fi <= n) sd.toggleX(path[sd.l].fi);
-    } while(sd.r > i.se) {
-      if (path[sd.r].fi <= n) sd.toggleX(path[sd.r].fi);
+      if (path[sd.l].fi < MAXN) sd.toggleX(path[sd.l].fi, path[sd.l].se.se);
+    } while(sd.r > i.fi.se) {
+      if (path[sd.r].fi < MAXN) sd.toggleX(path[sd.r].fi, path[sd.r].se.se);
       sd.r--;
-    } while(sd.l < i.fi) {
-      if (path[sd.l].fi <= n) sd.toggleX(path[sd.l].fi);
+    } while(sd.l < i.fi.fi) {
+      if (path[sd.l].fi < MAXN) sd.toggleX(path[sd.l].fi, path[sd.l].se.se);
       sd.l++;
-    } cout << sd.getFirst() << ln;
-  }
+    } ans[i.se] = sd.getFirst();
+  } for (auto& i : ans) cout << i << ln;
 
 
 }
