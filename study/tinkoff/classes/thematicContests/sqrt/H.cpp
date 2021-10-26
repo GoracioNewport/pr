@@ -40,7 +40,9 @@ vvp64 p;
 v64 used;
 vector <pair <ll, p64>> path;
 
-void dfs(ll v, p64 parent) { // <num, ind>
+ll cnt = 0;
+
+void dfs(ll v, p64 parent) { // < color, <> >
   used[v] = true;
   for (auto &u : p[v]) {
     if (!used[u.fi]) {
@@ -69,7 +71,7 @@ struct sqrtD {
     r = -1;
   }
 
-  void toggleX(ll i) {
+  void toggleX(ll i, ll x) {
     t[i / len].sum -= a[i];
     a[i] = !a[i];
     t[i / len].sum += a[i];
