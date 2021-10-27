@@ -129,29 +129,29 @@ study/fast:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/study.dir/build.make CMakeFiles/study.dir/build
 .PHONY : study/fast
 
-tinkoff/classes/thematicContests/sqrt/H.o: tinkoff/classes/thematicContests/sqrt/H.cpp.o
-.PHONY : tinkoff/classes/thematicContests/sqrt/H.o
+cpm/stlbinsearch/E.o: cpm/stlbinsearch/E.cpp.o
+.PHONY : cpm/stlbinsearch/E.o
 
 # target to build an object file
-tinkoff/classes/thematicContests/sqrt/H.cpp.o:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/study.dir/build.make CMakeFiles/study.dir/tinkoff/classes/thematicContests/sqrt/H.cpp.o
-.PHONY : tinkoff/classes/thematicContests/sqrt/H.cpp.o
+cpm/stlbinsearch/E.cpp.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/study.dir/build.make CMakeFiles/study.dir/cpm/stlbinsearch/E.cpp.o
+.PHONY : cpm/stlbinsearch/E.cpp.o
 
-tinkoff/classes/thematicContests/sqrt/H.i: tinkoff/classes/thematicContests/sqrt/H.cpp.i
-.PHONY : tinkoff/classes/thematicContests/sqrt/H.i
+cpm/stlbinsearch/E.i: cpm/stlbinsearch/E.cpp.i
+.PHONY : cpm/stlbinsearch/E.i
 
 # target to preprocess a source file
-tinkoff/classes/thematicContests/sqrt/H.cpp.i:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/study.dir/build.make CMakeFiles/study.dir/tinkoff/classes/thematicContests/sqrt/H.cpp.i
-.PHONY : tinkoff/classes/thematicContests/sqrt/H.cpp.i
+cpm/stlbinsearch/E.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/study.dir/build.make CMakeFiles/study.dir/cpm/stlbinsearch/E.cpp.i
+.PHONY : cpm/stlbinsearch/E.cpp.i
 
-tinkoff/classes/thematicContests/sqrt/H.s: tinkoff/classes/thematicContests/sqrt/H.cpp.s
-.PHONY : tinkoff/classes/thematicContests/sqrt/H.s
+cpm/stlbinsearch/E.s: cpm/stlbinsearch/E.cpp.s
+.PHONY : cpm/stlbinsearch/E.s
 
 # target to generate assembly for a file
-tinkoff/classes/thematicContests/sqrt/H.cpp.s:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/study.dir/build.make CMakeFiles/study.dir/tinkoff/classes/thematicContests/sqrt/H.cpp.s
-.PHONY : tinkoff/classes/thematicContests/sqrt/H.cpp.s
+cpm/stlbinsearch/E.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/study.dir/build.make CMakeFiles/study.dir/cpm/stlbinsearch/E.cpp.s
+.PHONY : cpm/stlbinsearch/E.cpp.s
 
 # Help Target
 help:
@@ -162,9 +162,9 @@ help:
 	@echo "... edit_cache"
 	@echo "... rebuild_cache"
 	@echo "... study"
-	@echo "... tinkoff/classes/thematicContests/sqrt/H.o"
-	@echo "... tinkoff/classes/thematicContests/sqrt/H.i"
-	@echo "... tinkoff/classes/thematicContests/sqrt/H.s"
+	@echo "... cpm/stlbinsearch/E.o"
+	@echo "... cpm/stlbinsearch/E.i"
+	@echo "... cpm/stlbinsearch/E.s"
 .PHONY : help
 
 
