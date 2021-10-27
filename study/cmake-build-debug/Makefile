@@ -129,29 +129,29 @@ study/fast:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/study.dir/build.make CMakeFiles/study.dir/build
 .PHONY : study/fast
 
-cpm/stlbinsearch/E.o: cpm/stlbinsearch/E.cpp.o
-.PHONY : cpm/stlbinsearch/E.o
+cpm/scanline/A.o: cpm/scanline/A.cpp.o
+.PHONY : cpm/scanline/A.o
 
 # target to build an object file
-cpm/stlbinsearch/E.cpp.o:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/study.dir/build.make CMakeFiles/study.dir/cpm/stlbinsearch/E.cpp.o
-.PHONY : cpm/stlbinsearch/E.cpp.o
+cpm/scanline/A.cpp.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/study.dir/build.make CMakeFiles/study.dir/cpm/scanline/A.cpp.o
+.PHONY : cpm/scanline/A.cpp.o
 
-cpm/stlbinsearch/E.i: cpm/stlbinsearch/E.cpp.i
-.PHONY : cpm/stlbinsearch/E.i
+cpm/scanline/A.i: cpm/scanline/A.cpp.i
+.PHONY : cpm/scanline/A.i
 
 # target to preprocess a source file
-cpm/stlbinsearch/E.cpp.i:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/study.dir/build.make CMakeFiles/study.dir/cpm/stlbinsearch/E.cpp.i
-.PHONY : cpm/stlbinsearch/E.cpp.i
+cpm/scanline/A.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/study.dir/build.make CMakeFiles/study.dir/cpm/scanline/A.cpp.i
+.PHONY : cpm/scanline/A.cpp.i
 
-cpm/stlbinsearch/E.s: cpm/stlbinsearch/E.cpp.s
-.PHONY : cpm/stlbinsearch/E.s
+cpm/scanline/A.s: cpm/scanline/A.cpp.s
+.PHONY : cpm/scanline/A.s
 
 # target to generate assembly for a file
-cpm/stlbinsearch/E.cpp.s:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/study.dir/build.make CMakeFiles/study.dir/cpm/stlbinsearch/E.cpp.s
-.PHONY : cpm/stlbinsearch/E.cpp.s
+cpm/scanline/A.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/study.dir/build.make CMakeFiles/study.dir/cpm/scanline/A.cpp.s
+.PHONY : cpm/scanline/A.cpp.s
 
 # Help Target
 help:
@@ -162,9 +162,9 @@ help:
 	@echo "... edit_cache"
 	@echo "... rebuild_cache"
 	@echo "... study"
-	@echo "... cpm/stlbinsearch/E.o"
-	@echo "... cpm/stlbinsearch/E.i"
-	@echo "... cpm/stlbinsearch/E.s"
+	@echo "... cpm/scanline/A.o"
+	@echo "... cpm/scanline/A.i"
+	@echo "... cpm/scanline/A.s"
 .PHONY : help
 
 

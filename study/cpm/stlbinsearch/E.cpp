@@ -54,9 +54,11 @@
       q.erase(a, b);
       q.insert({x, i});
       q.insert({y, i});
-    } for (auto& i : q) cnt[i.se]++;
-    ll ans = 0;
-    for (auto& i : cnt) if (i > 1) ans++;
-    cout << ans << ln;
+    } ll ans = 0;
+    ll prev = -1;
+    for (auto&i : q) {
+      if (i.se == prev) ans++;
+      prev = i.se;
+    } cout << ans << ln;
 
   }

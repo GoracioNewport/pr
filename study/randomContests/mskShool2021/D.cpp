@@ -36,62 +36,17 @@ double eps = 1e-12;
 #define all(x) (x).begin(), (x).end()
 #define sz(x) ((ll)(x).size())
 
-struct r {
-  ld x, y;
-  r () {};
-  r (ld x, ld y): x(x), y(y) {};
-
-  ld len() {
-    return hypot(x, y);
-  }
-
-  ld angleRad() {
-    return atan2(y, x);
-  }
-
-  ld angleDeg() {
-    return angleRad() * (180.0 / M_PI);
-  }
-};
-
-istream& operator>>(istream &in, r& a) {
-  in >> a.x >> a.y;
-  return in;
-}
-
-ostream& operator<<(ostream &out, const r& a) {
-  out << a.x << ' ' << a.y << ln;
-  return out;
-}
-
-r operator+(r a, r b) {
-  return { a.x + b.x, a.y + b.y};
-}
-
-r operator-(r a, r b) {
-  return {a.x - b.x, a.y - b.y};
-}
-
-ld operator*(r a, r b) { // Скалярное произведение
-  return a.x * b.x + a.y * b.y;
-}
-
-ld operator^(r a, r b) {  // Векторное произведение
-  return a.x * b.y - a.y * b.x;
-}
-
-ld rAngle(r a, r b) {
-  return atan2(a ^ b, a * b);
-}
-
-struct segment {
-  r p, q;
-};
-
 int main() {
   fast_cin();
 
-  r a, b;
-  cin >> a >> b;
-  cout << fixed << setprecision(20) << abs(rAngle(a, b)) << ln;
+  ll n, d;
+  cin >> n >> d;
+  v64 a(n);
+  for (auto&i : a) cin >> i;
+  ll lim = 0;
+  for(ll i = 0; i < n; i++) {
+    lim = max(lim, i + (a[i] / d));
+    if (lim <= i) break;
+  } cout << min(n, lim + 1) << ln;
+
 }

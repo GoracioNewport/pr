@@ -36,62 +36,24 @@ double eps = 1e-12;
 #define all(x) (x).begin(), (x).end()
 #define sz(x) ((ll)(x).size())
 
-struct r {
-  ld x, y;
-  r () {};
-  r (ld x, ld y): x(x), y(y) {};
-
-  ld len() {
-    return hypot(x, y);
-  }
-
-  ld angleRad() {
-    return atan2(y, x);
-  }
-
-  ld angleDeg() {
-    return angleRad() * (180.0 / M_PI);
-  }
-};
-
-istream& operator>>(istream &in, r& a) {
-  in >> a.x >> a.y;
-  return in;
-}
-
-ostream& operator<<(ostream &out, const r& a) {
-  out << a.x << ' ' << a.y << ln;
-  return out;
-}
-
-r operator+(r a, r b) {
-  return { a.x + b.x, a.y + b.y};
-}
-
-r operator-(r a, r b) {
-  return {a.x - b.x, a.y - b.y};
-}
-
-ld operator*(r a, r b) { // Скалярное произведение
-  return a.x * b.x + a.y * b.y;
-}
-
-ld operator^(r a, r b) {  // Векторное произведение
-  return a.x * b.y - a.y * b.x;
-}
-
-ld rAngle(r a, r b) {
-  return atan2(a ^ b, a * b);
-}
-
-struct segment {
-  r p, q;
-};
-
 int main() {
   fast_cin();
 
-  r a, b;
-  cin >> a >> b;
-  cout << fixed << setprecision(20) << abs(rAngle(a, b)) << ln;
+  ll s, e, n;
+  cin >> s >> e >> n;
+  v64 a(n);
+  for (auto& i : a) cin >> i;
+  sort(all(a));
+
+
+  ll rightS = INF, leftS = INF, rightE = INF, leftE = INF;
+  if (s <= a.back()) rightS = *lower_bound(all(a), s);
+  if (s >= a[0]) leftS = *prev(lower_bound(all(a), s));
+
+  if (e <= a.back()) rightE = *lower_bound(all(a), e);
+  if (e >= a[0]) leftE = *prev(lower_bound(all(a), e));
+
+//  cout << leftS << ' ' << rightS << ' ' left
+
+  cout << min(abs(s - e), min(abs(s - leftS), abs(s - rightS)) + 1 + min(abs(e - leftE), abs(e - rightE))) << ln;
 }

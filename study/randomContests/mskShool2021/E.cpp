@@ -36,62 +36,48 @@ double eps = 1e-12;
 #define all(x) (x).begin(), (x).end()
 #define sz(x) ((ll)(x).size())
 
-struct r {
-  ld x, y;
-  r () {};
-  r (ld x, ld y): x(x), y(y) {};
-
-  ld len() {
-    return hypot(x, y);
-  }
-
-  ld angleRad() {
-    return atan2(y, x);
-  }
-
-  ld angleDeg() {
-    return angleRad() * (180.0 / M_PI);
-  }
-};
-
-istream& operator>>(istream &in, r& a) {
-  in >> a.x >> a.y;
-  return in;
+ll gcd(ll a, ll b) {
+  if (b == 0) return a;
+  else return gcd(b, a % b);
 }
-
-ostream& operator<<(ostream &out, const r& a) {
-  out << a.x << ' ' << a.y << ln;
-  return out;
-}
-
-r operator+(r a, r b) {
-  return { a.x + b.x, a.y + b.y};
-}
-
-r operator-(r a, r b) {
-  return {a.x - b.x, a.y - b.y};
-}
-
-ld operator*(r a, r b) { // Скалярное произведение
-  return a.x * b.x + a.y * b.y;
-}
-
-ld operator^(r a, r b) {  // Векторное произведение
-  return a.x * b.y - a.y * b.x;
-}
-
-ld rAngle(r a, r b) {
-  return atan2(a ^ b, a * b);
-}
-
-struct segment {
-  r p, q;
-};
 
 int main() {
   fast_cin();
 
-  r a, b;
+  ll a, b;
   cin >> a >> b;
-  cout << fixed << setprecision(20) << abs(rAngle(a, b)) << ln;
+  if (a == b && a != 1) {
+    cout << -1 << ln;
+    return 0;
+  }
+
+  if (b >= a * 2) {
+    cout << a << ln;
+    return 0;
+  }
+
+  set <ll> pos;
+  v64 can(a * a + 1, false);
+  for(ll i = a; i <= min(sz(can) - 1, b); i++) {
+    pos.insert(i);
+    can[i] = true;
+  } for(ll i = a; i < sz(can); i++) {
+    for(auto& j : pos) {
+      if (i + j < sz(can)) {
+        can[i + j] = true;
+        pos.insert(i + j);
+      } else break;
+    }
+  } for (ll i = sz(can) - 1; i >= 0; i--) {
+    if (!can[i]) {
+      cout << i + 1 << ln;
+//      return 0;
+      break;
+    }
+  } // for (auto& i : can) {
+//    if (i) cout << 1 << ' ';
+//    else cout << 0 << ' ';
+//  }
+
+
 }
