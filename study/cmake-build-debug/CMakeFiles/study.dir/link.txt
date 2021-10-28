@@ -1,1 +1,1 @@
-/usr/bin/c++ -g CMakeFiles/study.dir/distours/vseros/10.28.2021/B.cpp.o -o study 
+/usr/bin/c++ -g CMakeFiles/study.dir/randomContests/townContest/D.cpp.o -o study 

@@ -62,7 +62,7 @@ void dfsAns(ll v, ll i, ll j, ll x) {
   used[i][j] = v;
   ans[i][j] = x;
   for (auto& c: moves) {
-    if (valid(i + c.fi, j + c.se) && p[i + c.fi][j + c.se] < x && used[i + c.fi][j + c.se] != v) dfs(v, i + c.fi, j + c.se, x);
+    if (valid(i + c.fi, j + c.se) && p[i + c.fi][j + c.se] < x && used[i + c.fi][j + c.se] != v) dfsAns(v, i + c.fi, j + c.se, x);
   }
 }
 
@@ -70,8 +70,43 @@ void dfsFill(ll v, ll i, ll j, ll x) {
   used[i][j] = v;
   ans[i][j] = -1;
   for (auto& c: moves) {
-    if (valid(i + c.fi, j + c.se) && p[i + c.fi][j + c.se] < x && used[i + c.fi][j + c.se] != v) dfs(v, i + c.fi, j + c.se, x);
+    if (valid(i + c.fi, j + c.se) && p[i + c.fi][j + c.se] <= x && used[i + c.fi][j + c.se] != v && ans[i + c.fi][j + c.se] == 0) dfsFill(v, i + c.fi, j + c.se, x);
   }
+}
+
+void dfsPre(ll v, ll i, ll j) {
+  used[i][j] = v;
+  ans[i][j] = -1;
+  for (auto& c: moves) {
+    if (valid(i + c.fi, j + c.se) && p[i + c.fi][j + c.se] >= p[i][j] && used[i + c.fi][j + c.se] != v) dfsPre(v, i + c.fi, j + c.se);
+  }
+}
+
+ll ANS;
+
+void dfsSmol(ll i, ll j) {
+  used[i][j] = 1;
+  ANS--;
+  for (auto& c : moves) {
+    if (valid(i + c.fi, j + c.se) && (p[i + c.fi][j + c.se] == 1) && (used[i + c.fi][j + c.se] == 0)) dfsSmol(i + c.fi, j + c.se);
+  }
+}
+
+void solve() {
+  ANS = 0;
+  for (auto& i : p) {
+    for (auto& j : i) ANS += (j == 1);
+  }
+
+  forn(i,n) {
+    if (!used[i][0] && p[i][0] == 1) dfsSmol(i, 0);
+    if (!used[i][m - 1] && p[i][m - 1] == 1) dfsSmol(i, m - 1);
+  } forn(j,m) {
+    if (!used[0][j] && p[0][j] == 1) dfsSmol(0, j);
+    if (!used[n - 1][j] && p[n - 1][j] == 1) dfsSmol(n - 1, j);
+  } cout << ANS << ln;
+
+
 }
 
 bool DEBUG = false;
@@ -83,10 +118,19 @@ int main() {
 //  if (max(n, m) > 50) {
 //    v64 Q(1e9);
 //  }
+  bool smol = true;
   p.resize(n, v64 (m));
   used.resize(n, v64 (m, 0));
   ans.resize(n, v64 (m, 0));
-  for (auto& i : p) for (auto& j : i) cin >> j;
+  for (auto& i : p) {
+    for (auto& j : i) {
+      cin >> j;
+      if (j > 2) smol = false;
+    }
+  } if (smol) {
+    solve();
+    return 0;
+  }
 
   vector <pair <ll, p64>> c;
 
@@ -97,6 +141,13 @@ int main() {
   } sort(all(c));
 
   ll cnt = 0;
+  forn(i,n) {
+    if (ans[i][0] != -1) dfsPre(++cnt, i, 0);
+    if (ans[i][m - 1] != -1) dfsPre(++cnt, i, m - 1);
+  } forn(j,m) {
+    if (ans[0][j] != -1) dfsPre(++cnt, 0, j);
+    if (ans[n - 1][j] != -1) dfsPre(++cnt, n - 1, j);
+  }
   for (auto& i : c) {
     if (ans[i.se.fi][i.se.se] != 0) continue;
     ll l = i.fi;
@@ -108,13 +159,21 @@ int main() {
       ll t = (l + r) / 2;
       fail = false;
       dfs(++cnt, i.se.fi, i.se.se, t);
-      if (DEBUG) cout << t << ' ' << fail << ln;
+//      if (DEBUG) cout << t << ' ' << fail << ln;
       if (fail) r = t;
       else l = t;
     } if (DEBUG) cout << "ANS: " << l << ln;
 
     if (l != i.fi) dfsAns(++cnt, i.se.fi, i.se.se, l);
     else dfsFill(++cnt, i.se.fi, i.se.se, l);
+
+    if (DEBUG) {
+      for (auto& i : ans) {
+        for (auto& j : i) cout << j << ' ';
+        cout << ln;
+      }
+    }
+
 
   } ll ANS = 0;
   forn(i,n) {
@@ -130,3 +189,10 @@ int main() {
 //5 5 5 5 5 5
 //1 2 1 3 1 4
 //5 5 5 5 5 5
+
+//5 5
+//3 3 3 3 3
+//3 2 2 2 3
+//3 2 1 2 3
+//3 2 2 2 3
+//3 3 3 3 3

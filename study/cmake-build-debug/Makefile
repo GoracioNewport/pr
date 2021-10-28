@@ -129,29 +129,29 @@ study/fast:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/study.dir/build.make CMakeFiles/study.dir/build
 .PHONY : study/fast
 
-distours/vseros/10.28.2021/B.o: distours/vseros/10.28.2021/B.cpp.o
-.PHONY : distours/vseros/10.28.2021/B.o
+randomContests/townContest/D.o: randomContests/townContest/D.cpp.o
+.PHONY : randomContests/townContest/D.o
 
 # target to build an object file
-distours/vseros/10.28.2021/B.cpp.o:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/study.dir/build.make CMakeFiles/study.dir/distours/vseros/10.28.2021/B.cpp.o
-.PHONY : distours/vseros/10.28.2021/B.cpp.o
+randomContests/townContest/D.cpp.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/study.dir/build.make CMakeFiles/study.dir/randomContests/townContest/D.cpp.o
+.PHONY : randomContests/townContest/D.cpp.o
 
-distours/vseros/10.28.2021/B.i: distours/vseros/10.28.2021/B.cpp.i
-.PHONY : distours/vseros/10.28.2021/B.i
+randomContests/townContest/D.i: randomContests/townContest/D.cpp.i
+.PHONY : randomContests/townContest/D.i
 
 # target to preprocess a source file
-distours/vseros/10.28.2021/B.cpp.i:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/study.dir/build.make CMakeFiles/study.dir/distours/vseros/10.28.2021/B.cpp.i
-.PHONY : distours/vseros/10.28.2021/B.cpp.i
+randomContests/townContest/D.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/study.dir/build.make CMakeFiles/study.dir/randomContests/townContest/D.cpp.i
+.PHONY : randomContests/townContest/D.cpp.i
 
-distours/vseros/10.28.2021/B.s: distours/vseros/10.28.2021/B.cpp.s
-.PHONY : distours/vseros/10.28.2021/B.s
+randomContests/townContest/D.s: randomContests/townContest/D.cpp.s
+.PHONY : randomContests/townContest/D.s
 
 # target to generate assembly for a file
-distours/vseros/10.28.2021/B.cpp.s:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/study.dir/build.make CMakeFiles/study.dir/distours/vseros/10.28.2021/B.cpp.s
-.PHONY : distours/vseros/10.28.2021/B.cpp.s
+randomContests/townContest/D.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/study.dir/build.make CMakeFiles/study.dir/randomContests/townContest/D.cpp.s
+.PHONY : randomContests/townContest/D.cpp.s
 
 # Help Target
 help:
@@ -162,9 +162,9 @@ help:
 	@echo "... edit_cache"
 	@echo "... rebuild_cache"
 	@echo "... study"
-	@echo "... distours/vseros/10.28.2021/B.o"
-	@echo "... distours/vseros/10.28.2021/B.i"
-	@echo "... distours/vseros/10.28.2021/B.s"
+	@echo "... randomContests/townContest/D.o"
+	@echo "... randomContests/townContest/D.i"
+	@echo "... randomContests/townContest/D.s"
 .PHONY : help
 
 
