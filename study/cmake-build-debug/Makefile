@@ -129,29 +129,29 @@ study/fast:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/study.dir/build.make CMakeFiles/study.dir/build
 .PHONY : study/fast
 
-cpm/scanline/A.o: cpm/scanline/A.cpp.o
-.PHONY : cpm/scanline/A.o
+distours/vseros/10.28.2021/B.o: distours/vseros/10.28.2021/B.cpp.o
+.PHONY : distours/vseros/10.28.2021/B.o
 
 # target to build an object file
-cpm/scanline/A.cpp.o:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/study.dir/build.make CMakeFiles/study.dir/cpm/scanline/A.cpp.o
-.PHONY : cpm/scanline/A.cpp.o
+distours/vseros/10.28.2021/B.cpp.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/study.dir/build.make CMakeFiles/study.dir/distours/vseros/10.28.2021/B.cpp.o
+.PHONY : distours/vseros/10.28.2021/B.cpp.o
 
-cpm/scanline/A.i: cpm/scanline/A.cpp.i
-.PHONY : cpm/scanline/A.i
+distours/vseros/10.28.2021/B.i: distours/vseros/10.28.2021/B.cpp.i
+.PHONY : distours/vseros/10.28.2021/B.i
 
 # target to preprocess a source file
-cpm/scanline/A.cpp.i:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/study.dir/build.make CMakeFiles/study.dir/cpm/scanline/A.cpp.i
-.PHONY : cpm/scanline/A.cpp.i
+distours/vseros/10.28.2021/B.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/study.dir/build.make CMakeFiles/study.dir/distours/vseros/10.28.2021/B.cpp.i
+.PHONY : distours/vseros/10.28.2021/B.cpp.i
 
-cpm/scanline/A.s: cpm/scanline/A.cpp.s
-.PHONY : cpm/scanline/A.s
+distours/vseros/10.28.2021/B.s: distours/vseros/10.28.2021/B.cpp.s
+.PHONY : distours/vseros/10.28.2021/B.s
 
 # target to generate assembly for a file
-cpm/scanline/A.cpp.s:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/study.dir/build.make CMakeFiles/study.dir/cpm/scanline/A.cpp.s
-.PHONY : cpm/scanline/A.cpp.s
+distours/vseros/10.28.2021/B.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/study.dir/build.make CMakeFiles/study.dir/distours/vseros/10.28.2021/B.cpp.s
+.PHONY : distours/vseros/10.28.2021/B.cpp.s
 
 # Help Target
 help:
@@ -162,9 +162,9 @@ help:
 	@echo "... edit_cache"
 	@echo "... rebuild_cache"
 	@echo "... study"
-	@echo "... cpm/scanline/A.o"
-	@echo "... cpm/scanline/A.i"
-	@echo "... cpm/scanline/A.s"
+	@echo "... distours/vseros/10.28.2021/B.o"
+	@echo "... distours/vseros/10.28.2021/B.i"
+	@echo "... distours/vseros/10.28.2021/B.s"
 .PHONY : help
 
 
