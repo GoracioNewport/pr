@@ -1,8 +1,6 @@
 file(REMOVE_RECURSE
-  "CMakeFiles/study.dir/randomContests/townContest/D.cpp.obj"
-  "libstudy.dll.a"
-  "study.exe"
-  "study.exe.manifest"
+  "CMakeFiles/study.dir/hseOlymp/elimination/A.cpp.o"
+  "study"
   "study.pdb"
 )
 

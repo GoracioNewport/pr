@@ -8,7 +8,7 @@ set(CMAKE_DEPENDS_LANGUAGES
   )
 # The set of files for implicit dependencies of each language:
 set(CMAKE_DEPENDS_CHECK_CXX
-  "D:/pr/study/randomContests/townContest/D.cpp" "D:/pr/study/cmake-build-debug/CMakeFiles/study.dir/randomContests/townContest/D.cpp.obj"
+  "/mnt/hdd/pr/study/hseOlymp/elimination/A.cpp" "/mnt/hdd/pr/study/cmake-build-debug/CMakeFiles/study.dir/hseOlymp/elimination/A.cpp.o"
   )
 set(CMAKE_CXX_COMPILER_ID "GNU")
 
