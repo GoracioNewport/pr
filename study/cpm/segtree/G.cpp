@@ -36,13 +36,66 @@ double eps = 1e-12;
 #define all(x) (x).begin(), (x).end()
 #define sz(x) ((ll)(x).size())
 
+struct Tree {
+	v64 a, t;
+	ll n;
+
+	Tree (v64& _a) {
+		a = _a;
+		n = sz(a);
+		t.assign(4 * n, 0);
+		build(0, 0, n);
+	}
+
+	void build(ll v, ll l, ll r) {
+		if (l + 1 == r) {
+			t[v] = a[l];
+			if (l % 2) t[v] *= -1;
+			return;
+		} ll m = (l + r) / 2;
+		build(2 * v + 1, l, m);
+		build(2 * v + 2, m, r);
+		t[v] = t[2 * v + 1] + t[2 * v + 2];
+	}
+
+	void setX(ll v, ll l, ll r, ll i, ll x) {
+		if (l + 1 == r) {
+			t[v] = x;
+			if (l % 2) t[v] *= -1;
+			return;		
+		} ll m = (l + r) / 2;
+		if (i < m) setX(2 * v + 1, l, m, i, x);
+		else setX(2 * v + 2, m, r, i, x);
+		t[v] = t[2 * v + 1] + t[2 * v + 2];
+	}
+
+	ll getSum(ll v, ll l, ll r, ll L, ll R) {
+		if (l >= L && r <= R) return t[v];
+		if (l >= R || r <= L) return 0;
+		ll m = (l + r) / 2;
+		return getSum(2 * v + 1, l, m, L, R) + getSum(2 * v + 2, m, r, L, R);
+	}
+};
+
 int main() {
   fast_cin();
 
   ll n;
   cin >> n;
-  if (n % 3 == 0) {
-  	cout << (n / 3) - 1 << ' ' << n / 3 << ' ' << (n / 3) + 1 << ln;
-  } else cout << -1 << ln;
+  v64 a(n);
+  for (auto& i : a) cin >> i;
+  Tree tree(a);
+
+  ll q;
+	cin >> q;
+	while(q--) {
+		ll t, l, r;
+		cin >> t >> l >> r;
+		if (t == 0) tree.setX(0, 0, n, l - 1, r);
+		else {
+			ll x = tree.getSum(0, 0, n, l - 1, r);
+			cout << (l % 2 == 0 ? -x : x) << ln;
+		}
+	}
 
 }

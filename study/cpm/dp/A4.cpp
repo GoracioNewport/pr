@@ -39,10 +39,41 @@ double eps = 1e-12;
 int main() {
   fast_cin();
 
-  ll n;
-  cin >> n;
-  if (n % 3 == 0) {
-  	cout << (n / 3) - 1 << ' ' << n / 3 << ' ' << (n / 3) + 1 << ln;
-  } else cout << -1 << ln;
+  freopen("salesman.in", "r", stdin);
+  freopen("salesman.out", "w", stdout);
+
+  ll n, m;
+  cin >> n >> m;
+  vv64 a(n, v64(n, INF));
+  forn(i,m) {
+  	ll x, y, c;
+  	cin >> x >> y >> c;
+  	x--; y--;
+  	a[x][y] = c;
+  	a[y][x] = c;
+  } 
+
+  vv64 dp((1 << n), v64(n, INF)); // dp[i][j] - подмножество i, закончилось в j
+  for(ll i = 0; i < n; i++) dp[(1 << i)][i] = 0;
+  for(ll i = 0; i < (1 << n); i++) {
+  	for(ll j = 0; j < n; j++) { // Куда мы пойдем 
+  		if ((1 << j) & i) continue;
+  		for (ll k = 0; k < n; k++) { // Откуда пойдем
+  			if (!((1 << k) & i) || (j == k)) continue;
+  			// cout << i << ' ' << j << ' ' << k << ' ' << a[k][j] << ' ' << dp[i][k] << ln;
+  			dp[i | (1 << j)][j] = min(dp[i | (1 << j)][j], dp[i][k] + a[k][j]);
+  		}
+  	}
+  } ll ans = INF;
+  forn(i,n) ans = min(ans, dp[(1 << n) - 1][i]);
+  cout << (ans == INF ? -1 : ans) << ln;
+
+
+  // forn(i, (1 << n)) {
+  // 	cout << "---" << i << ln;
+  // 	forn(j,n) {
+  // 		cout << j + 1 << ' ' << dp[i][j] << ln;
+  // 	}
+  // }
 
 }

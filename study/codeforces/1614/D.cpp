@@ -39,10 +39,6 @@ double eps = 1e-12;
 int main() {
   fast_cin();
 
-  ll n;
-  cin >> n;
-  if (n % 3 == 0) {
-  	cout << (n / 3) - 1 << ' ' << n / 3 << ' ' << (n / 3) + 1 << ln;
-  } else cout << -1 << ln;
+  
 
 }

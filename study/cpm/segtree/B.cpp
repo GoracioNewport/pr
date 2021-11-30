@@ -36,13 +36,51 @@ double eps = 1e-12;
 #define all(x) (x).begin(), (x).end()
 #define sz(x) ((ll)(x).size())
 
+struct Tree {
+	vp64 t;
+	v64 a;
+	ll n;
+
+	Tree (v64& _a) {
+		a = _a;
+		n = sz(a);
+		t.assign(4 * n, {0, 0});
+		build(0, 0, n);
+	}
+
+	void build(ll v, ll l, ll r) {
+		if (l + 1 == r) {
+			t[v] = {a[l], l};
+			return;
+		} ll m = (l + r) / 2;
+		build(2 * v + 1, l, m);
+		build(2 * v + 2, m, r);
+		t[v] = max(t[2 * v + 1], t[2 * v + 2]);
+	}
+
+	p64 getMax(ll v, ll l, ll r, ll L, ll R) {
+		if (l >= L && r <= R) return t[v];
+		if (l >= R || r <= L) return {0, 0};
+		ll m = (l + r) / 2;
+		return max(getMax(2 * v + 1, l, m, L, R), getMax(2 * v + 2, m, r, L, R));
+	}
+};
+
 int main() {
   fast_cin();
 
   ll n;
   cin >> n;
-  if (n % 3 == 0) {
-  	cout << (n / 3) - 1 << ' ' << n / 3 << ' ' << (n / 3) + 1 << ln;
-  } else cout << -1 << ln;
+  v64 a(n);
+  for (auto& i : a) cin >> i;
+  Tree tree(a);
+
+  ll q;
+	cin >> q;
+	while(q--) {
+		ll l, r;
+		cin >> l >> r;
+		cout << tree.getMax(0, 0, n, l - 1, r).se + 1 << ' ';
+	}
 
 }

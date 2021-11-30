@@ -39,10 +39,22 @@ double eps = 1e-12;
 int main() {
   fast_cin();
 
-  ll n;
-  cin >> n;
-  if (n % 3 == 0) {
-  	cout << (n / 3) - 1 << ' ' << n / 3 << ' ' << (n / 3) + 1 << ln;
-  } else cout << -1 << ln;
+  ll t;
+  cin >> t;
+  while(t--) {
+  	ll n, l, r, k;
+  	cin >> n >> l >> r >> k;
+  	v64 a(n);
+  	for (auto& i : a) cin >> i;
+  	sort(all(a));
+  	ll ans = 0;
+  	for (auto& i : a) {
+  		if (i < l || i > r) continue;
+  		if (i <= k) {
+  			ans++;
+  			k -= i;
+  		}
+  	} cout << ans << ln;
+  }
 
 }

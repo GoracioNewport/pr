@@ -41,8 +41,27 @@ int main() {
 
   ll n;
   cin >> n;
-  if (n % 3 == 0) {
-  	cout << (n / 3) - 1 << ' ' << n / 3 << ' ' << (n / 3) + 1 << ln;
-  } else cout << -1 << ln;
+ 	vv64 a(n, v64(n));
+ 	for (auto& i : a) for (auto& j : i) cin >> j;
+ 	forn(i,n) a[i][i] = INF;
+
+ 	vvp64 dp((1 << n), vp64 (n, {INF, -1})); // dp[i][j] - Подмножество i, последняя j <val, prev>
+ 	forn(i,n) dp[(1 << i)][i] = {0, -1};
+
+ 	for(ll i = 0; i < (1 << n); i++) {
+		for(ll j = 0; j < n; j++) { // Куда идем
+			if ((1 << j) & i) continue;
+			for(ll k = 0; k < n; k++) { // Откуда
+				if (!((1 << k) & i) || (j == k)) continue;
+				dp[(i | (1 << j))][k] = min(dp[i | (1 << j)][k], {dp[i][k].fi + a[k][j], k});
+			}
+		} 		
+ 	} ll ans = INF, p = -1;
+ 	forn(i,n) {
+ 		if (dp[(1 << n) - 1][i].fi < ans) {
+ 			ans = dp[(1 << n) - 1][i].fi;
+ 			p = dp[(1 << n) - 1][i].se;
+ 		}
+ 	} cout << ans << ' ' << p << ln;
 
 }

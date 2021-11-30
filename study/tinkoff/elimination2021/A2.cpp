@@ -45,6 +45,7 @@ ll getAns(ll x) {
 int main() {
   fast_cin();
 
-
+  f.resize(50);
+  f[0] = 
 
 }
