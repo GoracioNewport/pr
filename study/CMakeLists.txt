@@ -1,11 +1,11 @@
 cmake_minimum_required(VERSION 3.17)
 project(study)
 
-set(CMAKE_CXX_STANDARD 11)
+set(CMAKE_CXX_STANDARD 20)
 
 #add_executable(study geometry/base.cpp)
-#add_executable(study codeforces/technocup/elimination4/C.cpp)
-#add_executable(study cpm/scanline/A.cpp)
-#add_executable(study tinkoff/classes/thematicContests/sqrt/H.cpp)
-#add_executable(study distours/vseros/10.28.2021/B.cpp)
-add_executable(study hseOlymp/elimination/A.cpp)
+#add_executable(study codeforces/1611/E2.cpp)
+#add_executable(study cpm/segTree/C.cpp)
+#add_executable(study tinkoff/classes/thematicContests/lcarmq/A.cpp)
+add_executable(study distours/region/11.24.2021/C.cpp)
+#add_executable(study randomContests/townContest2/D.cpp)

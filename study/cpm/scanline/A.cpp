@@ -41,7 +41,29 @@ int main() {
 
   ll n;
   cin >> n;
-  vp64 a(n);
-  for (auto& i : a) cin >> i.fi >> i.se;
+  vp64 a;
+
+  forn(i,n) {
+    ll x, y;
+    cin >> x >> y;
+    a.pb({x, 0});
+    a.pb({y, 1});
+  } sort(all(a));
+
+  vp64 ans;
+  ll bal = 0, prev;
+
+  for (auto& i : a) {
+    if (i.se == 0) {
+      bal++;
+      if (bal == 1) prev = i.fi;
+    } else {
+      bal--;
+      if (bal == 0) ans.pb({prev, i.fi});
+    }
+  } cout << sz(ans) << ln;
+  for (auto& i : ans) cout << i.fi << ' ' << i.se << ln;
+
+
 
 }

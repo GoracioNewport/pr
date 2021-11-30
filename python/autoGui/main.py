@@ -6,7 +6,9 @@ pg.alert("Ready?")
 b = ["я", "тебя", "люблю"]
 
 
-for i in range(100):
+for i in range(50
+
+               ):
 
     b = numpy.random.permutation(b)
     s = " ".join(b).capitalize()

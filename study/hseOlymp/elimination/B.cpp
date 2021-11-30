@@ -85,11 +85,13 @@ void solveElse() {
   v64 P(n, -1);
   while(!q.empty()) {
     ll x = q.front();
+//    cout << x + 1 << ln;
+    if (x == t) break;
     used[x] = 1;
     q.pop();
     for (auto& u : p[x]) {
       if (used[u.fi]) continue;
-      P[u.fi] = x;
+      if (P[u.fi] == -1) P[u.fi] = x;
       q.push(u.fi);
     }
   } ll x = P[t];
@@ -98,6 +100,8 @@ void solveElse() {
     ans.pb(x);
     x = P[x];
   } cout << sz(ans) + 1 << ln << sz(ans) << ln;
+
+  reverse(all(ans));
 
 
   for (auto& i : ans) cout << i + 1 << ' ';
@@ -114,6 +118,6 @@ int main() {
     cin >> x >> y >> c; x--; y--;
     p[x].pb({y, c});
     p[y].pb({x, c});
-  } if (n <= 10) solve10();
+  } if (n <= 10 && false) solve10();
   else solveElse();
 }

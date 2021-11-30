@@ -129,29 +129,29 @@ study/fast:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/study.dir/build.make CMakeFiles/study.dir/build
 .PHONY : study/fast
 
-hseOlymp/elimination/A.o: hseOlymp/elimination/A.cpp.o
-.PHONY : hseOlymp/elimination/A.o
+distours/region/11.24.2021/C.o: distours/region/11.24.2021/C.cpp.o
+.PHONY : distours/region/11.24.2021/C.o
 
 # target to build an object file
-hseOlymp/elimination/A.cpp.o:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/study.dir/build.make CMakeFiles/study.dir/hseOlymp/elimination/A.cpp.o
-.PHONY : hseOlymp/elimination/A.cpp.o
+distours/region/11.24.2021/C.cpp.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/study.dir/build.make CMakeFiles/study.dir/distours/region/11.24.2021/C.cpp.o
+.PHONY : distours/region/11.24.2021/C.cpp.o
 
-hseOlymp/elimination/A.i: hseOlymp/elimination/A.cpp.i
-.PHONY : hseOlymp/elimination/A.i
+distours/region/11.24.2021/C.i: distours/region/11.24.2021/C.cpp.i
+.PHONY : distours/region/11.24.2021/C.i
 
 # target to preprocess a source file
-hseOlymp/elimination/A.cpp.i:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/study.dir/build.make CMakeFiles/study.dir/hseOlymp/elimination/A.cpp.i
-.PHONY : hseOlymp/elimination/A.cpp.i
+distours/region/11.24.2021/C.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/study.dir/build.make CMakeFiles/study.dir/distours/region/11.24.2021/C.cpp.i
+.PHONY : distours/region/11.24.2021/C.cpp.i
 
-hseOlymp/elimination/A.s: hseOlymp/elimination/A.cpp.s
-.PHONY : hseOlymp/elimination/A.s
+distours/region/11.24.2021/C.s: distours/region/11.24.2021/C.cpp.s
+.PHONY : distours/region/11.24.2021/C.s
 
 # target to generate assembly for a file
-hseOlymp/elimination/A.cpp.s:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/study.dir/build.make CMakeFiles/study.dir/hseOlymp/elimination/A.cpp.s
-.PHONY : hseOlymp/elimination/A.cpp.s
+distours/region/11.24.2021/C.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/study.dir/build.make CMakeFiles/study.dir/distours/region/11.24.2021/C.cpp.s
+.PHONY : distours/region/11.24.2021/C.cpp.s
 
 # Help Target
 help:
@@ -162,9 +162,9 @@ help:
 	@echo "... edit_cache"
 	@echo "... rebuild_cache"
 	@echo "... study"
-	@echo "... hseOlymp/elimination/A.o"
-	@echo "... hseOlymp/elimination/A.i"
-	@echo "... hseOlymp/elimination/A.s"
+	@echo "... distours/region/11.24.2021/C.o"
+	@echo "... distours/region/11.24.2021/C.i"
+	@echo "... distours/region/11.24.2021/C.s"
 .PHONY : help
 
 
