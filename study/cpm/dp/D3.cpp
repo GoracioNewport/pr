@@ -39,34 +39,8 @@ double eps = 1e-12;
 int main() {
   fast_cin();
 
-  ll n;
-  cin >> n;
-  vv64 a(n, v64 (n));
-  for (auto& i : a) for (auto& j : i) cin >> j;
-  forn(i,n) a[i][i] = INF;
-  vvp64 dp((1 << n), vp64 (n, {INF, -1}));
-  forn(i,n) dp[(1 << i)][i] = {0, -1};
-
-  for (ll i = 0; i < (1 << n); i++) {
-    for (ll j = 0; j < n; j++) { // откуда идем
-      if (!((1 << j) & i)) continue;
-      for (ll k = 0; k < n; k++) { // куда идем
-        if ((1 << k) & i) continue;
-        dp[i | (1 << k)][k] = min(dp[i | (1 << k)][k], {dp[i][j].fi + a[j][k], j});
-      }
-    }
-  } p64 ans = {INF, 0};
-  forn(i,n) ans = min(ans, {dp[(1 << n) - 1][i].fi, i});
-  cout << ans.fi << ln;
-  v64 path;
-  ll status = (1 << n) - 1;
-  while(ans.se != -1) {
-    path.pb(ans.se);
-    ll prev = ans.se;
-    ans.se = dp[status][ans.se].se;
-    status = status & (INT32_MAX ^ (1 << prev));
-  } reverse(all(path));
-  for (auto& i : path) cout << i + 1 << ' ';
-  cout << ln;
+  ll n, m;
+  cin >> n >> m;
+  vector <vv64> dp(n + 1, )
 
 }
