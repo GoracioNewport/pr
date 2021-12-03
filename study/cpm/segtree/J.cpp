@@ -90,7 +90,7 @@ int main() {
   v64 a(n);
   for (auto& i : a) cin >> i;
   v64 b(n - 1);
-	forn(i,n) b[i] = a[i + 1] - a[i];
+	forn(i,n - 1) b[i] = a[i + 1] - a[i];
 	Tree tree(b);
 
 	while(q--) {
@@ -109,11 +109,11 @@ int main() {
 		} else {
 			ll l, r, x;
 			cin >> l >> r >> x; l--; r--;
-			if (l >= 0) tree.addX(0, 0, n - 1, l, x);
-			if (r + 1 < n - 1) tree.addX(0, 0, n - 1, r + 1, -x);
+			if (l - 1 >= 0) tree.addX(0, 0, n - 1, l - 1, x);
+			if (r < n - 1) tree.addX(0, 0, n - 1, r, -x);
 		}
 
-		for (auto& i : tree.t) cout << i.min << ' ' << i.max << ln;
-		cout << ln; 
+		// for (auto& i : tree.t) cout << i.min << ' ' << i.max << ln;
+		// cout << ln; 
 	}
 }
