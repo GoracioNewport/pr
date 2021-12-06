@@ -68,8 +68,6 @@ int main() {
   while ((1 << k) < n) {
   	for(auto &i : p) i = ((i - (1 << k)) + n) % n;
   	countSort(p,c);
-  	// for (auto &i : p) cout << i << ' ';
-  	// cout << ln;
   	v64 cNew(n);
   	forsn(i,1,n) {
   		if ((c[p[i]] == c[p[i - 1]]) && (c[p[i] + (1 << k) % n] == c[p[i - 1] + (1 << k) % n])) cNew[p[i]] = cNew[p[i - 1]];

@@ -8,7 +8,7 @@ set(CMAKE_DEPENDS_LANGUAGES
   )
 # The set of files for implicit dependencies of each language:
 set(CMAKE_DEPENDS_CHECK_CXX
-  "/mnt/hdd/pr/study/cpm/dp/A3.cpp" "/mnt/hdd/pr/study/cmake-build-debug/CMakeFiles/study.dir/cpm/dp/A3.cpp.o"
+  "D:/pr/study/tinkoff/classes/thematicContests/hashingSufarr/C.cpp" "D:/pr/study/cmake-build-debug/CMakeFiles/study.dir/tinkoff/classes/thematicContests/hashingSufarr/C.cpp.obj"
   )
 set(CMAKE_CXX_COMPILER_ID "GNU")
 
