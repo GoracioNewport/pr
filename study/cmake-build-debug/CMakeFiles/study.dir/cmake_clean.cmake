@@ -1,8 +1,7 @@
 file(REMOVE_RECURSE
-  "CMakeFiles/study.dir/tinkoff/classes/thematicContests/hashingSufarr/C.cpp.obj"
-  "libstudy.dll.a"
-  "study.exe"
-  "study.exe.manifest"
+  "CMakeFiles/study.dir/tinkoff/classes/thematicContests/hashingSufarr/D.cpp.o"
+  "CMakeFiles/study.dir/tinkoff/classes/thematicContests/hashingSufarr/D.cpp.o.d"
+  "study"
   "study.pdb"
 )
 

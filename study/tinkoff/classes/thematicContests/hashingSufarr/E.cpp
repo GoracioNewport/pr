@@ -36,9 +36,31 @@ double eps = 1e-12;
 #define all(x) (x).begin(), (x).end()
 #define sz(x) ((ll)(x).size())
 
+void countSort(v64& c, v64& p) {
+  ll n = sz(p);
+  v64 cnt(n), pos(n), newP(n);
+  
+}
+
 int main() {
   fast_cin();
 
-
+  ll n, m;
+  cin >> n >> m;
+  v64 s(n);
+  for (auto& i : s) cin >> i;
+  v64 c(n), p(n); {
+    vp64 a(n);
+    forn(i,n) a[i] = {s[i], i};
+    sort(all(a));
+    forn(i,n) p[i] = a[i].se;
+    forsn(i,1,n) {
+      if (a[i].fi == a[i - 1].fi) c[p[i]] = c[p[i - 1]];
+      else c[p[i]] = c[p[i - 1]] + 1;
+    }
+  } ll k = 0;
+  while((1 << k) < n) {
+    for (auto& i : p) i = (i - (1 << k) + n) % n;
+  }
 
 }
