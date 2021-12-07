@@ -39,7 +39,10 @@ double eps = 1e-12;
 void countSort(v64& c, v64& p) {
   ll n = sz(p);
   v64 cnt(n), pos(n), newP(n);
-  
+  for (auto& i : c) cnt[i]++;
+  forsn(i,1,n) pos[i] = pos[i - 1] + cnt[i - 1];
+  for (auto& i : p) newP[pos[c[i]]++] = i;
+  p = newP;
 }
 
 int main() {
@@ -49,6 +52,11 @@ int main() {
   cin >> n >> m;
   v64 s(n);
   for (auto& i : s) cin >> i;
+
+  v64 p;
+
+  s.pb(0);
+  n++;
   v64 c(n), p(n); {
     vp64 a(n);
     forn(i,n) a[i] = {s[i], i};
@@ -61,6 +69,51 @@ int main() {
   } ll k = 0;
   while((1 << k) < n) {
     for (auto& i : p) i = (i - (1 << k) + n) % n;
+    countSort(c, p);
+    v64 newC(n);
+    forsn(i,1,n) {
+      if ((c[p[i]] == c[p[i - 1]]) && (c[(p[i] + (1 << k)) % n] == c[(p[i - 1] + (1 << k)) % n])) newC[p[i]] = newC[p[i - 1]];
+      else newC[p[i]] = newC[p[i - 1]] + 1;
+    } c = newC;
+    k++;
+  } k = 0;
+  v64 lcp(n - 1);
+  forn(i, n - 1) {
+    ll j = p[c[i] - 1];
+    while(s[i + k] == s[j + k]) k++;
+    lcp[c[i] - 1] = k;
+    k = max(0ll, k - 1);
   }
+
+  stack <p64> q;
+  q.push({-INF, -1});
+
+  vp64 ans(n - 1, { -1 , n - 1 });
+
+  forn(i, n - 1) {
+    while(q.top().fi > lcp[i]) {
+      ans[q.top().se].se = i;
+      q.pop();
+    } q.push({lcp[i], i});
+  }
+
+  while(!q.empty()) q.pop();
+
+  q.push({-INF, -1});
+
+  rforn(i, n - 1) {
+    while(q.top().fi > lcp[i]) {
+      ans[q.top().se].fi = i;
+      q.pop();
+    } q.push({lcp[i], i});
+  }
+
+  pair <ll, p64> Ans = {n - 1, {0, n - 1}};
+  forn(i, n - 1) {
+    ll x = lcp[i] * (ans[i].se - ans[i].fi);
+    Ans = max(Ans, {x, {p[i], lcp[i]}});
+  } cout << Ans.fi << ln << Ans.se.se << ln;
+  for (ll i = Ans.se.fi; i < Ans.se.fi + Ans.se.se; i++) cout << s[i] << ' ';
+  cout << ln;
 
 }
