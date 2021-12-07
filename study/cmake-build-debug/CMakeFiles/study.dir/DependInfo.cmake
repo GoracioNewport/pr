@@ -8,7 +8,7 @@ set(CMAKE_DEPENDS_LANGUAGES
 
 # The set of dependency files which are needed:
 set(CMAKE_DEPENDS_DEPENDENCY_FILES
-  "/mnt/hdd/pr/study/tinkoff/classes/thematicContests/hashingSufarr/E.cpp" "CMakeFiles/study.dir/tinkoff/classes/thematicContests/hashingSufarr/E.cpp.o" "gcc" "CMakeFiles/study.dir/tinkoff/classes/thematicContests/hashingSufarr/E.cpp.o.d"
+  "/mnt/hdd/pr/study/tinkoff/classes/thematicContests/stress/C/stupid.cpp" "CMakeFiles/study.dir/tinkoff/classes/thematicContests/stress/C/stupid.cpp.o" "gcc" "CMakeFiles/study.dir/tinkoff/classes/thematicContests/stress/C/stupid.cpp.o.d"
   )
 
 # Targets to which this target links.

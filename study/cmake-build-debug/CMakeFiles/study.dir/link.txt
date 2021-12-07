@@ -1,1 +1,1 @@
-/usr/bin/c++ -g CMakeFiles/study.dir/tinkoff/classes/thematicContests/hashingSufarr/E.cpp.o -o study 
+/usr/bin/c++ -g CMakeFiles/study.dir/tinkoff/classes/thematicContests/stress/C/stupid.cpp.o -o study 

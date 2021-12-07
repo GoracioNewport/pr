@@ -129,29 +129,29 @@ study/fast:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/study.dir/build.make CMakeFiles/study.dir/build
 .PHONY : study/fast
 
-tinkoff/classes/thematicContests/hashingSufarr/E.o: tinkoff/classes/thematicContests/hashingSufarr/E.cpp.o
-.PHONY : tinkoff/classes/thematicContests/hashingSufarr/E.o
+tinkoff/classes/thematicContests/stress/C/stupid.o: tinkoff/classes/thematicContests/stress/C/stupid.cpp.o
+.PHONY : tinkoff/classes/thematicContests/stress/C/stupid.o
 
 # target to build an object file
-tinkoff/classes/thematicContests/hashingSufarr/E.cpp.o:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/study.dir/build.make CMakeFiles/study.dir/tinkoff/classes/thematicContests/hashingSufarr/E.cpp.o
-.PHONY : tinkoff/classes/thematicContests/hashingSufarr/E.cpp.o
+tinkoff/classes/thematicContests/stress/C/stupid.cpp.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/study.dir/build.make CMakeFiles/study.dir/tinkoff/classes/thematicContests/stress/C/stupid.cpp.o
+.PHONY : tinkoff/classes/thematicContests/stress/C/stupid.cpp.o
 
-tinkoff/classes/thematicContests/hashingSufarr/E.i: tinkoff/classes/thematicContests/hashingSufarr/E.cpp.i
-.PHONY : tinkoff/classes/thematicContests/hashingSufarr/E.i
+tinkoff/classes/thematicContests/stress/C/stupid.i: tinkoff/classes/thematicContests/stress/C/stupid.cpp.i
+.PHONY : tinkoff/classes/thematicContests/stress/C/stupid.i
 
 # target to preprocess a source file
-tinkoff/classes/thematicContests/hashingSufarr/E.cpp.i:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/study.dir/build.make CMakeFiles/study.dir/tinkoff/classes/thematicContests/hashingSufarr/E.cpp.i
-.PHONY : tinkoff/classes/thematicContests/hashingSufarr/E.cpp.i
+tinkoff/classes/thematicContests/stress/C/stupid.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/study.dir/build.make CMakeFiles/study.dir/tinkoff/classes/thematicContests/stress/C/stupid.cpp.i
+.PHONY : tinkoff/classes/thematicContests/stress/C/stupid.cpp.i
 
-tinkoff/classes/thematicContests/hashingSufarr/E.s: tinkoff/classes/thematicContests/hashingSufarr/E.cpp.s
-.PHONY : tinkoff/classes/thematicContests/hashingSufarr/E.s
+tinkoff/classes/thematicContests/stress/C/stupid.s: tinkoff/classes/thematicContests/stress/C/stupid.cpp.s
+.PHONY : tinkoff/classes/thematicContests/stress/C/stupid.s
 
 # target to generate assembly for a file
-tinkoff/classes/thematicContests/hashingSufarr/E.cpp.s:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/study.dir/build.make CMakeFiles/study.dir/tinkoff/classes/thematicContests/hashingSufarr/E.cpp.s
-.PHONY : tinkoff/classes/thematicContests/hashingSufarr/E.cpp.s
+tinkoff/classes/thematicContests/stress/C/stupid.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/study.dir/build.make CMakeFiles/study.dir/tinkoff/classes/thematicContests/stress/C/stupid.cpp.s
+.PHONY : tinkoff/classes/thematicContests/stress/C/stupid.cpp.s
 
 # Help Target
 help:
@@ -162,9 +162,9 @@ help:
 	@echo "... edit_cache"
 	@echo "... rebuild_cache"
 	@echo "... study"
-	@echo "... tinkoff/classes/thematicContests/hashingSufarr/E.o"
-	@echo "... tinkoff/classes/thematicContests/hashingSufarr/E.i"
-	@echo "... tinkoff/classes/thematicContests/hashingSufarr/E.s"
+	@echo "... tinkoff/classes/thematicContests/stress/C/stupid.o"
+	@echo "... tinkoff/classes/thematicContests/stress/C/stupid.i"
+	@echo "... tinkoff/classes/thematicContests/stress/C/stupid.s"
 .PHONY : help
 
 
