@@ -129,29 +129,29 @@ study/fast:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/study.dir/build.make CMakeFiles/study.dir/build
 .PHONY : study/fast
 
-tinkoff/classes/thematicContests/stress/C/stupid.o: tinkoff/classes/thematicContests/stress/C/stupid.cpp.o
-.PHONY : tinkoff/classes/thematicContests/stress/C/stupid.o
+tinkoff/classes/thematicContests/stress/D/smart.o: tinkoff/classes/thematicContests/stress/D/smart.cpp.o
+.PHONY : tinkoff/classes/thematicContests/stress/D/smart.o
 
 # target to build an object file
-tinkoff/classes/thematicContests/stress/C/stupid.cpp.o:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/study.dir/build.make CMakeFiles/study.dir/tinkoff/classes/thematicContests/stress/C/stupid.cpp.o
-.PHONY : tinkoff/classes/thematicContests/stress/C/stupid.cpp.o
+tinkoff/classes/thematicContests/stress/D/smart.cpp.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/study.dir/build.make CMakeFiles/study.dir/tinkoff/classes/thematicContests/stress/D/smart.cpp.o
+.PHONY : tinkoff/classes/thematicContests/stress/D/smart.cpp.o
 
-tinkoff/classes/thematicContests/stress/C/stupid.i: tinkoff/classes/thematicContests/stress/C/stupid.cpp.i
-.PHONY : tinkoff/classes/thematicContests/stress/C/stupid.i
+tinkoff/classes/thematicContests/stress/D/smart.i: tinkoff/classes/thematicContests/stress/D/smart.cpp.i
+.PHONY : tinkoff/classes/thematicContests/stress/D/smart.i
 
 # target to preprocess a source file
-tinkoff/classes/thematicContests/stress/C/stupid.cpp.i:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/study.dir/build.make CMakeFiles/study.dir/tinkoff/classes/thematicContests/stress/C/stupid.cpp.i
-.PHONY : tinkoff/classes/thematicContests/stress/C/stupid.cpp.i
+tinkoff/classes/thematicContests/stress/D/smart.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/study.dir/build.make CMakeFiles/study.dir/tinkoff/classes/thematicContests/stress/D/smart.cpp.i
+.PHONY : tinkoff/classes/thematicContests/stress/D/smart.cpp.i
 
-tinkoff/classes/thematicContests/stress/C/stupid.s: tinkoff/classes/thematicContests/stress/C/stupid.cpp.s
-.PHONY : tinkoff/classes/thematicContests/stress/C/stupid.s
+tinkoff/classes/thematicContests/stress/D/smart.s: tinkoff/classes/thematicContests/stress/D/smart.cpp.s
+.PHONY : tinkoff/classes/thematicContests/stress/D/smart.s
 
 # target to generate assembly for a file
-tinkoff/classes/thematicContests/stress/C/stupid.cpp.s:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/study.dir/build.make CMakeFiles/study.dir/tinkoff/classes/thematicContests/stress/C/stupid.cpp.s
-.PHONY : tinkoff/classes/thematicContests/stress/C/stupid.cpp.s
+tinkoff/classes/thematicContests/stress/D/smart.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/study.dir/build.make CMakeFiles/study.dir/tinkoff/classes/thematicContests/stress/D/smart.cpp.s
+.PHONY : tinkoff/classes/thematicContests/stress/D/smart.cpp.s
 
 # Help Target
 help:
@@ -162,9 +162,9 @@ help:
 	@echo "... edit_cache"
 	@echo "... rebuild_cache"
 	@echo "... study"
-	@echo "... tinkoff/classes/thematicContests/stress/C/stupid.o"
-	@echo "... tinkoff/classes/thematicContests/stress/C/stupid.i"
-	@echo "... tinkoff/classes/thematicContests/stress/C/stupid.s"
+	@echo "... tinkoff/classes/thematicContests/stress/D/smart.o"
+	@echo "... tinkoff/classes/thematicContests/stress/D/smart.i"
+	@echo "... tinkoff/classes/thematicContests/stress/D/smart.s"
 .PHONY : help
 
 

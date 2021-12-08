@@ -46,7 +46,7 @@ int main() {
     ll m;
     cin >> m;
     v64 a(m);
-    for (auto& i : a) cin >> i; 
+    for (auto& i : a) cin >> i;
   }
 
 }

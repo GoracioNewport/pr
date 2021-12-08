@@ -1,6 +1,6 @@
 file(REMOVE_RECURSE
-  "CMakeFiles/study.dir/tinkoff/classes/thematicContests/stress/C/stupid.cpp.o"
-  "CMakeFiles/study.dir/tinkoff/classes/thematicContests/stress/C/stupid.cpp.o.d"
+  "CMakeFiles/study.dir/tinkoff/classes/thematicContests/stress/D/smart.cpp.o"
+  "CMakeFiles/study.dir/tinkoff/classes/thematicContests/stress/D/smart.cpp.o.d"
   "study"
   "study.pdb"
 )
