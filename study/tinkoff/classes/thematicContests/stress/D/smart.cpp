@@ -7,7 +7,7 @@
 
 using namespace std;
 
-typedef int ll;
+typedef long long ll;
 typedef long double ld;
 typedef pair<int,int> p32;
 typedef pair<ll,ll> p64;
