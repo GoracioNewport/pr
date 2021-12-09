@@ -129,29 +129,29 @@ study/fast:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/study.dir/build.make CMakeFiles/study.dir/build
 .PHONY : study/fast
 
-tinkoff/classes/thematicContests/lcarmq/A.o: tinkoff/classes/thematicContests/lcarmq/A.cpp.o
-.PHONY : tinkoff/classes/thematicContests/lcarmq/A.o
+tinkoff/classes/thematicContests/lcarmq/B.o: tinkoff/classes/thematicContests/lcarmq/B.cpp.o
+.PHONY : tinkoff/classes/thematicContests/lcarmq/B.o
 
 # target to build an object file
-tinkoff/classes/thematicContests/lcarmq/A.cpp.o:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/study.dir/build.make CMakeFiles/study.dir/tinkoff/classes/thematicContests/lcarmq/A.cpp.o
-.PHONY : tinkoff/classes/thematicContests/lcarmq/A.cpp.o
+tinkoff/classes/thematicContests/lcarmq/B.cpp.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/study.dir/build.make CMakeFiles/study.dir/tinkoff/classes/thematicContests/lcarmq/B.cpp.o
+.PHONY : tinkoff/classes/thematicContests/lcarmq/B.cpp.o
 
-tinkoff/classes/thematicContests/lcarmq/A.i: tinkoff/classes/thematicContests/lcarmq/A.cpp.i
-.PHONY : tinkoff/classes/thematicContests/lcarmq/A.i
+tinkoff/classes/thematicContests/lcarmq/B.i: tinkoff/classes/thematicContests/lcarmq/B.cpp.i
+.PHONY : tinkoff/classes/thematicContests/lcarmq/B.i
 
 # target to preprocess a source file
-tinkoff/classes/thematicContests/lcarmq/A.cpp.i:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/study.dir/build.make CMakeFiles/study.dir/tinkoff/classes/thematicContests/lcarmq/A.cpp.i
-.PHONY : tinkoff/classes/thematicContests/lcarmq/A.cpp.i
+tinkoff/classes/thematicContests/lcarmq/B.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/study.dir/build.make CMakeFiles/study.dir/tinkoff/classes/thematicContests/lcarmq/B.cpp.i
+.PHONY : tinkoff/classes/thematicContests/lcarmq/B.cpp.i
 
-tinkoff/classes/thematicContests/lcarmq/A.s: tinkoff/classes/thematicContests/lcarmq/A.cpp.s
-.PHONY : tinkoff/classes/thematicContests/lcarmq/A.s
+tinkoff/classes/thematicContests/lcarmq/B.s: tinkoff/classes/thematicContests/lcarmq/B.cpp.s
+.PHONY : tinkoff/classes/thematicContests/lcarmq/B.s
 
 # target to generate assembly for a file
-tinkoff/classes/thematicContests/lcarmq/A.cpp.s:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/study.dir/build.make CMakeFiles/study.dir/tinkoff/classes/thematicContests/lcarmq/A.cpp.s
-.PHONY : tinkoff/classes/thematicContests/lcarmq/A.cpp.s
+tinkoff/classes/thematicContests/lcarmq/B.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/study.dir/build.make CMakeFiles/study.dir/tinkoff/classes/thematicContests/lcarmq/B.cpp.s
+.PHONY : tinkoff/classes/thematicContests/lcarmq/B.cpp.s
 
 # Help Target
 help:
@@ -162,9 +162,9 @@ help:
 	@echo "... edit_cache"
 	@echo "... rebuild_cache"
 	@echo "... study"
-	@echo "... tinkoff/classes/thematicContests/lcarmq/A.o"
-	@echo "... tinkoff/classes/thematicContests/lcarmq/A.i"
-	@echo "... tinkoff/classes/thematicContests/lcarmq/A.s"
+	@echo "... tinkoff/classes/thematicContests/lcarmq/B.o"
+	@echo "... tinkoff/classes/thematicContests/lcarmq/B.i"
+	@echo "... tinkoff/classes/thematicContests/lcarmq/B.s"
 .PHONY : help
 
 
