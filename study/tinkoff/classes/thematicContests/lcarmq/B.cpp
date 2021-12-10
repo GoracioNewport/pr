@@ -143,23 +143,12 @@ int main() {
   } sort(all(q));
 
   ll ans = 0;
+  n *= 2;
   Tree tree(n);
   for (auto& i : q) {
-    if (i.type == BEGIN) {
-      ans -= tree.getSum(0, 0, n, i.y1, i.y2 + 1);
-      cout << "- " << tree.getSum(0, 0, n, i.y1, i.y2 + 1) << ln;
-      cout << i.x << ' ' << i.y1 << ' ' << i.y2 << ln;
-      cout << n << ln;
-    }
-    else if (i.type == END) {
-      ans += tree.getSum(0, 0, n, i.y1, i.y2 + 1) - 1;
-      cout << "+ " << tree.getSum(0, 0, n, i.y1, i.y2 + 1) - 1 << ln;
-      cout << i.x << ' ' << i.y1 << ' ' << i.y2 << ln;
-    }
-    else {
-      tree.addX(0, 0, n, i.y1, 1);
-      cout << "DOT" << ln << i.x << ' ' << i.y1 << ln;
-    } cout << ln;
+    if (i.type == BEGIN) ans -= tree.getSum(0, 0, n, i.y1, i.y2 + 1);
+    else if (i.type == END) ans += tree.getSum(0, 0, n, i.y1, i.y2 + 1) - 1;
+    else tree.addX(0, 0, n, i.y1, 1);
   } cout << ans << ln;
 
 
