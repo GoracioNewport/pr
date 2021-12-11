@@ -1,6 +1,6 @@
 file(REMOVE_RECURSE
-  "CMakeFiles/study.dir/tinkoff/classes/thematicContests/lcarmq/C.cpp.o"
-  "CMakeFiles/study.dir/tinkoff/classes/thematicContests/lcarmq/C.cpp.o.d"
+  "CMakeFiles/study.dir/distours/vseros/12.11.2021/B.cpp.o"
+  "CMakeFiles/study.dir/distours/vseros/12.11.2021/B.cpp.o.d"
   "study"
   "study.pdb"
 )

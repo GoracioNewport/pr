@@ -129,29 +129,29 @@ study/fast:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/study.dir/build.make CMakeFiles/study.dir/build
 .PHONY : study/fast
 
-tinkoff/classes/thematicContests/lcarmq/C.o: tinkoff/classes/thematicContests/lcarmq/C.cpp.o
-.PHONY : tinkoff/classes/thematicContests/lcarmq/C.o
+distours/vseros/12.11.2021/B.o: distours/vseros/12.11.2021/B.cpp.o
+.PHONY : distours/vseros/12.11.2021/B.o
 
 # target to build an object file
-tinkoff/classes/thematicContests/lcarmq/C.cpp.o:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/study.dir/build.make CMakeFiles/study.dir/tinkoff/classes/thematicContests/lcarmq/C.cpp.o
-.PHONY : tinkoff/classes/thematicContests/lcarmq/C.cpp.o
+distours/vseros/12.11.2021/B.cpp.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/study.dir/build.make CMakeFiles/study.dir/distours/vseros/12.11.2021/B.cpp.o
+.PHONY : distours/vseros/12.11.2021/B.cpp.o
 
-tinkoff/classes/thematicContests/lcarmq/C.i: tinkoff/classes/thematicContests/lcarmq/C.cpp.i
-.PHONY : tinkoff/classes/thematicContests/lcarmq/C.i
+distours/vseros/12.11.2021/B.i: distours/vseros/12.11.2021/B.cpp.i
+.PHONY : distours/vseros/12.11.2021/B.i
 
 # target to preprocess a source file
-tinkoff/classes/thematicContests/lcarmq/C.cpp.i:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/study.dir/build.make CMakeFiles/study.dir/tinkoff/classes/thematicContests/lcarmq/C.cpp.i
-.PHONY : tinkoff/classes/thematicContests/lcarmq/C.cpp.i
+distours/vseros/12.11.2021/B.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/study.dir/build.make CMakeFiles/study.dir/distours/vseros/12.11.2021/B.cpp.i
+.PHONY : distours/vseros/12.11.2021/B.cpp.i
 
-tinkoff/classes/thematicContests/lcarmq/C.s: tinkoff/classes/thematicContests/lcarmq/C.cpp.s
-.PHONY : tinkoff/classes/thematicContests/lcarmq/C.s
+distours/vseros/12.11.2021/B.s: distours/vseros/12.11.2021/B.cpp.s
+.PHONY : distours/vseros/12.11.2021/B.s
 
 # target to generate assembly for a file
-tinkoff/classes/thematicContests/lcarmq/C.cpp.s:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/study.dir/build.make CMakeFiles/study.dir/tinkoff/classes/thematicContests/lcarmq/C.cpp.s
-.PHONY : tinkoff/classes/thematicContests/lcarmq/C.cpp.s
+distours/vseros/12.11.2021/B.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/study.dir/build.make CMakeFiles/study.dir/distours/vseros/12.11.2021/B.cpp.s
+.PHONY : distours/vseros/12.11.2021/B.cpp.s
 
 # Help Target
 help:
@@ -162,9 +162,9 @@ help:
 	@echo "... edit_cache"
 	@echo "... rebuild_cache"
 	@echo "... study"
-	@echo "... tinkoff/classes/thematicContests/lcarmq/C.o"
-	@echo "... tinkoff/classes/thematicContests/lcarmq/C.i"
-	@echo "... tinkoff/classes/thematicContests/lcarmq/C.s"
+	@echo "... distours/vseros/12.11.2021/B.o"
+	@echo "... distours/vseros/12.11.2021/B.i"
+	@echo "... distours/vseros/12.11.2021/B.s"
 .PHONY : help
 
 
