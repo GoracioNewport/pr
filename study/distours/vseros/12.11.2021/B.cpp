@@ -7,7 +7,7 @@
 
 using namespace std;
 
-typedef long long ll;
+typedef int ll;
 typedef long double ld;
 typedef pair<int,int> p32;
 typedef pair<ll,ll> p64;
@@ -98,7 +98,7 @@ void dfsIn(ll v, ll c) {
   }
 }
 
-ll mod = 1e9 + 7;
+long long mod = 1e9 + 7;
 
 ll dfsAns(ll v, set <p64>& q, ll h = 0) {
   used[v] = true;
@@ -113,7 +113,7 @@ ll dfsAns(ll v, set <p64>& q, ll h = 0) {
   for (auto& u : p[v]) {
     if (used[u]) continue;
     ll x = dfsAns(u, q, h + 1);
-    locAns = (locAns * x) % mod;
+    locAns = (long long)((long long)locAns * (long long)x) % mod;
     bool goUp = false;
     for (auto& i : q) {
       ll hx = -i.fi;
@@ -149,7 +149,7 @@ ll dfsAns(ll v, set <p64>& q, ll h = 0) {
 
   for (auto& i : mul[v]) {
     p64 l = lca(v, i.fi);
-    q.insert({l.fi, i.se});
+    q.insert({-l.fi, i.se});
   }
 
   Ans = true;
@@ -159,9 +159,10 @@ ll dfsAns(ll v, set <p64>& q, ll h = 0) {
       cnt++;
     }
   } if (!Ans) return 0;
+  if (hasVertWay) cnt--;
 
-  locAns = locAns * powers[cnt] % mod;
-  locAns = locAns * powers[(sz(p[v]) - (v == 0 ? 0 : 1)) - (sz(vs) - hasVertWay)] % mod;
+  locAns = (long long)locAns * (long long)powers[cnt] % mod;
+  locAns = (long long)locAns * (long long)powers[(sz(p[v]) - (v == 0 ? 0 : 1)) - (sz(vs) - hasVertWay)] % mod;
   return locAns;
 
 }
@@ -174,7 +175,7 @@ int main() {
   p.assign(n, v64());
   used.assign(n, 0);
   mul.assign(n, vp64());
-  powers.resize(4 * 1e5, 1);
+  powers.resize(3 * 1e5 + 1, 1);
   forsn(i,1,sz(powers)) powers[i] = powers[i - 1] * 2 % mod;
   forn(i,n - 1) {
     ll x, y;
