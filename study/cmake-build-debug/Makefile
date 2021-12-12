@@ -129,29 +129,29 @@ study/fast:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/study.dir/build.make CMakeFiles/study.dir/build
 .PHONY : study/fast
 
-distours/vseros/12.11.2021/B.o: distours/vseros/12.11.2021/B.cpp.o
-.PHONY : distours/vseros/12.11.2021/B.o
+codeforces/1585/D.o: codeforces/1585/D.cpp.o
+.PHONY : codeforces/1585/D.o
 
 # target to build an object file
-distours/vseros/12.11.2021/B.cpp.o:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/study.dir/build.make CMakeFiles/study.dir/distours/vseros/12.11.2021/B.cpp.o
-.PHONY : distours/vseros/12.11.2021/B.cpp.o
+codeforces/1585/D.cpp.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/study.dir/build.make CMakeFiles/study.dir/codeforces/1585/D.cpp.o
+.PHONY : codeforces/1585/D.cpp.o
 
-distours/vseros/12.11.2021/B.i: distours/vseros/12.11.2021/B.cpp.i
-.PHONY : distours/vseros/12.11.2021/B.i
+codeforces/1585/D.i: codeforces/1585/D.cpp.i
+.PHONY : codeforces/1585/D.i
 
 # target to preprocess a source file
-distours/vseros/12.11.2021/B.cpp.i:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/study.dir/build.make CMakeFiles/study.dir/distours/vseros/12.11.2021/B.cpp.i
-.PHONY : distours/vseros/12.11.2021/B.cpp.i
+codeforces/1585/D.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/study.dir/build.make CMakeFiles/study.dir/codeforces/1585/D.cpp.i
+.PHONY : codeforces/1585/D.cpp.i
 
-distours/vseros/12.11.2021/B.s: distours/vseros/12.11.2021/B.cpp.s
-.PHONY : distours/vseros/12.11.2021/B.s
+codeforces/1585/D.s: codeforces/1585/D.cpp.s
+.PHONY : codeforces/1585/D.s
 
 # target to generate assembly for a file
-distours/vseros/12.11.2021/B.cpp.s:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/study.dir/build.make CMakeFiles/study.dir/distours/vseros/12.11.2021/B.cpp.s
-.PHONY : distours/vseros/12.11.2021/B.cpp.s
+codeforces/1585/D.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/study.dir/build.make CMakeFiles/study.dir/codeforces/1585/D.cpp.s
+.PHONY : codeforces/1585/D.cpp.s
 
 # Help Target
 help:
@@ -162,9 +162,9 @@ help:
 	@echo "... edit_cache"
 	@echo "... rebuild_cache"
 	@echo "... study"
-	@echo "... distours/vseros/12.11.2021/B.o"
-	@echo "... distours/vseros/12.11.2021/B.i"
-	@echo "... distours/vseros/12.11.2021/B.s"
+	@echo "... codeforces/1585/D.o"
+	@echo "... codeforces/1585/D.i"
+	@echo "... codeforces/1585/D.s"
 .PHONY : help
 
 
