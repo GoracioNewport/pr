@@ -1,1 +1,1 @@
-/usr/bin/c++ -g CMakeFiles/study.dir/codeforces/1585/D.cpp.o -o study 
+/usr/bin/c++ -g CMakeFiles/study.dir/atcoder/abc230/D.cpp.o -o study 

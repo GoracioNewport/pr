@@ -8,7 +8,7 @@ set(CMAKE_DEPENDS_LANGUAGES
 
 # The set of dependency files which are needed:
 set(CMAKE_DEPENDS_DEPENDENCY_FILES
-  "/mnt/hdd/pr/study/codeforces/1585/D.cpp" "CMakeFiles/study.dir/codeforces/1585/D.cpp.o" "gcc" "CMakeFiles/study.dir/codeforces/1585/D.cpp.o.d"
+  "/mnt/hdd/pr/study/atcoder/abc230/D.cpp" "CMakeFiles/study.dir/atcoder/abc230/D.cpp.o" "gcc" "CMakeFiles/study.dir/atcoder/abc230/D.cpp.o.d"
   )
 
 # Targets to which this target links.

@@ -1,6 +1,6 @@
 file(REMOVE_RECURSE
-  "CMakeFiles/study.dir/codeforces/1585/D.cpp.o"
-  "CMakeFiles/study.dir/codeforces/1585/D.cpp.o.d"
+  "CMakeFiles/study.dir/atcoder/abc230/D.cpp.o"
+  "CMakeFiles/study.dir/atcoder/abc230/D.cpp.o.d"
   "study"
   "study.pdb"
 )

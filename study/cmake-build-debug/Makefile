@@ -129,29 +129,29 @@ study/fast:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/study.dir/build.make CMakeFiles/study.dir/build
 .PHONY : study/fast
 
-codeforces/1585/D.o: codeforces/1585/D.cpp.o
-.PHONY : codeforces/1585/D.o
+atcoder/abc230/D.o: atcoder/abc230/D.cpp.o
+.PHONY : atcoder/abc230/D.o
 
 # target to build an object file
-codeforces/1585/D.cpp.o:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/study.dir/build.make CMakeFiles/study.dir/codeforces/1585/D.cpp.o
-.PHONY : codeforces/1585/D.cpp.o
+atcoder/abc230/D.cpp.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/study.dir/build.make CMakeFiles/study.dir/atcoder/abc230/D.cpp.o
+.PHONY : atcoder/abc230/D.cpp.o
 
-codeforces/1585/D.i: codeforces/1585/D.cpp.i
-.PHONY : codeforces/1585/D.i
+atcoder/abc230/D.i: atcoder/abc230/D.cpp.i
+.PHONY : atcoder/abc230/D.i
 
 # target to preprocess a source file
-codeforces/1585/D.cpp.i:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/study.dir/build.make CMakeFiles/study.dir/codeforces/1585/D.cpp.i
-.PHONY : codeforces/1585/D.cpp.i
+atcoder/abc230/D.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/study.dir/build.make CMakeFiles/study.dir/atcoder/abc230/D.cpp.i
+.PHONY : atcoder/abc230/D.cpp.i
 
-codeforces/1585/D.s: codeforces/1585/D.cpp.s
-.PHONY : codeforces/1585/D.s
+atcoder/abc230/D.s: atcoder/abc230/D.cpp.s
+.PHONY : atcoder/abc230/D.s
 
 # target to generate assembly for a file
-codeforces/1585/D.cpp.s:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/study.dir/build.make CMakeFiles/study.dir/codeforces/1585/D.cpp.s
-.PHONY : codeforces/1585/D.cpp.s
+atcoder/abc230/D.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/study.dir/build.make CMakeFiles/study.dir/atcoder/abc230/D.cpp.s
+.PHONY : atcoder/abc230/D.cpp.s
 
 # Help Target
 help:
@@ -162,9 +162,9 @@ help:
 	@echo "... edit_cache"
 	@echo "... rebuild_cache"
 	@echo "... study"
-	@echo "... codeforces/1585/D.o"
-	@echo "... codeforces/1585/D.i"
-	@echo "... codeforces/1585/D.s"
+	@echo "... atcoder/abc230/D.o"
+	@echo "... atcoder/abc230/D.i"
+	@echo "... atcoder/abc230/D.s"
 .PHONY : help
 
 
