@@ -39,20 +39,18 @@ double eps = 1e-12;
 int main() {
   fast_cin();
 
-  ll n, d;
-  cin >> n >> d;
-  vector <p64> a;
-  forn(i,n) {
-    ll x, y;
-    cin >> x >> y;
-    a.pb({y, x});
-  } sort(all(a));
-
+  ll n;
+  cin >> n;
   ll ans = 0;
-  ll x = -INF;
-
-  for (auto& i : a) {
-    if (x + d - 1 < i.se) ans++, x = i.fi;
+  for (ll i = 1; i <= n; i++) {
+    ll l = i;
+    ll r = n + 1;
+    while(l + 1 < r) {
+      ll m = (l + r) >> 1;
+      if ((n / m) == (n / i)) l = m;
+      else r = m;
+    } ans += (n / i) * (l - i + 1);
+    i = l;
   } cout << ans << ln;
 
 }
