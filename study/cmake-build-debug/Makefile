@@ -129,29 +129,29 @@ study/fast:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/study.dir/build.make CMakeFiles/study.dir/build
 .PHONY : study/fast
 
-atcoder/abc230/E.o: atcoder/abc230/E.cpp.o
-.PHONY : atcoder/abc230/E.o
+tinkoff/classes/thematicContests/maths/A.o: tinkoff/classes/thematicContests/maths/A.cpp.o
+.PHONY : tinkoff/classes/thematicContests/maths/A.o
 
 # target to build an object file
-atcoder/abc230/E.cpp.o:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/study.dir/build.make CMakeFiles/study.dir/atcoder/abc230/E.cpp.o
-.PHONY : atcoder/abc230/E.cpp.o
+tinkoff/classes/thematicContests/maths/A.cpp.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/study.dir/build.make CMakeFiles/study.dir/tinkoff/classes/thematicContests/maths/A.cpp.o
+.PHONY : tinkoff/classes/thematicContests/maths/A.cpp.o
 
-atcoder/abc230/E.i: atcoder/abc230/E.cpp.i
-.PHONY : atcoder/abc230/E.i
+tinkoff/classes/thematicContests/maths/A.i: tinkoff/classes/thematicContests/maths/A.cpp.i
+.PHONY : tinkoff/classes/thematicContests/maths/A.i
 
 # target to preprocess a source file
-atcoder/abc230/E.cpp.i:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/study.dir/build.make CMakeFiles/study.dir/atcoder/abc230/E.cpp.i
-.PHONY : atcoder/abc230/E.cpp.i
+tinkoff/classes/thematicContests/maths/A.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/study.dir/build.make CMakeFiles/study.dir/tinkoff/classes/thematicContests/maths/A.cpp.i
+.PHONY : tinkoff/classes/thematicContests/maths/A.cpp.i
 
-atcoder/abc230/E.s: atcoder/abc230/E.cpp.s
-.PHONY : atcoder/abc230/E.s
+tinkoff/classes/thematicContests/maths/A.s: tinkoff/classes/thematicContests/maths/A.cpp.s
+.PHONY : tinkoff/classes/thematicContests/maths/A.s
 
 # target to generate assembly for a file
-atcoder/abc230/E.cpp.s:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/study.dir/build.make CMakeFiles/study.dir/atcoder/abc230/E.cpp.s
-.PHONY : atcoder/abc230/E.cpp.s
+tinkoff/classes/thematicContests/maths/A.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/study.dir/build.make CMakeFiles/study.dir/tinkoff/classes/thematicContests/maths/A.cpp.s
+.PHONY : tinkoff/classes/thematicContests/maths/A.cpp.s
 
 # Help Target
 help:
@@ -162,9 +162,9 @@ help:
 	@echo "... edit_cache"
 	@echo "... rebuild_cache"
 	@echo "... study"
-	@echo "... atcoder/abc230/E.o"
-	@echo "... atcoder/abc230/E.i"
-	@echo "... atcoder/abc230/E.s"
+	@echo "... tinkoff/classes/thematicContests/maths/A.o"
+	@echo "... tinkoff/classes/thematicContests/maths/A.i"
+	@echo "... tinkoff/classes/thematicContests/maths/A.s"
 .PHONY : help
 
 

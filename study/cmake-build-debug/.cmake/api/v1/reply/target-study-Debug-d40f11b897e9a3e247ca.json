@@ -24,7 +24,7 @@
 			{
 				"command" : 0,
 				"file" : 0,
-				"line" : 8,
+				"line" : 10,
 				"parent" : 0
 			}
 		]
@@ -94,7 +94,7 @@
 		{
 			"backtrace" : 1,
 			"compileGroupIndex" : 0,
-			"path" : "atcoder/abc230/E.cpp",
+			"path" : "tinkoff/classes/thematicContests/maths/A.cpp",
 			"sourceGroupIndex" : 0
 		}
 	],

@@ -8,7 +8,7 @@ set(CMAKE_DEPENDS_LANGUAGES
 
 # The set of dependency files which are needed:
 set(CMAKE_DEPENDS_DEPENDENCY_FILES
-  "/mnt/hdd/pr/study/atcoder/abc230/E.cpp" "CMakeFiles/study.dir/atcoder/abc230/E.cpp.o" "gcc" "CMakeFiles/study.dir/atcoder/abc230/E.cpp.o.d"
+  "/mnt/hdd/pr/study/tinkoff/classes/thematicContests/maths/A.cpp" "CMakeFiles/study.dir/tinkoff/classes/thematicContests/maths/A.cpp.o" "gcc" "CMakeFiles/study.dir/tinkoff/classes/thematicContests/maths/A.cpp.o.d"
   )
 
 # Targets to which this target links.

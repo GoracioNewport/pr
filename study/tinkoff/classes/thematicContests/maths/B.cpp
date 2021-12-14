@@ -39,13 +39,10 @@ double eps = 1e-12;
 int main() {
   fast_cin();
 
-  ll n;
-  cin >> n;
-  ll ans = 0;
+  ll a, b, c;
+  cin >> a >> b >> c;
 
-  ll k = (ll)sqrt(n);
-  for (ll i = 1; i <= k; i++) ans += ((n / i) - (n / (i + 1))) * i;
-  for (ll i = 1; (n / i) > k; i++) ans += (n / i);
-  cout << ans << ln;
+  
+
 
 }
