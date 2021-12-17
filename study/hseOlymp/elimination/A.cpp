@@ -41,26 +41,38 @@ int main() {
 
   ll n;
   cin >> n;
-  if (n % 2) {
+  if (n % 4) {
+//    if (n % 4 == 2) {
+//      if (n == 6) {
+//        cout << 3 << ln;
+//        cout << "1 3" << ln << "1 4" << ln << "1 5" << ln;
+//      }
+//      return 0;
+//    }
+//    ll i = 1, j = n;
+//    vp64 ans;
+//    while(i + 2 < j) {
+//      i++;
+//      ans.pb({i, j});
+//      j--;
+//      if (i + 2 > j) continue;
+//      ans.pb({i, j});
+//    } cout << sz(ans) << ln;
+//    for (auto& i : ans) cout << i.fi << ' ' << i.se << ln;
+
     cout << n - 3 << ln;
-    ll i = 1, j = n;
-    while(i + 2 < j) {
-      i++;
-      cout << i << ' ' << j << ln;
-      j--;
-      if (i + 2 > j) continue;
-      cout << i << ' ' << j << ln;
+    for (ll i = 3; i <= n - 1; i++) {
+      cout << 1 << ' ' << i << ln;
     }
   } else {
     ll i = 1, j = n;
     vp64 ans;
-    while(i + 2 <= j) {
+    while(i + 2 < j) {
       i++;
       ans.pb({i, j});
       j--;
     } i = (n / 4) + 1;
     j = i - 1 + n;
-    if (n % 4 != 0) i++;
     while(i + 2 < j) {
       i++;
       ans.pb({i, (j == n ? j : j % n)});

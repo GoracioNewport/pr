@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 //#pragma GCC optimize("Ofast")
 //#pragma GCC target("sse,sse2,sse3,ssse3,sse4,popcnt,abm,mmx,avx,avx2,fma")
 //#pragma GCC optimize("unroll-loops")
@@ -112,3 +113,118 @@ int main() {
 	// cout << offset << ln;
 
 }
+=======
+//#pragma GCC optimize("Ofast")
+//#pragma GCC target("sse,sse2,sse3,ssse3,sse4,popcnt,abm,mmx,avx,avx2,fma")
+//#pragma GCC optimize("unroll-loops")
+#include <bits/stdc++.h>
+
+// Author: @GoracioNewport
+
+using namespace std;
+
+typedef long long ll;
+typedef long double ld;
+typedef pair<int,int> p32;
+typedef pair<ll,ll> p64;
+typedef pair<double,double> pdd;
+typedef vector<ll> v64;
+typedef vector<int> v32;
+typedef vector<vector<int> > vv32;
+typedef vector<vector<ll> > vv64;
+typedef vector<vector<p64> > vvp64;
+typedef vector<p64> vp64;
+typedef vector<p32> vp32;
+ll MOD = 1791791791;
+double eps = 1e-12;
+#define forn(i,e) for(ll i = 0; i < e; i++)
+#define forsn(i,s,e) for(ll i = s; i < e; i++)
+#define rforn(i,s) for(ll i = s; i >= 0; i--)
+#define rforsn(i,s,e) for(ll i = s; i >= e; i--)
+#define ln "\n"
+#define dbg(x) cout<<#x<<" = "<<x<<ln
+#define mp make_pair
+#define pb push_back
+#define fi first
+#define se second
+#define INF 2e18
+#define fast_cin() ios_base::sync_with_stdio(false); cin.tie(NULL); cout.tie(NULL)
+#define all(x) (x).begin(), (x).end()
+#define sz(x) ((ll)(x).size())
+
+ll n, m;
+vvp64 p;
+v64 used, tin, fup, dis;
+
+ll mod = 1e9 + 7, timer = 0;
+
+void dfsBridge(ll v, ll pr = -1) {
+  used[v] = true;
+  tin[v] = fup[v] = timer++;
+  for (auto& x : p[v]) {
+    ll u = x.fi, id = x.se;
+    if (u == pr) continue;
+    if (used[u]) fup[v] = min(fup[v], tin[u]);
+    else {
+      dfsBridge(u, v);
+      fup[v] = min(fup[v], fup[u]);
+      if (fup[u] > tin[v]) {
+        dis[id] = true;
+        dis[(id % 2 ? id - 1 : id + 1)] = true;
+      }
+    }
+  }
+}
+
+void dfsColor(ll v, ll c) {
+  used[v] = c;
+  for (auto& x : p[v]) if (used[x.fi] == -1 && !dis[x.se]) dfsColor(x.fi, c);
+}
+
+int main() {
+  fast_cin();
+
+  cin >> n >> m;
+  p.resize(n, vp64());
+  used.resize(n, 0);
+  tin.resize(n, 0);
+  fup.resize(n, 0);
+  dis.resize(2 * m);
+
+  vp64 q;
+
+  forn(z,m) {
+    ll x, y;
+    cin >> x >> y; x--; y--;
+    p[x].pb({y, 2 * z});
+    p[y].pb({x, 2 * z + 1});
+    q.pb({x, y});
+  } dfsBridge(0);
+  forn(i,n) used[i] = -1;
+
+  ll c = 0;
+  forn(i,n) {
+    if (used[i] != -1) continue;
+    dfsColor(i, c++);
+  } v64 P(c, 0);
+
+  unordered_map <ll, ll> cnt;
+  for (auto& i : used) cnt[i]++;
+
+  for (auto& i : q) {
+    if (used[i.fi] == used[i.se]) continue;
+    P[used[i.fi]]++;
+    P[used[i.se]]++;
+  } ll leafCnt = 0;
+  ll ans = 1;
+
+  forn(i,c) {
+    if (P[i] < 2) {
+      leafCnt++;
+      ans = (ans * cnt[i]) % mod;
+    }
+  } cout << leafCnt << ' ' << ans << ln;
+
+
+}
+>>>>>>> c10b6d143a19ad16931d9b0277e119bc667abf06

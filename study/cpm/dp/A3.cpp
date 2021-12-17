@@ -1,12 +1,12 @@
-//#pragma GCC optimize("Ofast")
-//#pragma GCC target("sse,sse2,sse3,ssse3,sse4,popcnt,abm,mmx,avx,avx2,fma")
-//#pragma GCC optimize("unroll-loops")
+// #pragma GCC optimize("Ofast")
+// #pragma GCC target("sse,sse2,sse3,ssse3,sse4,popcnt,abm,mmx,avx,avx2,fma")
+// #pragma GCC optimize("unroll-loops")
 #include <bits/stdc++.h>
+
+// Author: @GoracioNewport
 
 using namespace std;
 
-// Author: @GoracioNewport
-  
 typedef long long ll;
 typedef long double ld;
 typedef pair<int,int> p32;
@@ -64,4 +64,4 @@ int main() {
  		}
  	} cout << ans << ' ' << p << ln;
 
-}
+} 

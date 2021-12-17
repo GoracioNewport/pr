@@ -3,10 +3,10 @@
 //#pragma GCC optimize("unroll-loops")
 #include <bits/stdc++.h>
 
+// Author: @GoracioNewport
+
 using namespace std;
 
-// Author: @GoracioNewport
-  
 typedef long long ll;
 typedef long double ld;
 typedef pair<int,int> p32;
@@ -37,23 +37,37 @@ double eps = 1e-12;
 #define sz(x) ((ll)(x).size())
 
 vv64 p;
-v64 used;
+v64 used, path;
 
-
+void dfs(ll v) {
+  used[v] = true;
+  for (auto& u : p[v]) if (!used[u]) dfs(u);
+  path.pb(v);
+}
 
 int main() {
-  
   fast_cin();
-  
+
   ll n, m;
   cin >> n >> m;
+  vector <map <ll,ll>> r(n);
   p.resize(n, v64());
   used.resize(n);
-  
+
   while(m--) {
-  	ll x, y;
-  	cin >> x >> y;
-  	p[x].pb(y);
-  }
+    ll x, y;
+    cin >> x >> y; x--; y--;
+    p[x].pb(y);
+    r[x][y]++;
+  } forn(i,n) if (!used[i]) dfs(i);
+  reverse(all(path));
+  bool good = true;
+  forn(i, n - 1) {
+    if (r[path[i]][path[i + 1]] == 0) good = false;
+  } if (good) {
+    cout << "YES" << ln;
+    for (auto& i : path) cout << i + 1 << ' ';
+    cout << ln;
+  } else cout << "NO" << ln;
 
 }

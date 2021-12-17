@@ -6,7 +6,7 @@
 using namespace std;
 
 // Author: @GoracioNewport
-  
+
 typedef long long ll;
 typedef long double ld;
 typedef pair<int,int> p32;

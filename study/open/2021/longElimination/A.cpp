@@ -7,7 +7,7 @@
 
 using namespace std;
 
-typedef long long ll;
+typedef int ll;
 typedef long double ld;
 typedef pair<int,int> p32;
 typedef pair<ll,ll> p64;
@@ -41,6 +41,38 @@ int main() {
 
   ll n, m;
   cin >> n >> m;
+  v64 a(n), b(m), ans(n, -1);
+  for (auto& i : a) cin >> i;
+  for (auto& i : b) cin >> i;
+
+  reverse(all(a));
+  reverse(all(b));
+
+  vv64 pos(2e5 + 1, v64());
+  forn(i,n) pos[a[i]].pb(i);
+
+  vp64 candidates; // < begin, end >;
+  for (auto& i : pos[b[0]]) candidates.pb({i,i});
+
+
+  forsn(i,1,m) {
+    for(auto& j : candidates) {
+      auto x = lower_bound(all(pos[b[i]]), j.se);
+      if (x == pos[b[i]].end()) j.se = n;
+      else j.se = *x;
+    } while(!candidates.empty() && candidates.back().se == n) candidates.pop_back();
+  } for (auto& i : candidates) {
+    i.fi = n - i.fi - 1;
+    i.se = n - i.se - 1;
+    swap(i.fi, i.se);
+  } sort(all(candidates));
+
+  ll ind = 0;
+  forn(i,n) {
+    while(ind < sz(candidates) && candidates[ind].fi < i) ind++;
+    if (ind == sz(candidates)) break;
+    ans[i] = candidates[ind].se + 1;
+  } for (auto& i : ans) cout << i << ' ';
 
 
 }
