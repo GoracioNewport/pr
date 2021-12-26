@@ -81,7 +81,7 @@ int main() {
 		} forn(i,2 * n) if (!used[i]) dfs(i);
 		reverse(all(path));
 		forn(i, 2 * n) used[i] = 0;
-		forn(i, 2 * n) if (!used[i]) dfsC(i, i + 1);
+		for (auto& i : path) if (!used[i]) dfsC(i, i + 1);
 
 		forn(i,n) {
 			cout << (used[2 * i] < used[2 * i + 1] ? '0' : '1');
