@@ -24,58 +24,58 @@ typedef long long ll;
 typedef unsigned long long ull;
 
 #ifdef DEBUG
-	const int MAXN = 4e3 + 1;
-	const int MAXLOG = 7;
-	const int MAXSQRT = 4;
+	const ll MAXN = 4e3 + 1;
+	const ll MAXLOG = 7;
+	const ll MAXSQRT = 4;
 #else
-	const int MAXN = 1e6 + 10;
-	const int MAXLOG = 29;
-	const int MAXSQRT = 400;
+	const ll MAXN = 1e6 + 10;
+	const ll MAXLOG = 29;
+	const ll MAXSQRT = 400;
 	#define cerr if (false) cerr
 #endif
 
 mt19937 rng(time(0));
 
-const int INF = 1e9;
-const int MOD = 1e9 + 7;
+const ll INF = 1e9;
+const ll MOD = 1e9 + 7;
 
-int n;
+ll n;
 
-int val[MAXN];
-int lol[MAXN];
-int pos[MAXN];
-int nlol[MAXN];
-int npos[MAXN];
+ll val[MAXN];
+ll lol[MAXN];
+ll pos[MAXN];
+ll nlol[MAXN];
+ll npos[MAXN];
 
 inline void init() {
-	for (int i = 0; i < n; i++) {
+	for (ll i = 0; i < n; i++) {
 		pos[i] = i;
 	}
 }
 
-inline int solve(int log) {
-	int cnt = 0;
-	for (int i = 0; i < n; i++) {
+inline ll solve(ll log) {
+	ll cnt = 0;
+	for (ll i = 0; i < n; i++) {
 		if (!(val[pos[i]] & (1 << log))) {
 			npos[cnt] = pos[i];
 			nlol[cnt++] = lol[i];
 		}
 	}
-	for (int i = 0; i < n; i++) {
+	for (ll i = 0; i < n; i++) {
 		if ((val[pos[i]] & (1 << log))) {
 			npos[cnt] = pos[i];
 			nlol[cnt++] = lol[i] | (1 << log);
 		}
 	}
-	for (int i = 0; i < n; i++) {
+	for (ll i = 0; i < n; i++) {
 		lol[i] = nlol[i];
 		pos[i] = npos[i];
 	}
-	int ans = 0;
-	int ptr_1 = 0;
-	int ptr_2 = 0;
-	int ptr_3 = 0;
-	for (int i = 0; i < n; i++) {
+	ll ans = 0;
+	ll ptr_1 = 0;
+	ll ptr_2 = 0;
+	ll ptr_3 = 0;
+	for (ll i = 0; i < n; i++) {
 		while (ptr_1 >= 0 && lol[i] + lol[ptr_1] >= (1 << log)) {
 			ptr_1--;
 		}
@@ -96,11 +96,11 @@ inline int solve(int log) {
 
 inline void solve() {
 	init();
-	for (int i = 0; i < n; i++) {
+	for (ll i = 0; i < n; i++) {
 		cin >> val[i];
 	}
-	int ans = 0;
-	for (int i = 0; i < MAXLOG; i++) {
+	ll ans = 0;
+	for (ll i = 0; i < MAXLOG; i++) {
 		ans |= solve(i) << i;
 	}
 	cout << ans << '\n';

@@ -37,7 +37,7 @@ inline void init() {
 	}
 }
 
-int get(string S, int block_size) {
+int get(string& S, int block_size) {
 	n = S.size() / block_size * (block_size + 1);
 	int min_right = 1e9;
 	int max_left = -1;

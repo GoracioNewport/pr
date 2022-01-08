@@ -38,6 +38,12 @@ inline void init() {
 inline void solve() {
 	init();
 	int lft = n - 1;
+
+	if (n == 1 && k == 1) {
+		cout << 0 << '\n';
+		return;
+	}
+
 	k--;
 	if (k == 0 || lft % k != 0) {
 		cout << "-1\n";

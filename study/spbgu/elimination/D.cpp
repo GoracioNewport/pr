@@ -46,6 +46,43 @@ int main() {
     cin >> i;
   } sort(all(a));
 
+  v64 d = {0};
 
+  partial_sum(all(a), back_inserter(d));
+
+  ll ans = INF;
+
+  // for (auto& i : a) cout << i << ' ';
+  // cout << ln;
+
+  // for (auto& i : d) cout << i << ' ';
+  // cout << ln; 
+
+  for (ll i = 2; i < n; i++) {
+    
+    ll l = 1;                         
+    ll r = i;
+
+    while(l + 1 < r) {
+      ll m = (l + r) / 2;
+
+      ll j = i - m;
+
+      ll s = d[i + 1] - d[j];
+      ll ma = a[i];
+
+      if (ma < s - ma) r = m;
+      else l = m;
+    } 
+
+    ll j = i - r;
+
+    ll s = d[i + 1] - d[j];
+    ll ma = a[i];
+
+    // cout << j << ' ' << i << ' ' << s << ' ' << ma << ln;
+  
+    if (ma < s - ma) ans = min(ans, r + 1);
+  } cout << (ans == INF ? -1 : ans) << ln;
 
 }

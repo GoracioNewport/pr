@@ -84,6 +84,8 @@ double dist(V a, V b) {
 	return sqrt((a.x - b.x) * (a.x - b.x) + (a.y - b.y) * (a.y - b.y));
 }
 
+long double eps = 0.00000001;
+
 inline void init() {
 
 }
@@ -95,7 +97,7 @@ inline void solve() {
 	int r1, r2, r3;
 	cin >> r1 >> r2 >> r3;
 	V AB = B - A;
-	if (AB.len() > r1 + r2) {
+	if (AB.len() > r1 + r2) { // clear
 		cout << "Impossible\n";
 		return;
 	}
@@ -110,7 +112,7 @@ inline void solve() {
 			x.resz(r1);
 			cout << A + x;
 			return;
-		}
+		} 
 		cout << "Impossible\n";
 		return;
 	}
@@ -138,7 +140,7 @@ inline void solve() {
 		cout << t2;
 		return;
 	}
-	cout << "Impossible\n";
+	cout << "Impossible\n"; // WA
 }
 
 
@@ -152,6 +154,7 @@ signed main() {
 	ios_base::sync_with_stdio(0);
 	cin.tie(0);
 	cout.tie(0);
+	cout << fixed << setprecision(20);
 	solve();
 	return 0;
 }

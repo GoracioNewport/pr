@@ -1,12 +1,12 @@
-// #pragma GCC optimize("Ofast")
-// #pragma GCC target("sse,sse2,sse3,ssse3,sse4,popcnt,abm,mmx,avx,avx2,fma")
-// #pragma GCC optimize("unroll-loops")
+//#pragma GCC optimize("Ofast")
+//#pragma GCC target("sse,sse2,sse3,ssse3,sse4,popcnt,abm,mmx,avx,avx2,fma")
+//#pragma GCC optimize("unroll-loops")
 #include <bits/stdc++.h>
-
-// Author: @GoracioNewport
 
 using namespace std;
 
+// Author: @GoracioNewport
+  
 typedef long long ll;
 typedef long double ld;
 typedef pair<int,int> p32;
@@ -36,52 +36,24 @@ double eps = 1e-12;
 #define all(x) (x).begin(), (x).end()
 #define sz(x) ((ll)(x).size())
 
-struct r {
-  ld x, y;
-  r(ld x, ld y) : x(x), y(y) {};
-
-  ld len() {
-   return hypot(x, y);
-  }
-
-  ld angle() {
-    return atan2(y, x);
-  }
-
-  ld operator^(r o) {
-    return (x * o.y - o.x * y);
-  }
-};
-
 int main() {
   fast_cin();
 
-  ll n, k, m;
+  ll n, m, k;
   cin >> n >> m >> k;
-  vector <r> p(n), q(m);
-  for (auto& i : p) cin >> i.x >> i.y;
-  for (auto& i : q) cin >> i.x >> i.y;
-  ld startX = q[0].x, startY = q[0].y;
+  ll ans = 0;
 
-  for (auto& i : p) {
-    i.x -= startX;
-    i.y -= startY;
-  } for (auto& i : q) {
-    i.x -= startX;
-    i.y -= startY;
-  }
+  v64 a(m);
+  for (auto& i : a) cin >> i;
 
-  ll cnt = 0;
-  for (auto& i : q) {
-    ll l = 0;
-    ll r = n;
-    while(l + 1 < r) {
-      ll m = (l + r) / 2;
-      if ((p[m]^i) < 0) r = m;
-      else l = m;
-    }
-  }
+  ll x; cin >> x;
+	bitset <32> X(x);
 
-
+	for (auto& i : a) {
+		bitset <32> b(i);
+		ll cnt = 0;
+		forn(i,32) cnt += X[i] != b[i];
+		if (cnt <= k) ans++;
+	} cout << ans << ln;
 
 }
