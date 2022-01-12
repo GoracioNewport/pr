@@ -1,0 +1,1 @@
+{"name":"Local: E4","url":"/media/goracionewport/53D27AD04C3F1E51/pr/study/misc/E4.cpp","tests":[{"id":1610135913270,"input":"5\n5 8\n10   4  1","output":"1 4 5"}],"interactive":false,"memoryLimit":1024,"timeLimit":3000,"srcPath":"/media/goracionewport/53D27AD04C3F1E51/pr/study/misc/E4.cpp","group":"local","local":true}
