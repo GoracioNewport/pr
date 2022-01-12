@@ -1,0 +1,1 @@
+/usr/bin/c++ -g CMakeFiles/study.dir/tinkoff/classes/thematicContests/maths/A.cpp.o -o study 

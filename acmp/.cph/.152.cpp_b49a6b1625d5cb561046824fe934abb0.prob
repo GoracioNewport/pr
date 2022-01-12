@@ -1,0 +1,1 @@
+{"name":"Local: 152","url":"/mnt/hdd/pr/study/acmp/152.cpp","tests":[{"id":1612703932661,"input":"5 4\n1 3\n1 4\n4 3\n5 2 ","output":"Yes"}],"interactive":false,"memoryLimit":1024,"timeLimit":3000,"srcPath":"/mnt/hdd/pr/study/acmp/152.cpp","group":"local","local":true}

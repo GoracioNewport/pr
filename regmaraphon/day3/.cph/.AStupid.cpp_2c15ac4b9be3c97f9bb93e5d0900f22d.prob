@@ -1,0 +1,1 @@
+{"name":"Local: AStupid","url":"/media/goracionewport/53D27AD04C3F1E51/pr/study/regmaraphon/day3/AStupid.cpp","tests":[{"id":1610275049965,"input":"4\n1 2 3 4\n2\n1 1\n1 4","output":"2\n1"}],"interactive":false,"memoryLimit":1024,"timeLimit":3000,"srcPath":"/media/goracionewport/53D27AD04C3F1E51/pr/study/regmaraphon/day3/AStupid.cpp","group":"local","local":true}
