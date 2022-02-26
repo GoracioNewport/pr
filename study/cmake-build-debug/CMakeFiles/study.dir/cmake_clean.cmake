@@ -1,6 +1,6 @@
 file(REMOVE_RECURSE
-  "CMakeFiles/study.dir/tinkoff/classes/thematicContests/maths/A.cpp.o"
-  "CMakeFiles/study.dir/tinkoff/classes/thematicContests/maths/A.cpp.o.d"
+  "CMakeFiles/study.dir/mosh/elimination2022/C.cpp.o"
+  "CMakeFiles/study.dir/mosh/elimination2022/C.cpp.o.d"
   "study"
   "study.pdb"
 )

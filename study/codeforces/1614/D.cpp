@@ -1,6 +1,6 @@
-//#pragma GCC optimize("Ofast")
-//#pragma GCC target("sse,sse2,sse3,ssse3,sse4,popcnt,abm,mmx,avx,avx2,fma")
-//#pragma GCC optimize("unroll-loops")
+#pragma GCC optimize("Ofast")
+#pragma GCC target("sse,sse2,sse3,ssse3,sse4,popcnt,abm,mmx,avx,avx2,fma")
+#pragma GCC optimize("unroll-loops")
 #include <bits/stdc++.h>
 
 using namespace std;
@@ -39,6 +39,57 @@ double eps = 1e-12;
 int main() {
   fast_cin();
 
-  
+  int m;
+  cin >> m;
+
+  int n = 2e7;
+
+  v32 cnt(n + 1);
+
+  ll t = chrono::high_resolution_clock().now().time_since_epoch().count();
+
+  while(m--) {
+    int x; cin >> x;
+
+    for (int i = 1; i * i <= x; i++) {
+      if (x % i == 0) {
+        cnt[i]++;
+        if (i * i != x) cnt[x / i]++;
+      }
+    }
+  }
+
+
+  v32 lp(n + 1), primes;
+
+
+
+  for (int i = 2; i <= n; i++) {
+    if (lp[i] == 0) {
+      lp[i] = i;
+      primes.pb(i);
+    } for (auto &x : primes) {
+      if (i * x > n || x > lp[i]) break;
+      lp[i * x] = x;
+    }
+  }
+
+  v64 dp(n + 1);
+  forn(i,n + 1) dp[i] = (ll)cnt[i] * (ll)i;
+
+  for (int i = n; i >= 1; i--) {
+//    for (ll j = 2; j * i <= n; j++) {
+//      dp[i] = max(dp[i], dp[i * j] + (cnt[i] - cnt[i * j]) * i);
+//    }
+
+    int x = i;
+    while(x > 1) {
+      dp[i / lp[x]] = max(dp[i / lp[x]], dp[i] + (ll)(i / lp[x]) * (ll)(cnt[i / lp[x]] - cnt[i]));
+      x = x / lp[x];
+    }
+  } cout << dp[1] << ln;
+
+
+//  cout << fixed << setprecision(20) << (chrono::high_resolution_clock().now().time_since_epoch().count() - t) / 1e9 << " secs" << ln;
 
 }

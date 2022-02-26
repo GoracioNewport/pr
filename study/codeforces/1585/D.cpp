@@ -44,42 +44,34 @@ int main() {
   while(t--) {
     ll n;
     cin >> n;
-    v64 a(n), p(n);
-    vp64 b(n);
-    forn(i,n) {
-      cin >> b[i].fi;
-      b[i].se = i;
+    v64 a(n), b;
+    for (auto& i : a) {
+      cin >> i;
+      b.emplace_back(i);
     } sort(all(b));
-
-    if (n == 1) {
+    b.erase(unique(all(b)), b.end());
+    if (sz(b) != sz(a)) {
       cout << "YES" << ln;
       continue;
     }
 
+    unordered_map <ll, ll> z;
+    forn(i,n) z[b[i]] = i;
+    for (auto& i : a) i = z[i];
+
+    v64 pos(n);
+    forn(i,n) pos[a[i]] = i;
+
+    ll cnt = 0;
     forn(i,n) {
-      a[i] = b[i].se;
-      p[a[i]] = i;
-    }
-
-    forn(x,n - 1) {
-      ll i = p[x];
-      if (x == i) continue;
-      ll j = x;
-      ll k = j + 1;
-      while(k == i || k == j) k++;
-      if (k >= n) break;
+      if (a[i] == i) continue;
+      cnt++;
+      ll j = pos[i];
       swap(a[i], a[j]);
-      swap(a[i], a[k]);
-      p[a[j]] = j;
-      p[a[i]] = i;
-      p[a[k]] = k;
+      swap(pos[a[i]], pos[a[j]]);
+    } cout << (cnt % 2 ? "NO" : "YES") << ln;
 
-//      for (auto& i : a) cout << i << ' ';
-//      cout << ln;
 
-    } bool good = true;
-    forn(i,n - 1) if (a[i] > a[i + 1]) good = false;
-    cout << (good ? "YES" : "NO") << ln;
   }
 
 }

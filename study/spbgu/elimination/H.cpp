@@ -31,10 +31,43 @@ double eps = 1e-12;
 #define pb push_back
 #define fi first
 #define se second
-#define INF 2e18
+#define INF (ll)2e18
 #define fast_cin() ios_base::sync_with_stdio(false); cin.tie(NULL); cout.tie(NULL)
 #define all(x) (x).begin(), (x).end()
 #define sz(x) ((ll)(x).size())
+
+struct Node {
+  ll add, min;
+};
+
+struct Tree {
+  vector <Node> t;
+  ll n;
+
+  Tree (ll _n) {
+    n = _n;
+    t.assign(4 * n, {0, 0});
+  }
+
+  void addX(ll v, ll l, ll r, ll L, ll R, ll x) {
+    if (l >= L && r <= R) {
+      t[v].add += x;
+      t[v].min += x;
+      return;
+    } if (l >= R || r <= L) return;
+    ll m = (l + r) / 2;
+    addX(2 * v + 1, l, m, L, R, x);
+    addX(2 * v + 2, m, r, L, R, x);
+    t[v].min = min(t[2 * v + 1].min, t[2 * v + 2].min) + t[v].add;
+  }
+
+  ll getMin(ll v, ll l, ll r, ll L, ll R) {
+    if (l >= L && r <= R) return t[v].min;
+    if (l >= R || r <= L) return INF;
+    ll m = (l + r) / 2;
+    return min(getMin(2 * v + 1, l, m, L, R), getMin(2 * v + 2, m, r, L, R)) + t[v].add;
+  }
+};
 
 int main() {
   fast_cin();
@@ -47,16 +80,31 @@ int main() {
   	v64 a(n);
   	for (auto& i : a) cin >> i;
 
+    if (n == 0) {
+      cout << a[0] << ln;
+      return 0;
+    }
+
   	v64 d = {0};
   	partial_sum(all(a), back_inserter(d));
 
   	v64 dp(n + 1, INF);
   	dp[0] = INF;
-  	dp[1] = a[0];
 
-  	forsn(i,1,n) {
-  		for (ll j = 0; j <= i; j++) dp[i + 1] = min(dp[i + 1], min(dp[j], d[i + 1] - d[j]));
-  	} cout << dp.back() << ln;
+    ll minDp = dp[0];
+
+    Tree tree(n + 1);
+
+  	forn(i,n) {
+
+      tree.addX(0, 0, n + 1, 0, i + 1, a[i]);
+
+//  		for (ll j = 0; j <= i; j++) dp[i + 1] = min(dp[i + 1], min(dp[j], d[i + 1] - d[j]));
+
+      dp[i + 1] = min(minDp, tree.getMin(0, 0, n + 1, 0, i + 1));
+
+      minDp = min(minDp, dp[i + 1]);
+    } cout << dp.back() << ln;
 
   }
 

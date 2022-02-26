@@ -48,10 +48,10 @@ cmake_force:
 SHELL = /bin/sh
 
 # The CMake executable.
-CMAKE_COMMAND = /snap/clion/175/bin/cmake/linux/bin/cmake
+CMAKE_COMMAND = /snap/clion/180/bin/cmake/linux/bin/cmake
 
 # The command to remove a file.
-RM = /snap/clion/175/bin/cmake/linux/bin/cmake -E rm -f
+RM = /snap/clion/180/bin/cmake/linux/bin/cmake -E rm -f
 
 # Escaping for special characters.
 EQUALS = =
@@ -68,7 +68,7 @@ CMAKE_BINARY_DIR = /mnt/hdd/pr/study/cmake-build-debug
 # Special rule for the target rebuild_cache
 rebuild_cache:
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --cyan "Running CMake to regenerate build system..."
-	/snap/clion/175/bin/cmake/linux/bin/cmake --regenerate-during-build -S$(CMAKE_SOURCE_DIR) -B$(CMAKE_BINARY_DIR)
+	/snap/clion/180/bin/cmake/linux/bin/cmake --regenerate-during-build -S$(CMAKE_SOURCE_DIR) -B$(CMAKE_BINARY_DIR)
 .PHONY : rebuild_cache
 
 # Special rule for the target rebuild_cache
@@ -78,7 +78,7 @@ rebuild_cache/fast: rebuild_cache
 # Special rule for the target edit_cache
 edit_cache:
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --cyan "No interactive CMake dialog available..."
-	/snap/clion/175/bin/cmake/linux/bin/cmake -E echo No\ interactive\ CMake\ dialog\ available.
+	/snap/clion/180/bin/cmake/linux/bin/cmake -E echo No\ interactive\ CMake\ dialog\ available.
 .PHONY : edit_cache
 
 # Special rule for the target edit_cache
@@ -129,29 +129,29 @@ study/fast:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/study.dir/build.make CMakeFiles/study.dir/build
 .PHONY : study/fast
 
-tinkoff/classes/thematicContests/maths/A.o: tinkoff/classes/thematicContests/maths/A.cpp.o
-.PHONY : tinkoff/classes/thematicContests/maths/A.o
+mosh/elimination2022/C.o: mosh/elimination2022/C.cpp.o
+.PHONY : mosh/elimination2022/C.o
 
 # target to build an object file
-tinkoff/classes/thematicContests/maths/A.cpp.o:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/study.dir/build.make CMakeFiles/study.dir/tinkoff/classes/thematicContests/maths/A.cpp.o
-.PHONY : tinkoff/classes/thematicContests/maths/A.cpp.o
+mosh/elimination2022/C.cpp.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/study.dir/build.make CMakeFiles/study.dir/mosh/elimination2022/C.cpp.o
+.PHONY : mosh/elimination2022/C.cpp.o
 
-tinkoff/classes/thematicContests/maths/A.i: tinkoff/classes/thematicContests/maths/A.cpp.i
-.PHONY : tinkoff/classes/thematicContests/maths/A.i
+mosh/elimination2022/C.i: mosh/elimination2022/C.cpp.i
+.PHONY : mosh/elimination2022/C.i
 
 # target to preprocess a source file
-tinkoff/classes/thematicContests/maths/A.cpp.i:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/study.dir/build.make CMakeFiles/study.dir/tinkoff/classes/thematicContests/maths/A.cpp.i
-.PHONY : tinkoff/classes/thematicContests/maths/A.cpp.i
+mosh/elimination2022/C.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/study.dir/build.make CMakeFiles/study.dir/mosh/elimination2022/C.cpp.i
+.PHONY : mosh/elimination2022/C.cpp.i
 
-tinkoff/classes/thematicContests/maths/A.s: tinkoff/classes/thematicContests/maths/A.cpp.s
-.PHONY : tinkoff/classes/thematicContests/maths/A.s
+mosh/elimination2022/C.s: mosh/elimination2022/C.cpp.s
+.PHONY : mosh/elimination2022/C.s
 
 # target to generate assembly for a file
-tinkoff/classes/thematicContests/maths/A.cpp.s:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/study.dir/build.make CMakeFiles/study.dir/tinkoff/classes/thematicContests/maths/A.cpp.s
-.PHONY : tinkoff/classes/thematicContests/maths/A.cpp.s
+mosh/elimination2022/C.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/study.dir/build.make CMakeFiles/study.dir/mosh/elimination2022/C.cpp.s
+.PHONY : mosh/elimination2022/C.cpp.s
 
 # Help Target
 help:
@@ -162,9 +162,9 @@ help:
 	@echo "... edit_cache"
 	@echo "... rebuild_cache"
 	@echo "... study"
-	@echo "... tinkoff/classes/thematicContests/maths/A.o"
-	@echo "... tinkoff/classes/thematicContests/maths/A.i"
-	@echo "... tinkoff/classes/thematicContests/maths/A.s"
+	@echo "... mosh/elimination2022/C.o"
+	@echo "... mosh/elimination2022/C.i"
+	@echo "... mosh/elimination2022/C.s"
 .PHONY : help
 
 

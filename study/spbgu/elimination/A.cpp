@@ -42,19 +42,23 @@ int main() {
   ll n;
   cin >> n;
 
-  ll cnt = 1, ans = 0;
-  if (n == 1000000000000000000) {
-    cout << 1644934065387872428 << ln;
-    return 0;
-  } if (n == 999999999999999999) {
-    cout << 1644934065387872427 << ln;
-    return 0;
-  }
+  ll ans = 0;
+
   for (ll i = n - 1; i >= 1; i--) {
-    ll x = i / (cnt * cnt);
-    cnt++;
+    ll x = i / ((n - i) * (n - i));
     if (x == 0) break;
-    ans += x;
+
+    ll l = sqrt(n);
+    ll r = i + 1;
+
+    while(l + 1 < r) {
+      ll m = (l + r) / 2;
+      if ((m / ((n - m) * (n - m))) == x) r = m;
+      else l = m;
+    }
+
+    ans += x * (i - r + 1);
+    i = r;
   } cout << ans << ln;
 
 }

@@ -8,7 +8,7 @@ set(CMAKE_DEPENDS_LANGUAGES
 
 # The set of dependency files which are needed:
 set(CMAKE_DEPENDS_DEPENDENCY_FILES
-  "/mnt/hdd/pr/study/tinkoff/classes/thematicContests/maths/A.cpp" "CMakeFiles/study.dir/tinkoff/classes/thematicContests/maths/A.cpp.o" "gcc" "CMakeFiles/study.dir/tinkoff/classes/thematicContests/maths/A.cpp.o.d"
+  "/mnt/hdd/pr/study/mosh/elimination2022/C.cpp" "CMakeFiles/study.dir/mosh/elimination2022/C.cpp.o" "gcc" "CMakeFiles/study.dir/mosh/elimination2022/C.cpp.o.d"
   )
 
 # Targets to which this target links.

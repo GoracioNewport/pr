@@ -56,6 +56,7 @@ int main() {
 
   ll n, m;
   while (cin >> n >> m) {
+    if (n == 0 && m == 0) break;
   	p.clear();
   	r.clear();
   	used.clear();
@@ -66,25 +67,33 @@ int main() {
 		r.resize(2 * n, v64());
 		used.resize(2 * n);
 
+    vp64 e;
+
 		forn(z,m) {
 			ll i1, e1, i2, e2;
 			// a || b  <>  !a -> b && !b -> a
 			cin >> i1 >> e1 >> i2 >> e2; // (2 * i1 ^ (!e1)) or (2 * i2 ^ (!e2))
 			ll a = (2 * i1) ^ (!e1);
 			ll b = (2 * i2) ^ (!e2);
-			p[a ^ 1].pb(b);
-			p[b ^ 1].pb(a);
 
-			r[b].pb(a ^ 1);
-			r[a].pb(b ^ 1);
-
-		} forn(i,2 * n) if (!used[i]) dfs(i);
-		reverse(all(path));
+      e.pb({a ^ 1, b});
+      e.pb({b ^ 1, a});
+		} sort(all(e));
+    e.erase(unique(all(e)), e.end());
+    for (auto& i : e) {
+      if (i.fi == i.se) continue;
+      p[i.fi].pb(i.se);
+      r[i.se].pb(i.fi);
+    } forn(i,2 * n) if (!used[i]) dfs(i);
 		forn(i, 2 * n) used[i] = 0;
-		for (auto& i : path) if (!used[i]) dfsC(i, i + 1);
+
+    reverse(all(path));
+
+    ll cnt = 1;
+		for (auto& i : path) if (!used[i]) dfsC(i, cnt++);
 
 		forn(i,n) {
-			cout << (used[2 * i] < used[2 * i + 1] ? '0' : '1');
+			cout << (used[2 * i] > used[2 * i + 1] ? '0' : '1');
 		} cout << ln;
 
   }
