@@ -48,10 +48,10 @@ cmake_force:
 SHELL = /bin/sh
 
 # The CMake executable.
-CMAKE_COMMAND = /snap/clion/180/bin/cmake/linux/bin/cmake
+CMAKE_COMMAND = /snap/clion/184/bin/cmake/linux/bin/cmake
 
 # The command to remove a file.
-RM = /snap/clion/180/bin/cmake/linux/bin/cmake -E rm -f
+RM = /snap/clion/184/bin/cmake/linux/bin/cmake -E rm -f
 
 # Escaping for special characters.
 EQUALS = =
@@ -68,7 +68,7 @@ CMAKE_BINARY_DIR = /mnt/hdd/pr/study/cmake-build-debug
 # Special rule for the target rebuild_cache
 rebuild_cache:
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --cyan "Running CMake to regenerate build system..."
-	/snap/clion/180/bin/cmake/linux/bin/cmake --regenerate-during-build -S$(CMAKE_SOURCE_DIR) -B$(CMAKE_BINARY_DIR)
+	/snap/clion/184/bin/cmake/linux/bin/cmake --regenerate-during-build -S$(CMAKE_SOURCE_DIR) -B$(CMAKE_BINARY_DIR)
 .PHONY : rebuild_cache
 
 # Special rule for the target rebuild_cache
@@ -78,7 +78,7 @@ rebuild_cache/fast: rebuild_cache
 # Special rule for the target edit_cache
 edit_cache:
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --cyan "No interactive CMake dialog available..."
-	/snap/clion/180/bin/cmake/linux/bin/cmake -E echo No\ interactive\ CMake\ dialog\ available.
+	/snap/clion/184/bin/cmake/linux/bin/cmake -E echo No\ interactive\ CMake\ dialog\ available.
 .PHONY : edit_cache
 
 # Special rule for the target edit_cache
@@ -129,29 +129,29 @@ study/fast:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/study.dir/build.make CMakeFiles/study.dir/build
 .PHONY : study/fast
 
-mosh/elimination2022/C.o: mosh/elimination2022/C.cpp.o
-.PHONY : mosh/elimination2022/C.o
+codeforces/technocup/finals2022/D.o: codeforces/technocup/finals2022/D.cpp.o
+.PHONY : codeforces/technocup/finals2022/D.o
 
 # target to build an object file
-mosh/elimination2022/C.cpp.o:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/study.dir/build.make CMakeFiles/study.dir/mosh/elimination2022/C.cpp.o
-.PHONY : mosh/elimination2022/C.cpp.o
+codeforces/technocup/finals2022/D.cpp.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/study.dir/build.make CMakeFiles/study.dir/codeforces/technocup/finals2022/D.cpp.o
+.PHONY : codeforces/technocup/finals2022/D.cpp.o
 
-mosh/elimination2022/C.i: mosh/elimination2022/C.cpp.i
-.PHONY : mosh/elimination2022/C.i
+codeforces/technocup/finals2022/D.i: codeforces/technocup/finals2022/D.cpp.i
+.PHONY : codeforces/technocup/finals2022/D.i
 
 # target to preprocess a source file
-mosh/elimination2022/C.cpp.i:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/study.dir/build.make CMakeFiles/study.dir/mosh/elimination2022/C.cpp.i
-.PHONY : mosh/elimination2022/C.cpp.i
+codeforces/technocup/finals2022/D.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/study.dir/build.make CMakeFiles/study.dir/codeforces/technocup/finals2022/D.cpp.i
+.PHONY : codeforces/technocup/finals2022/D.cpp.i
 
-mosh/elimination2022/C.s: mosh/elimination2022/C.cpp.s
-.PHONY : mosh/elimination2022/C.s
+codeforces/technocup/finals2022/D.s: codeforces/technocup/finals2022/D.cpp.s
+.PHONY : codeforces/technocup/finals2022/D.s
 
 # target to generate assembly for a file
-mosh/elimination2022/C.cpp.s:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/study.dir/build.make CMakeFiles/study.dir/mosh/elimination2022/C.cpp.s
-.PHONY : mosh/elimination2022/C.cpp.s
+codeforces/technocup/finals2022/D.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/study.dir/build.make CMakeFiles/study.dir/codeforces/technocup/finals2022/D.cpp.s
+.PHONY : codeforces/technocup/finals2022/D.cpp.s
 
 # Help Target
 help:
@@ -162,9 +162,9 @@ help:
 	@echo "... edit_cache"
 	@echo "... rebuild_cache"
 	@echo "... study"
-	@echo "... mosh/elimination2022/C.o"
-	@echo "... mosh/elimination2022/C.i"
-	@echo "... mosh/elimination2022/C.s"
+	@echo "... codeforces/technocup/finals2022/D.o"
+	@echo "... codeforces/technocup/finals2022/D.i"
+	@echo "... codeforces/technocup/finals2022/D.s"
 .PHONY : help
 
 

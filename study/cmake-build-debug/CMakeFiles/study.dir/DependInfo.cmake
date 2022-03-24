@@ -8,7 +8,7 @@ set(CMAKE_DEPENDS_LANGUAGES
 
 # The set of dependency files which are needed:
 set(CMAKE_DEPENDS_DEPENDENCY_FILES
-  "/mnt/hdd/pr/study/mosh/elimination2022/C.cpp" "CMakeFiles/study.dir/mosh/elimination2022/C.cpp.o" "gcc" "CMakeFiles/study.dir/mosh/elimination2022/C.cpp.o.d"
+  "/mnt/hdd/pr/study/codeforces/technocup/finals2022/D.cpp" "CMakeFiles/study.dir/codeforces/technocup/finals2022/D.cpp.o" "gcc" "CMakeFiles/study.dir/codeforces/technocup/finals2022/D.cpp.o.d"
   )
 
 # Targets to which this target links.

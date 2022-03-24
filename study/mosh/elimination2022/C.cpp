@@ -1,6 +1,6 @@
-// #pragma GCC optimize("Ofast")
-// #pragma GCC target("sse,sse2,sse3,ssse3,sse4,popcnt,abm,mmx,avx,avx2,fma")
-// #pragma GCC optimize("unroll-loops")
+ #pragma GCC optimize("Ofast")
+ #pragma GCC target("sse,sse2,sse3,ssse3,sse4,popcnt,abm,mmx,avx,avx2,fma")
+ #pragma GCC optimize("unroll-loops")
 
 #include <bits/stdc++.h>
 #include <ext/pb_ds/assoc_container.hpp>
@@ -145,47 +145,229 @@ p64 getP(vv64 a) {
   } return ans;
 };
 
+p64 getBitByCords(ll i, ll j) {
+  if (i < (n / 2)) {
+    i = (n / 2) - i - 1;
+    j = n - j - 1;
+    return {1, i * n + j};
+  } else {
+    i = n - i - 1;
+    j = n - j - 1;
+    return {2, i * n + j};
+  }
+}
+
+p64 toggleCross(p64 a, ll x, ll y) {
+  forn(i,n) { // vertical
+    auto z = getBitByCords(i, y);
+    if (z.fi == 1) a.fi ^= powers[z.se];
+    else a.se ^= powers[z.se];
+  }
+
+  forn(j,n) { // horizontal
+    auto z = getBitByCords(x, j);
+    if (z.fi == 1) a.fi ^= powers[z.se];
+    else a.se ^= powers[z.se];
+  }
+
+  auto z = getBitByCords(x, y);
+  if (z.fi == 1) a.fi ^= powers[z.se];
+  else a.se ^= powers[z.se];
+
+  return a;
+}
+
+struct pairHash {
+  size_t operator() (const p64& x) const {
+    return hash <ll> () (((x.fi * 31) ^ (x.se << 32)));
+  }
+};
+
+struct block {
+  p64 cur;
+  int depth;
+
+  block(p64 a): cur(a), depth(0) {};
+  block(p64 a, int d): cur(a), depth(d) {};
+};
 
 int main() {
   fastCin();
 
 
-  freopen("/mnt/hdd/pr/study/mosh/elimination2022/c0.txt", "r", stdin);
+//  freopen("/mnt/hdd/pr/study/mosh/elimination2022/cFinal.txt", "r", stdin);
 //  freopen("/mnt/hdd/pr/study/mosh/elimination/a0ans.txt", "w", stdout);
 
   powers.resize(60);
   powers[0] = 1;
   forsn(i,1,60) powers[i] = powers[i - 1] * 2;
 
+  ll step1 = 1, beginInd1 = 0, step2 = 1, beginInd2 = 0;
+  cin >> step1 >> beginInd1 >> step2 >> beginInd2;
+
   ll t;
   cin >> t;
-  while(t--) {
+
+
+  forn(Z,t) {
+    cout << "TEST CASE №" << Z + 1 << endl;
+    ll timeStart = chrono::high_resolution_clock::now().time_since_epoch().count();
     cin >> n;
-    vv64 p(n, v64(n));
-    cin >> p;
+    vv64 start(n, v64(n, 0));
+//    cin >> start;
+    vv64 x(n, v64(n));
+    cin >> x;
 
-    ordered_set visited;
 
-    queue <p64> q1, q2;
-    q1.push({0, 0});
-    q2.push(getP(p));
+    queue <block> q1, q2; // <cur, <prev, <ij, depth>>>
+    unordered_set <p64, pairHash> visited1, visited2;
 
-    visited.insert({0, 0});
-    visited.insert(getP(p));
+    q1.push(block(getP(start)));
+    q2.push(block(getP(x)));
 
-    ll step = 0;
+    ll maxS1 = 1, maxS2 = 1;
 
-    const ll MAX_STEP = 4;
+    visited1.insert(getP(start));
+    visited2.insert(getP(x));
+
+    const int MAX_DEPTH = 5;
+
+    bool ansFound = false;
+
+//    gp_hash_table <p64, vector <pair <p64, p64>>, pairHash> g; // key: tableHashed, value: <tableHashed, move>
 
     while(true) {
-      if (step >= MAX_STEP) {
-        cout << "Answer Not Found :(" << endl;
-        break;
-      } cout << "Step №" << ++step << "..." << endl;
 
+      if (!q1.empty()) { // Q1
+        if (q1.front().depth >= MAX_DEPTH) {
+          cout << "Answer not found :(" << endl;
+          break;
+        }
 
+        int prevDepth = q1.front().depth;
+        p64 curP = q1.front().cur;
+        q1.pop();
+
+        ll iB = 0;
+        ll iS = 1;
+
+        if (prevDepth == MAX_DEPTH - 1) {
+          iB = beginInd1;
+          iS = step1;
+        }
+
+        for (ll i = iB; i < n; i += iS) {
+          for (ll j = 0; j < n; j++) {
+
+            p64 res = toggleCross(curP, i, j);
+
+            if (visited1.find(res) == visited1.end()) {
+//              g[curP].pb({res, {i, j}});
+//              g[res].pb({curP, {i, j}});
+
+              q1.push({res, prevDepth + 1});
+              visited1.insert(res);
+            } maxS1 = max(maxS1, sz(q1));
+
+            if (visited2.find(res) != visited2.end()) {
+              cout << "ANSWER FOUND, DEPTH: " << prevDepth << endl;
+              ansFound = true;
+
+              vv64 ANS = getT(res);
+              cout << ANS << ln;
+
+              break;
+            }
+
+          } if (ansFound) break;
+        }
+
+      } if (ansFound) break;
+
+      if (!q2.empty()) { // Q2
+        if (q2.front().depth >= MAX_DEPTH) {
+          cout << "Answer not found :(" << endl;
+          break;
+        }
+
+        int prevDepth = q2.front().depth;
+        p64 curP = q2.front().cur;
+        q2.pop();
+
+        ll iB = 0;
+        ll iS = 1;
+
+        if (prevDepth == MAX_DEPTH - 1) {
+          iB = beginInd2;
+          iS = step2;
+        }
+
+        for (ll i = iB; i < n; i += iS) {
+          for (ll j = 0; j < n; j++) {
+
+            p64 res = toggleCross(curP, i, j);
+
+            if (visited2.find(res) == visited2.end()) {
+//              g[curP].pb({res, {i, j}});
+//              g[res].pb({curP, {i, j}});
+
+              q2.push({res, prevDepth + 1});
+              visited2.insert(res);
+            } maxS2 = max(maxS2, sz(q2));
+
+            if (visited1.find(res) != visited1.end()) {
+              cout << "ANSWER FOUND, DEPTH: " << prevDepth << endl;
+
+              vv64 ANS = getT(res);
+              cout << ANS << ln;
+
+              ansFound = true;
+              break;
+            }
+
+          } if (ansFound) break;
+        }
+
+      } if (ansFound) break;
 
     }
+
+//    if (ansFound) {
+//
+//      gp_hash_table <p64, ll, pairHash> dist;
+//      gp_hash_table <p64, pair <p64, p64>, pairHash> parent;
+//      parent[getP(start)] = {{-1, -1}, {-1, -1}};
+//      dist[getP(start)] = 1;
+//
+//      queue <p64> q;
+//      q.push(getP(start));
+//
+//      while(!q.empty()) {
+//        auto y = q.front();
+//        q.pop();
+//
+//        for (auto& [u, z] : g[y]) {
+//          if (dist[u] == 0) {
+//            dist[u] = dist[y] + 1;
+//            parent[u] = {y, z};
+//            q.push(u);
+//          }
+//        }
+//      } auto X = getP(x);
+//
+//      vp64 ans;
+//      while(parent[X].fi.fi != -1) {
+//        ans.pb(parent[X].se);
+//        X = parent[X].fi;
+//      } reverse(all(ans));
+//      cout << sz(ans) << ln << ans << endl;
+//
+//    } else {
+//      cout << 1 << ln << "0 0" << endl;
+//    }
+
+    ll timeFinish = chrono::high_resolution_clock::now().time_since_epoch().count();
+    cout << "Time: " << fixed << setprecision(5) << (ld)(timeFinish - timeStart) / 1e9 << 's' << ln;
 
 
   }
