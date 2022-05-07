@@ -1,0 +1,1 @@
+{"name":"Local: 490","url":"/home/goracionewport/pr/study/binsearch/490.cpp","tests":[{"id":1606729585299,"input":"4 1 1","output":"3"},{"id":1606729592864,"input":"5 1 2","output":"4"}],"interactive":false,"memoryLimit":1024,"timeLimit":3000,"srcPath":"/home/goracionewport/pr/study/binsearch/490.cpp","group":"local","local":true}

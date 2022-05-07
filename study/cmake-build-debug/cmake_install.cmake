@@ -1,4 +1,4 @@
-# Install script for directory: /mnt/hdd/pr/study
+# Install script for directory: /home/goracionewport/pr/study
 
 # Set the install prefix
 if(NOT DEFINED CMAKE_INSTALL_PREFIX)
@@ -50,5 +50,5 @@ endif()
 
 string(REPLACE ";" "\n" CMAKE_INSTALL_MANIFEST_CONTENT
        "${CMAKE_INSTALL_MANIFEST_FILES}")
-file(WRITE "/mnt/hdd/pr/study/cmake-build-debug/${CMAKE_INSTALL_MANIFEST}"
+file(WRITE "/home/goracionewport/pr/study/cmake-build-debug/${CMAKE_INSTALL_MANIFEST}"
      "${CMAKE_INSTALL_MANIFEST_CONTENT}")

@@ -1,0 +1,1 @@
+{"name":"Local: A","url":"/home/goracionewport/pr/study/codeforces/1455/A.cpp","tests":[{"id":1606746858467,"input":"5\n4\n37\n998244353\n1000000007\n12345678901337426966631415\n","output":"1\n2\n9\n10\n26\n"}],"interactive":false,"memoryLimit":1024,"timeLimit":3000,"srcPath":"/home/goracionewport/pr/study/codeforces/1455/A.cpp","group":"local","local":true}

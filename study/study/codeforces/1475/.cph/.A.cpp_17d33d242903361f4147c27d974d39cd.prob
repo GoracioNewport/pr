@@ -1,0 +1,1 @@
+{"name":"Local: A","url":"/mnt/hdd/pr/study/codeforces/1475/A.cpp","tests":[{"id":1611586604469,"input":"6\n2\n3\n4\n5\n998244353\n1099511627776","output":"NO\nYES\nNO\nYES\nYES\nNO"}],"interactive":false,"memoryLimit":1024,"timeLimit":3000,"srcPath":"/mnt/hdd/pr/study/codeforces/1475/A.cpp","group":"local","local":true}

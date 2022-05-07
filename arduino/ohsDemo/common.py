@@ -1,0 +1,2 @@
+latestData = dict()
+latestUser = ""
