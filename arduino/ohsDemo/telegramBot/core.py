@@ -14,11 +14,11 @@ latestMessageLocal = {}
 messageCooldown = 60
 
 def startCommand(update, context):
-	update.message.reply_text("Sample Text")
+	update.message.reply_text("Привет! 😊 Меня зовут OHS, и Я прослежу за состоянием организма пользователя.\nПо запросу Я буду отправлять статистические данные и отображать общий уровень здоровья.\nПри крайних показателях Я напишу Вам сам, чтобы Вы поняли, что необходима проверка. 😉\nПриятного использования!")
 	common.latestUser = update['message']['chat']['id']
 
 def helpCommand(update, context):
-	update.message.reply_text("Help Message")
+	update.message.reply_text("Я вижу, что Вам нужна помощь. В моем каталоге есть несколько действий: \n/start - готов к работе\n/help - вспомнить функционал\n/stats - все данные о здоровье \nЭто всё, что Я могу сейчас, а ещё Я напишу Вам, если показатели будут резко менять своё значение. Надеюсь, теперь наша работа будет эффективнее!")
 	common.latestUser = update['message']['chat']['id']
 
 def handleMessage(update, context):
@@ -43,7 +43,7 @@ def sendMessage(id, dataIn):
 
 	data['text'] = "Внимание ‼️\nЗначение " + config.literalToString[dataIn['key']] + (" выше" if dataIn['type'] == 'MAX' else " ниже") + " нормы, просьба принять необходимые меры ❗"
 
-	if (id == latestMessageLocal["chat_id"] and (time.time() - latestMessageLocal['time']) <= messageCooldown):
+	if (latestMessageLocal and id == latestMessageLocal["chat_id"] and (time.time() - latestMessageLocal['time']) <= messageCooldown):
 		return
 
 	latestMessageLocal = data

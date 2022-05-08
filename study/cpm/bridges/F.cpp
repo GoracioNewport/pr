@@ -85,58 +85,11 @@ ll mod = 1791791791;
 ld eps = 1e-12;
 ll INF = 2e18;
 
-vvp64 p, mul;
-vp64 path;
+vvp64 p;
+vv64 mul;
 v64 tin, fup, isBridge, used, usedR, ans;
 
 ll timer = 0;
-
-struct sparceTableMin {
-  v64 leadPower, pos;
-  vvp64 t;
-  ll n, maxLog;
-
-  sparceTableMin(vp64& a, ll N) {
-    n = sz(a);
-    leadPower.resize(n + 1);
-    forsn(i,2,n + 1) leadPower[i] = leadPower[i / 2] + 1;
-    maxLog = leadPower.back();
-    t.resize(n, vp64(maxLog + 1));
-    forn(i,n) t[i][0] = a[i];
-
-    for (ll len = 1; len <= maxLog; len++) {
-      for (ll i = 0; i < n - (1 << len) + 1; i++) {
-        t[i][len] = min(t[i][len - 1], t[i + (1 << (len - 1))][len - 1]);
-      }
-    } pos.resize(N);
-    forn(i,n) pos[a[i].se] = i;
-  }
-
-  p64 getMin(ll l, ll r) {
-    ll len = leadPower[r - l + 1];
-    return min(t[l][len], t[r - (1 << len) + 1][len]);
-  }
-
-  p64 getLca(ll a, ll b) {
-    a = pos[a];
-    b = pos[b];
-    if (a > b) swap(a, b);
-    return getMin(a, b);
-  }
-
-
-};
-
-void buildLca(ll v, ll h = 0) {
-  used[v] = true;
-  path.pb({h, v});
-  for (auto& [u, i] : p[v]) {
-    if (!used[u]) {
-      buildLca(u, h + 1);
-      path.pb({h, v});
-    }
-  }
-}
 
 void dfs(ll v, ll P = -1) {
   tin[v] = fup[v] = ++timer;
@@ -153,7 +106,11 @@ void dfs(ll v, ll P = -1) {
 
 void dfsAns(ll v, ll s = 0) {
   used[v] = true;
-  for (auto& i : mul[v]) ans[i.fi] += (s * i.se);
+  for (auto& i : mul[v]) {
+    if (usedR[i]) ans[i] += s;
+    else ans[i] -= s;
+    usedR[i] = !usedR[i];
+  }
 
   for (auto& [u, i] : p[v]) {
     if (used[u]) continue;
@@ -183,19 +140,11 @@ int main() {
   usedR.resize(k);
   ans.resize(k);
 
-  buildLca(0);
-  sparceTableMin t(path, n);
-  for (auto& i : used) i = 0;
-
   forn(i,k) {
     ll x, y; cin >> x >> y; x--; y--;
-    mul[x].pb({i, 1});
-    mul[y].pb({i, 1});
-    mul[t.getLca(x, y).se].pb({i, -2});
-  } 
-
-
-  dfs(0);
+    mul[x].pb(i);
+    mul[y].pb(i);
+  } dfs(0);
   dfsAns(0);
   for (auto& i : ans) cout << i << ln;
 

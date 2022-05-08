@@ -1,0 +1,1 @@
+{"name":"Local: DTrivial","url":"/media/goracionewport/53D27AD04C3F1E51/pr/study/regmaraphon/day4/DTrivial.cpp","tests":[{"id":1610364216731,"input":"5 2 3\n10101\n1 3\n1 4\n1 5","output":"2\n2\n-1"}],"interactive":false,"memoryLimit":1024,"timeLimit":3000,"srcPath":"/media/goracionewport/53D27AD04C3F1E51/pr/study/regmaraphon/day4/DTrivial.cpp","group":"local","local":true}

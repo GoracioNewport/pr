@@ -36,40 +36,47 @@ double eps = 1e-12;
 #define all(x) (x).begin(), (x).end()
 #define sz(x) ((ll)(x).size())
 
-ll n, m, k;
-v64 a;
+int n, m, k;
+v32 a;
 
 struct Node {
-	vector <Node*> p;
-	ll cnt;
+	vector <int> p;
+	int cnt;
 
 	Node () {
-		p.resize(k, nullptr);
+		p.resize(k, -1);
 		cnt = 0;
 	}
 };
 
-Node* root = nullptr;
+vector <Node*> bor;
+ll ind = 1;
 
 void add(string& s) {
-	auto cur = root;
-	for(ll i = 0; i < sz(s); i++) {
+	auto cur = bor[0];
+	for(int i = 0; i < sz(s); i++) {
 		cur->cnt++;
-		ll c = s[i] - '0';
-		if (cur->p[c] == nullptr) cur->p[c] = new Node();
-		cur = cur->p[c];
+		int c = s[i] - '0';
+		if (cur->p[c] == -1) {
+      bor.emplace_back(new Node());
+      cur->p[c] = ind++;
+    }
+		cur = bor[cur->p[c]];
 	} cur->cnt++;
 }
 
-pair <ll, string> ans = {INF, ""};
+pair <int, string> ans = {1e9, ""};
 
-void getAns(Node* cur, ll h, ll sum, string& s) {
-	if (h == m - 1) {
-		ans = min(ans, {sum, s});
-		return;
-	} forn(i,k) {
-		s.push_back('0' + i);
-		getAns(cur->p[i], h + 1, sum + (cur->cnt - cur->p[i]->cnt) * a[h + 1], s);
+void getAns(Node* cur, int h, int sum, string& s) {
+  for(int i = 0; i < k; i++) {
+    if (cur->p[i] == -1) {
+      string sCopy = s;
+      if (h != m) sCopy.pb('0' + i);
+      while(sz(sCopy) < m) sCopy.pb('0');
+      ans = min(ans, {sum + a[h] * cur->cnt, sCopy});
+      continue;
+    } s.push_back('0' + i);
+    getAns(bor[cur->p[i]], h + 1, sum + (cur->cnt - bor[cur->p[i]]->cnt) * a[h], s);
 		s.pop_back();
 	}
 } 
@@ -78,17 +85,22 @@ int main() {
   fast_cin();
 
   cin >> n >> m >> k;
-  a.resize(m);
-  for (auto& i : a) cin >> i;
+  a = {0};
+  forn(i,m) {
+    int x;
+    cin >> x;
+    a.emplace_back(x);
+  }
 
-	root = new Node();
+  bor.emplace_back(new Node());
 	forn(i,n) {
 		string s;
 		cin >> s;
 		add(s);
 	} string s = "";
-	getAns(root, -1, 0, s);
-	cout << ans.fi << ln << ans.se << ln;
+
+	getAns(bor[0], 0, 0, s);
+	cout << ans.se << ln << ans.fi << ln;
 
 
 

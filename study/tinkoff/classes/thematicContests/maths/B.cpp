@@ -36,13 +36,42 @@ double eps = 1e-12;
 #define all(x) (x).begin(), (x).end()
 #define sz(x) ((ll)(x).size())
 
+ll gcd(ll a, ll b, ll& x0, ll& y0) {
+  if (a == 0) {
+    x0 = 0;
+    y0 = 1;
+    return b;
+  } ll x1, y1;
+  ll d = gcd(b % a, a, x1, y1);
+  x0 = y1 - (b / a) * x1;
+  y0 = x1;
+  return d;
+}
+
 int main() {
   fast_cin();
 
-  ll a, b, c;
+  ll a, b, c, x0, y0;
   cin >> a >> b >> c;
+  ll g = gcd(a, b, x0, y0);
+  if (c % g) {
+    cout << "Impossible" << ln;
+    return 0;
+  } x0 = x0 * (c / g);
+  y0 = y0 * (c / g);
 
-  
+  // x = x0 + k * (c / g);
+  // y = y0 - k * (c / g);
+
+//  cout << x0 << ' ' << y0 << ln;
+
+  if (x0 > 0) {
+    ll k = -(x0 / (b / g));
+    cout << x0 + k * (b / g) << ' ' << y0 - k * (a / g) << ln;
+  } else {
+    ll k = ceil((ld)-x0 / (ld)(b / g));
+    cout << x0 + k * (b / g) << ' ' << y0 - k * (a / g) << ln;
+  }
 
 
 }

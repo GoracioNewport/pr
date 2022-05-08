@@ -1,0 +1,1 @@
+{"name":"Local: B","url":"/home/goracionewport/pr/study/codeforces/1455/B.cpp","tests":[{"id":1606747204038,"input":"7\n1\n2\n3\n4\n5\n6\n7","output":"1\n3\n2\n3\n4\n3\n4"}],"interactive":false,"memoryLimit":1024,"timeLimit":3000,"srcPath":"/home/goracionewport/pr/study/codeforces/1455/B.cpp","group":"local","local":true}

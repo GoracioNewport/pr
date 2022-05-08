@@ -18,6 +18,12 @@ def read():
 	try:
 
 		decodedData = ast.literal_eval(str(data[0:len(data)].decode("utf-8")))
+
+		for key, val in decodedData.items():
+			if (val[-3:] == '.00'): 
+				decodedData[key] = int(val[:-3])
+
+
 		decodedData['ok'] = True
 
 	except:

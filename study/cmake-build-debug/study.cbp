@@ -84,7 +84,7 @@
 				</MakeCommands>
 			</Target>
 		</Build>
-		<Unit filename="/home/goracionewport/pr/study/tinkoff/classes/thematicContests/maths/A.cpp">
+		<Unit filename="/mnt/hdd/pr/study/codeforces/technocup/finals2022/D.cpp">
 			<Option target="study"/>
 		</Unit>
 		<Unit filename="/home/goracionewport/pr/study/CMakeLists.txt">

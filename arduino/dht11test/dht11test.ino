@@ -3,7 +3,7 @@
 #define DHTPIN 7
 #define BUTTON1PIN 4
 
-const int MAXSIZE = 11;
+const int MAXSIZE = 12;
 char keys[MAXSIZE];
 float values[MAXSIZE];
 int curInd = 0;
@@ -45,6 +45,13 @@ void measurePressure() {
   curInd++;
 }
 
+void measurePulse() {
+  float l = 60;
+  keys[curInd] = 'l';
+  values[curInd] = l;
+  curInd++;
+}
+
 void measureAcceleration() {
   
   float dX = 0;
@@ -65,7 +72,7 @@ void measureAcceleration() {
 
 void measureSaturation() {
 
-  float s = 50;
+  float s = 100;
   keys[curInd] = 's';
   values[curInd] = s;
   curInd++;
@@ -114,6 +121,7 @@ void loop() {
 
   measureDHT11();
   measurePressure();
+  measurePulse();
   measureAcceleration();
   measureSaturation();
   measureButtons();

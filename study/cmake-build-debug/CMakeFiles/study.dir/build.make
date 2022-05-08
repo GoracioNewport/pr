@@ -44,10 +44,10 @@ cmake_force:
 SHELL = /bin/sh
 
 # The CMake executable.
-CMAKE_COMMAND = /home/goracionewport/.local/share/JetBrains/Toolbox/apps/CLion/ch-0/213.7172.20/bin/cmake/linux/bin/cmake
+CMAKE_COMMAND = /snap/clion/184/bin/cmake/linux/bin/cmake
 
 # The command to remove a file.
-RM = /home/goracionewport/.local/share/JetBrains/Toolbox/apps/CLion/ch-0/213.7172.20/bin/cmake/linux/bin/cmake -E rm -f
+RM = /snap/clion/184/bin/cmake/linux/bin/cmake -E rm -f
 
 # Escaping for special characters.
 EQUALS = =
@@ -69,28 +69,28 @@ include CMakeFiles/study.dir/progress.make
 # Include the compile flags for this target's objects.
 include CMakeFiles/study.dir/flags.make
 
-CMakeFiles/study.dir/tinkoff/classes/thematicContests/maths/A.cpp.o: CMakeFiles/study.dir/flags.make
-CMakeFiles/study.dir/tinkoff/classes/thematicContests/maths/A.cpp.o: ../tinkoff/classes/thematicContests/maths/A.cpp
-CMakeFiles/study.dir/tinkoff/classes/thematicContests/maths/A.cpp.o: CMakeFiles/study.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/goracionewport/pr/study/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_1) "Building CXX object CMakeFiles/study.dir/tinkoff/classes/thematicContests/maths/A.cpp.o"
-	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/study.dir/tinkoff/classes/thematicContests/maths/A.cpp.o -MF CMakeFiles/study.dir/tinkoff/classes/thematicContests/maths/A.cpp.o.d -o CMakeFiles/study.dir/tinkoff/classes/thematicContests/maths/A.cpp.o -c /home/goracionewport/pr/study/tinkoff/classes/thematicContests/maths/A.cpp
+CMakeFiles/study.dir/codeforces/technocup/finals2022/D.cpp.o: CMakeFiles/study.dir/flags.make
+CMakeFiles/study.dir/codeforces/technocup/finals2022/D.cpp.o: ../codeforces/technocup/finals2022/D.cpp
+CMakeFiles/study.dir/codeforces/technocup/finals2022/D.cpp.o: CMakeFiles/study.dir/compiler_depend.ts
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/mnt/hdd/pr/study/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_1) "Building CXX object CMakeFiles/study.dir/codeforces/technocup/finals2022/D.cpp.o"
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/study.dir/codeforces/technocup/finals2022/D.cpp.o -MF CMakeFiles/study.dir/codeforces/technocup/finals2022/D.cpp.o.d -o CMakeFiles/study.dir/codeforces/technocup/finals2022/D.cpp.o -c /mnt/hdd/pr/study/codeforces/technocup/finals2022/D.cpp
 
-CMakeFiles/study.dir/tinkoff/classes/thematicContests/maths/A.cpp.i: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/study.dir/tinkoff/classes/thematicContests/maths/A.cpp.i"
-	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/goracionewport/pr/study/tinkoff/classes/thematicContests/maths/A.cpp > CMakeFiles/study.dir/tinkoff/classes/thematicContests/maths/A.cpp.i
+CMakeFiles/study.dir/codeforces/technocup/finals2022/D.cpp.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/study.dir/codeforces/technocup/finals2022/D.cpp.i"
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /mnt/hdd/pr/study/codeforces/technocup/finals2022/D.cpp > CMakeFiles/study.dir/codeforces/technocup/finals2022/D.cpp.i
 
-CMakeFiles/study.dir/tinkoff/classes/thematicContests/maths/A.cpp.s: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/study.dir/tinkoff/classes/thematicContests/maths/A.cpp.s"
-	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/goracionewport/pr/study/tinkoff/classes/thematicContests/maths/A.cpp -o CMakeFiles/study.dir/tinkoff/classes/thematicContests/maths/A.cpp.s
+CMakeFiles/study.dir/codeforces/technocup/finals2022/D.cpp.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/study.dir/codeforces/technocup/finals2022/D.cpp.s"
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /mnt/hdd/pr/study/codeforces/technocup/finals2022/D.cpp -o CMakeFiles/study.dir/codeforces/technocup/finals2022/D.cpp.s
 
 # Object files for target study
 study_OBJECTS = \
-"CMakeFiles/study.dir/tinkoff/classes/thematicContests/maths/A.cpp.o"
+"CMakeFiles/study.dir/codeforces/technocup/finals2022/D.cpp.o"
 
 # External object files for target study
 study_EXTERNAL_OBJECTS =
 
-study: CMakeFiles/study.dir/tinkoff/classes/thematicContests/maths/A.cpp.o
+study: CMakeFiles/study.dir/codeforces/technocup/finals2022/D.cpp.o
 study: CMakeFiles/study.dir/build.make
 study: CMakeFiles/study.dir/link.txt
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --bold --progress-dir=/home/goracionewport/pr/study/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_2) "Linking CXX executable study"

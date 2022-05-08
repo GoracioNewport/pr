@@ -69,6 +69,7 @@ int main() {
   fast_cin();
 
   while (cin >> n >> m) {
+    if (n == 0 && m == 0) break;
     p.clear();
     topSorted.clear();
     used.clear();
@@ -136,7 +137,7 @@ int main() {
     
     for (ll i = 0; i < 2 * n; i += 2) {
       cout << (ans[i] > ans[i^1]);
-    } cout << endl;
+    } cout << ln;
   }
 
 }
